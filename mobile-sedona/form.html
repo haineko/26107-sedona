@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sedona-Главная</title>
+    </head>
+    <body>
+        <div class="content-wrapper">
+        <header class="main-header">
+            <div class="main-header-inner">
+               <a class="main-header-logo" href="index.html" title="Главная">Sedona</a>
+               <a class="main-menu-btn" href="#" title="Меню">Меню</a>
+            </div>
+            <nav class="main-menu">
+                    <ul class="main-menu-list">
+                        <li class="main-menu-item"><a href="#" title="Карта штата">Карта штата</a></li>
+                        <li class="main-menu-item"><a href="#" title="Информация">Информация</a></li>
+                        <li class="main-menu-item"><a href="#" title="Фото и видео">Фото и видео</a></li>
+                        <li class="main-menu-item"><a href="#" title="Гостиницы">Гостиницы</a></li>
+                    </ul>
+            </nav>
+            <div class="intro">
+                <div class="intro-text sedona">
+                   <img src="http://placehold.it/280x48" alt="SEDONA">                
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="form-content">
+                <p class="form-header">Оставьте свой отзыв</p>
+                <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                <form action="/echo" method="post">
+                    <div class="personal-data">
+                        <p class="form-header">Представьтесь, пожалуйста:</p>
+                        <label for="lastname">Фамилия:</label>
+                        <input id="lastname" name="lastname" type="text" placeholder="Введите вашу фамилию" required>
+                        <label for="firstname">Имя:</label>
+                        <input id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" required>
+                        <label for="middlename">Отчество:</label>
+                        <input id="middlename" name="middlename" type="text" placeholder="Введите ваше отчество">
+                    </div>
+                    <div class="impression-data">
+                        <p class="form-header">Ваше общие впечатление:</p>
+                        <input id="positive" name="impression" type="radio" checked>
+                        <label for="positive">Скорее положительные</label>
+                        <input id="negative" name="impression" type="radio">
+                        <label for="negative">Скорее отрицательные</label>
+                    </div>
+                    <div class="trip-data">
+                        <label for="arrival">Дата приезда:</label>
+                        <p class="form-header">Даты вашей поездки:</p>
+                        <input id="arrival" name="arrival" type="text" placeholder="4 июля 2015" required>
+                        <label for="trip-duration">Длительность пребывания</label>
+                        <input class="btn-plus" type="button" value="+">
+                        <input id="trip-duration" name="trip-duration" type="text" placeholder="14 дн" required>
+                        <input class="btn-minus" type="button" value="-">
+                        <label for="depart">Дата отъезда</label>
+                        <input id="depart" name="depart" type="text" placeholder="28 июля 2015" required>
+                    </div>
+                    <div class="data-travelers">
+                        <p class="form-header">Кол-во путешественников:</p>
+                        <div class="number-travelers">
+                            <label for="number">Количество путешественников</label>
+                            <input class="btn-plus" type="button" value="+">
+                            <input id="number" name="number" type="text" placeholder="2 чел" required>
+                            <input class="btn-minus" type="button" value="-"> 
+                        </div>
+                        <div class="name-travelers">
+                            <div class="first-traveler">
+                                <label for="number-traveler">№</label>
+                                <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
+                                <label for="lastname-traveler">Фамилия:</label>
+                                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Введите вашу фамилию" required>
+                                <label for="firstname-traveler">Имя:</label>
+                                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Введите ваше имя" required>
+                                <label for="middlename-traveler">Отчество:</label>
+                                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Введите ваше отчество">
+                            </div>
+                            <div class="second-traveler">
+                                <label for="number-traveler">№</label>
+                                <input id="number-traveler" name="number-traveler" type="text" placeholder="2">
+                                <label for="lastname-traveler">Фамилия:</label>
+                                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Введите вашу фамилию" required>
+                                <label for="firstname-traveler">Имя:</label>
+                                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Введите ваше имя" required>
+                                <label for="middlename-traveler">Отчество:</label>
+                                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Введите ваше отчество">
+                            </div>
+                        </div>
+                        <div class="sights">
+                            <p class="form-header">Посещенные достопримечательности</p>
+                            <input id="sight-bridge" name="sight1" type="checkbox" checked>
+                            <label for="sight-bridge">Мост Дьявола</label>
+                            <input id="sight-park" name="sight2" type="checkbox">
+                            <label for="sight-park">Слайд-парк</label>
+                            <input id="sight-mount" name="sight3" type="checkbox" checked>
+                            <label for="sight-mount">Гора-Колокол</label>
+                            <input id="sight-rock" name="sight4" type="checkbox" checked>
+                            <label for="sight-rock">Красные скалы</label>
+                        </div>
+                        <div class="download-photos">
+                            <p class="form-header">Загрузите фотографии:</p>
+                            <input class="btn-select" type="button" value="Выбрать фотографии"> 
+                            <div class="photos-gallery">
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo" >
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo" >
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo">
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo">
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo">
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo">
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                                <figure>
+                                    <img class="photo" src="http://placehold.it/70x70" alt="photo">
+                                    <figcaption>photo</figcaption>
+                                    <a class="photo-close" href="#" title="close">x</a>
+                                </figure>
+                            </div>
+                            <input id="send" name="send" type="submit" value="Отправить фотографии">
+                        </div>
+                    </div>
+                </form>
+            </div>           
+        </main>
+        <footer>
+           <div class="footer-row">
+               <a href="#" class="visitsedona" title="Sedona">#visitsedona</a>
+           </div>
+           <div class="footer-row">
+               <a class="btn btn-social btn-tw"  href="#" title="Twitter">Twitter</a>
+               <a class="btn btn-social btn-fb"  href="#" title="Facebook">Facebook</a>
+               <a class="btn btn-social btn-ytb" href="#" title="Youtube">Youtube</a>
+           </div>
+           <div class="footer-row copyright">
+               <p>Разработано</p>
+               <a class="copyright-icon" href="#" title="HTML Academy">HTML Academy</a>
+           </div>
+        </footer>
+    </div>
+    </body>
+</html>
