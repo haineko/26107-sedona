@@ -30,25 +30,25 @@
                 <p class="form-header">Оставьте свой отзыв</p>
                 <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
                 <form action="/echo" method="post">
-                    <div class="personal-data">
-                        <p class="form-header">Представьтесь, пожалуйста:</p>
+                    <fieldset class="personal-data">
+                        <legend class="form-header">Представьтесь, пожалуйста:</legend>
                         <label for="lastname">Фамилия:</label>
                         <input id="lastname" name="lastname" type="text" placeholder="Введите вашу фамилию" required>
                         <label for="firstname">Имя:</label>
                         <input id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" required>
                         <label for="middlename">Отчество:</label>
                         <input id="middlename" name="middlename" type="text" placeholder="Введите ваше отчество">
-                    </div>
-                    <div class="impression-data">
-                        <p class="form-header">Ваше общие впечатление:</p>
+                    </fieldset>
+                    <fieldset class="impression-data">
+                        <legend class="form-header">Ваше общие впечатление:</legend>
                         <input id="positive" name="impression" type="radio" checked>
                         <label for="positive">Скорее положительные</label>
                         <input id="negative" name="impression" type="radio">
                         <label for="negative">Скорее отрицательные</label>
-                    </div>
-                    <div class="trip-data">
+                    </fieldset>
+                    <fieldset class="trip-data">
+                        <legend class="form-header">Даты вашей поездки:</legend>
                         <label for="arrival">Дата приезда:</label>
-                        <p class="form-header">Даты вашей поездки:</p>
                         <input id="arrival" name="arrival" type="text" placeholder="4 июля 2015" required>
                         <label for="trip-duration">Длительность пребывания</label>
                         <input class="btn-plus" type="button" value="+">
@@ -56,9 +56,9 @@
                         <input class="btn-minus" type="button" value="-">
                         <label for="depart">Дата отъезда</label>
                         <input id="depart" name="depart" type="text" placeholder="28 июля 2015" required>
-                    </div>
-                    <div class="data-travelers">
-                        <p class="form-header">Кол-во путешественников:</p>
+                    </fieldset>
+                    <fieldset class="data-travelers">
+                        <legend class="form-header">Кол-во путешественников:</legend>
                         <div class="number-travelers">
                             <label for="number">Количество путешественников</label>
                             <input class="btn-plus" type="button" value="+">
@@ -86,61 +86,61 @@
                                 <label for="middlename-traveler">Отчество:</label>
                                 <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Введите ваше отчество">
                             </div>
-                        </div>
-                        <div class="sights">
-                            <p class="form-header">Посещенные достопримечательности</p>
-                            <input id="sight-bridge" name="sight1" type="checkbox" checked>
-                            <label for="sight-bridge">Мост Дьявола</label>
-                            <input id="sight-park" name="sight2" type="checkbox">
-                            <label for="sight-park">Слайд-парк</label>
-                            <input id="sight-mount" name="sight3" type="checkbox" checked>
-                            <label for="sight-mount">Гора-Колокол</label>
-                            <input id="sight-rock" name="sight4" type="checkbox" checked>
-                            <label for="sight-rock">Красные скалы</label>
-                        </div>
-                        <div class="download-photos">
-                            <p class="form-header">Загрузите фотографии:</p>
-                            <input class="btn-select" type="button" value="Выбрать фотографии"> 
-                            <div class="photos-gallery">
-                                <figure>
+                        iv>
+                    </fieldset>
+                    <fieldset class="sights">
+                        <legend class="form-header">Посещенные достопримечательности</legend>
+                        <input id="sight-bridge" name="sight1" type="checkbox" checked>
+                        <label for="sight-bridge">Мост Дьявола</label>
+                        <input id="sight-park" name="sight2" type="checkbox">
+                        <label for="sight-park">Слайд-парк</label>
+                        <input id="sight-mount" name="sight3" type="checkbox" checked>
+                        <label for="sight-mount">Гора-Колокол</label>
+                        <input id="sight-rock" name="sight4" type="checkbox" checked>
+                        <label for="sight-rock">Красные скалы</label>
+                    </fieldset>
+                    <fieldset class="download-photos">
+                         <legend class="form-header">Загрузите фотографии:</legend>
+                         <input class="btn-select" type="button" value="Выбрать фотографии"> 
+                         <div class="photos-gallery">
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo" >
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo" >
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo">
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo">
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo">
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo">
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                                <figure>
+                             <figure>
                                     <img class="photo" src="http://placehold.it/70x70" alt="photo">
                                     <figcaption>photo</figcaption>
                                     <a class="photo-close" href="#" title="close">x</a>
                                 </figure>
-                            </div>
-                            <input id="send" name="send" type="submit" value="Отправить фотографии">
-                        </div>
-                    </div>
+                         </div>
+                         <input id="send" name="send" type="submit" value="Отправить фотографии">
+                    </fieldset>
                 </form>
             </div>           
         </main>
