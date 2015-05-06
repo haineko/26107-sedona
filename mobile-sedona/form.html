@@ -35,19 +35,19 @@
         <form action="/echo" method="post">
           <fieldset class="personal-data">
             <legend class="form-header">Представьтесь, пожалуйста:</legend>
-            <label for="lastname">Фамилия:</label>
+            <label for="lastname">Иванов</label>
             <input id="lastname" name="lastname" type="text" placeholder="Введите вашу фамилию" required>
-            <label for="firstname">Имя:</label>
+            <label for="firstname">Петр</label>
             <input id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" required>
-            <label for="middlename">Отчество:</label>
+            <label for="middlename">Александрович</label>
             <input id="middlename" name="middlename" type="text" placeholder="Введите ваше отчество">
           </fieldset>
           <fieldset class="impression-data">
             <legend class="form-header">Ваше общие впечатление:</legend>
             <input id="positive" name="impression" type="radio" checked>
-            <label for="positive">Скорее положительные</label>
+            <label for="positive">Скорее положительное</label>
             <input id="negative" name="impression" type="radio">
-            <label for="negative">Скорее отрицательные</label>
+            <label for="negative">Скорее отрицательное</label>
           </fieldset>
           <fieldset class="trip-data">
             <legend class="form-header">Даты вашей поездки:</legend>
@@ -55,8 +55,9 @@
             <input id="arrival" name="arrival" type="text" placeholder="4 июля 2015" required>
             <label for="trip-duration">Длительность пребывания</label>
             <input class="btn-plus" type="button" value="+">
+            <a class="btn-plus" href="#" title="Увеличить количество">+</a>
             <input id="trip-duration" name="trip-duration" type="text" placeholder="14 дн" required>
-            <input class="btn-minus" type="button" value="-">
+            <a class="btn-minus" href="#" title="Уменшить количество">-</a>
             <label for="depart">Дата отъезда</label>
             <input id="depart" name="depart" type="text" placeholder="28 июля 2015" required>
           </fieldset>
@@ -64,32 +65,32 @@
             <legend class="form-header">Кол-во путешественников:</legend>
             <div class="number-travelers">
               <label for="number">Количество путешественников</label>
-              <input class="btn-plus" type="button" value="+">
+              <a class="btn-plus" href="#" title="Увеличить количество">+</a>
               <input id="number" name="number" type="text" placeholder="2 чел" required>
-              <input class="btn-minus" type="button" value="-">
+              <a class="btn-minus" href="#" title="Уменшить количество">-</a>
             </div>
             <div class="name-travelers">
               <div class="first-traveler">
                 <label for="number-traveler">№</label>
                 <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
                 <label for="lastname-traveler">Фамилия:</label>
-                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Введите вашу фамилию" required>
+                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
                 <label for="firstname-traveler">Имя:</label>
-                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Введите ваше имя" required>
+                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
                 <label for="middlename-traveler">Отчество:</label>
-                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Введите ваше отчество">
+                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
               </div>
               <div class="second-traveler">
                 <label for="number-traveler">№</label>
                 <input id="number-traveler" name="number-traveler" type="text" placeholder="2">
                 <label for="lastname-traveler">Фамилия:</label>
-                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Введите вашу фамилию" required>
+                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
                 <label for="firstname-traveler">Имя:</label>
-                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Введите ваше имя" required>
+                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
                 <label for="middlename-traveler">Отчество:</label>
-                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Введите ваше отчество">
+                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
               </div>
-              iv>
+            </div>
           </fieldset>
           <fieldset class="sights">
             <legend class="form-header">Посещенные достопримечательности</legend>
