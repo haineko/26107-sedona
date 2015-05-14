@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Sedona-Главная</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" >
 </head>
 
 <body>
@@ -12,29 +14,29 @@
     <header class="main-header">
      
       <div class="main-header__inner">
-        <a class="main-header-logo" href="index.html" title="Главная">Sedona</a>
-        <a class="main-menu-btn" href="#" title="Меню">Меню</a>
+        <a class="main-header__logo" href="index.html" title="Главная">Sedona</a>
+        <a class="btn main-header__btn-menu" href="#" title="Меню">Меню</a>
       </div>
       
       <nav class="main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="#" title="Карта штата">Карта штата</a></li>
-          <li class="main-menu__item"><a href="#" title="Информация">Информация</a></li>
-          <li class="main-menu__item"><a href="#" title="Фото и видео">Фото и видео</a></li>
-          <li class="main-menu__item"><a href="#" title="Гостиницы">Гостиницы</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#" title="Карта штата">Карта штата</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#" title="Информация">Информация</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#" title="Гостиницы">Гостиницы</a></li>
         </ul>
-        <a class="main-menu__toggle" href="#" title="Закрыть меню"></a>
+        <a class="main-menu__toggle" href="#" title="Закрыть меню">x</a>
       </nav>
       
       <div class="intro">
         <div class="intro__text-welcome">
-          <img src="http://placehold.it/196x66" alt="Welcome to the gorgeous">
+          <img src="../img/intro-welcome.png" alt="Welcome to the gorgeous">
         </div>
         <div class="intro__text-sedona">
-          <img src="http://placehold.it/280x48" alt="SEDONA">
+          <img src="../img/intro-sedona.png" alt="SEDONA">
         </div>
         <div class="intro__text-slogan">
-          <img src="http://placehold.it/197x54" alt="Because the Grand Canyon sucks!">
+          <img src="../img/intro-slogan.png" alt="Because the Grand Canyon sucks!">
         </div>
       </div>
       
@@ -43,11 +45,11 @@
     <main>
      
       <section class="reasons-advantages">
-        <div class="reasons-advantages-header">
-          <div class="intro-content">
-            <h1 class="intro-content__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-            <p class="intro-content"__text>Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
-          </div>
+        <div class="reasons-advantages__intro">
+        
+            <h1 class="reasons-advantages__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+            <p class="reasons-advantages__text">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
+          
         </div>
         <div class="reason-and-image">
           <div class="reason-description">
@@ -56,19 +58,19 @@
             <p class="reason-description__text">Cедона не атракцион для туристов, там течет своя жизнь</p>
           </div>
           <div class="reason-image">
-            <img src="http://placehold.it/320x256" alt="Настоящий город">
+            <img src="../img/reason-image1.jpg" alt="Настоящий город">
           </div>
         </div>
         <div class="advantages">
-          <div class="advantage-item">
+          <div class="advantages__item">
             <h2 class="advantage-item__title">Жилье</h2>
             <p class="advantage-item__text">Рекомендуем пожитьв настоящем мотеле, все как в кино!</p>
           </div>
-          <div class="advantage__item">
+          <div class="advantages__item">
             <h2 class="advantage-item__title">Сувениры</h2>
             <p class="advantage-item__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div>
-          <div class="advantage__item">
+          <div class="advantages__item">
             <h2 class="advantage-item__title">Еда</h2>
             <p class="advantage-item__text">Не только китайского, но и местного производства!</p>
           </div>
@@ -80,7 +82,7 @@
             <p class="reason-description__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
           <div class="reason-image">
-            <img src="http://placehold.it/320x256" alt="Мост дьявола">
+            <img src="../img/reason-image2.jpg" alt="Мост дьявола">
           </div>
         </div>
         <div class="reasons">
@@ -108,7 +110,7 @@
           <a class="hotel-search__link" href="#">Найти гостиницу</a>
         </div>
         <div class="map">
-          <img src="http://placehold.it/320x350" alt="Карта">
+          <img src="../img/map.jpg" alt="Карта">
         </div>
       </section>
       
