@@ -1,0 +1,31 @@
+.main-menu {
+  position: relative;
+  background: $bg-main-menu;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    border-bottom: 1px solid $color-shadow-dark;
+    border-top: 1px solid $color-shadow-light;
+  }
+  &__link {
+    display: block;
+    padding: 20px 0;
+    color: $color-text-light;
+    text-align: center;
+  }
+  &__toggle {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 5;
+    width: 23px;
+    height: 22px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    background: url(../img/icon-cross.png) no-repeat;
+  }
+}
