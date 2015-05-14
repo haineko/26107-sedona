@@ -1,0 +1,33 @@
+.main-header {
+  background-color: $bg-color;
+  &__inner {
+    margin:  0 auto;
+    &:after{
+      @include clearfix;
+    }
+  }
+  &__logo{
+    display: block;
+    @include left;
+    margin: 0 auto;
+    width: 138px;
+    height: 70px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    background: url(../img/logo.png) no-repeat;
+    cursor: pointer;
+  }
+  &__btn-menu{
+    display: block;
+    @include right;
+    margin: 17px 0;
+    width: 23px;
+    height: 23px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    background: url(../img/icon-humburger.png) no-repeat;
+    cursor: pointer;
+  }
+}
