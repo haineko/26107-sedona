@@ -1,0 +1,19 @@
+@import "vendor/normalize.css"; 
+
+@import "global/variables.scss";
+@import "global/base.scss";
+@import "global/type.scss";
+
+@import "components/main-header.scss";
+@import "components/main-menu.scss";
+@import "components/intro.scss";
+@import "components/reasons-advantages.scss";
+@import "components/reason-and-image.scss";
+@import "components/reason-description.scss";
+@import "components/reason-image.scss";
+@import "components/reasons.scss";
+@import "components/reason-item.scss";
+@import "components/advantages.scss";
+@import "components/advantage-item.scss";
+@import "components/hotel-search.scss";
+@import "components/footer.scss";
