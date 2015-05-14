@@ -1,0 +1,18 @@
+.advantages {
+  padding: 22px 20px;
+  text-align: left;
+  &__item{
+    margin: 0 auto;
+    padding-left: 47px; 
+    width: 233px;
+    &:nth-child(1){
+      background: url(../img/icon-house.png) no-repeat;
+    }
+    &:nth-child(2){
+      background: url(../img/icon-souvenir.png) no-repeat;
+    }
+    &:nth-child(3){
+      background: url(../img/icon-food.png) no-repeat;
+    }
+  }
+}
