@@ -1,0 +1,23 @@
+.intro {
+  padding: 47px 20px;
+  background: url(../img/bg-intro.jpg) no-repeat 50% 50%;
+  &__text-welcome{
+      text-align: center;
+    & img {
+      width: 196px;
+    }
+  }
+  &__text-sedona{
+    margin: 70px 0;
+      text-align: center;
+    & img {
+      width: 280px;
+    }
+  }
+  &__text-slogan{
+      text-align: center;
+    & img {
+      width: 197px;
+    }
+  }
+}
