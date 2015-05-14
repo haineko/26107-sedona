@@ -1,0 +1,15 @@
+.hotel-search {
+  text-align: center;
+  &__content{
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 320px;    
+  }
+  &__link {
+    display: inline-block;
+    margin:  10px 0;
+    padding: 18px 46px;
+    color: $color-text-light;
+    background-color: $bg-main-menu;
+  }
+}
