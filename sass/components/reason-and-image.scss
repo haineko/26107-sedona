@@ -1,0 +1,5 @@
+.reason-and-image {
+  &:after{
+    @include clearfix;
+  }
+}
