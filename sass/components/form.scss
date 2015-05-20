@@ -1,0 +1,276 @@
+.form-review-intro {
+  padding-bottom: 5px;
+  border-bottom: 1px solid darken($bg-reason, 3%);
+  
+  &__title{
+    margin-bottom: 27px;
+    text-align: center;
+  }
+  
+  &__text {
+    line-height: 2.3rem;
+    text-align: center;
+  }
+}
+  
+.form-review {
+  margin-bottom: 50px;
+  
+  fieldset {
+    margin: 0; 
+    margin-top: 18px;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid darken($bg-reason, 3%);
+    &:last-child {
+      border-bottom: none;
+    }
+    legend{
+      margin-left: 5px;
+      margin-bottom: 5px;
+      padding: 0;
+      text-align: center;
+    }
+    
+    span {
+      margin-left: 4px;
+      color: red;
+    }
+    a {
+       @include invisible-text;
+    }
+  }
+  
+  &__personal-data {
+    label{
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        padding-left: 21px;
+        text-align: left;
+    }
+  }
+  
+  &__impression-data {
+    label {
+      position: relative;
+      display: block;
+      margin-bottom: 19px;
+      padding-top: 12px;
+      padding-left: 78px; 
+      padding-bottom: 12px;
+      &:last-child {
+        margin-bottom: 6px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        display: block;
+        width: 56px;
+        height: 56px;
+        background: url(../img/icon-radio.png) no-repeat 50% 50%;
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/icon-radio-hover.png);
+        }
+      }
+      &:disabled {
+        &:before {
+          background-image: url(../img/icon-radio-disabled.png);
+        }
+      }
+    }
+  }
+  
+  &__trip-data {
+    label{
+        position: relative;
+        display: block;
+        margin-top: -5px;
+        margin-bottom: 8px;
+        padding-left: 21px;
+        text-align: left;
+    }
+    input[type=text] {
+      margin-bottom: 21px;
+    }
+  }
+  
+  &__btn-plus,
+  &__btn-minus {
+    display: inline-block;
+    width: 62px;
+    height: 56px;
+    vertical-align: top;
+    cursor: pointer;
+  }
+  &__btn-plus {
+    background: lighten($bg-reason, 2%) url(../img/icon-plus.png) no-repeat 50% 50%;
+    &:hover {
+      background: darken($bg-reason, 3%) url(../img/icon-plus-hover.png) no-repeat 50% 50%;
+    }
+    &:active {
+      background: darken($bg-reason, 9%) url(../img/icon-plus-active.png) no-repeat 50% 50%;
+    }
+  }
+  &__btn-minus {
+    background: lighten($bg-reason, 2%) url(../img/icon-minus.png) no-repeat 50% 50%;
+    &:hover {
+      background: darken($bg-reason, 3%) url(../img/icon-minus-hover.png) no-repeat 50% 50%;
+    }
+    &:active {
+      background: darken($bg-reason, 9%) url(../img/icon-minus-active.png) no-repeat 50% 50%;
+    }
+  }
+  
+  &__counter-trip {
+    margin-bottom: 21px;
+    font-size: 0;
+    input[type=text] {
+      display: inline-block;
+      margin: 0 6px;
+      width: 144px;
+    }
+  }
+  
+  &__number-travelers {
+    margin-bottom: 38px;
+    font-size: 0;
+    label {
+      position: relative;
+      display: block;
+      margin-bottom: 8px;
+      padding-left: 21px;
+      font-size: 1.4rem;;
+      text-align: left;
+    }
+    input[type=text] {
+      display: inline-block;
+      margin: 0 6px;
+      width: 144px;
+    }
+  }
+  
+  &__first-traveler,
+  &__second-traveler {
+    display: table;
+    margin-bottom: 30px;
+    @include clearfix;
+    label {
+      display: block;
+    }
+    .row-left {
+      @include left;
+      margin-right: 6px;
+      width: 61px;
+      text-align: center;
+      label {
+        margin-bottom: 8px;
+      }
+      input[type=text] {
+        padding: 0;
+        width: 61px;
+        height: 56px;
+        text-align: center;
+      }
+    }
+    .row-right {
+      @include right;
+      width: 213px;
+      label {
+        margin-bottom: 8px;
+        padding-left: 20px;
+      }
+      input[type=text] {
+        width: 213px;
+        height: 56px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__sights {
+    label {
+      position: relative;
+      display: block;
+      margin-bottom: 35px;
+      padding-top: 7px;
+      padding-left: 78px; 
+      padding-bottom: 12px;
+      &:last-child {
+        margin-bottom: 8px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 0;
+        display: block;
+        width: 56px;
+        height: 56px;
+        background: url(../img/icon-checkbox.png) no-repeat 50% 50%;
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/icon-checkbox-hover.png);
+        }
+      }
+      &:disabled {
+        &:before {
+          background-image: url(../img/icon-checkbox-disabled.png);
+        }
+      }
+    }
+  }
+  &__btn-select,
+  &__btn-send {
+    margin-top: -8px;
+    margin-bottom: 55px;
+    padding: 0;
+    width: 280px;
+    height: 58px;
+    border: none;
+  }
+  &__btn-send {
+    margin-bottom: 20px;
+  }
+  &__photos-gallery {
+    margin-bottom: 20px;
+    font-size: 0;
+    line-height: 0;
+    figure {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      margin-right: 35px;
+      margin-bottom: 35px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__photo {
+    display: block;
+    max-width: 100%; 
+    width: 70px;
+    height: 70px;
+  }
+  &__photo-close {
+    @include invisible-text;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: lighten(#eeeeee, 2%) url(../img/icon-photo-cross.png) no-repeat 50% 50%; 
+    &:hover {
+      background-color: darken(#eeeeee, 3%);
+    }
+  }
+}
