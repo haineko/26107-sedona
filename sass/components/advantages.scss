@@ -1,18 +1,39 @@
 .advantages {
-  padding: 22px 20px;
+  margin-bottom: 50px;
+  padding: 0 20px;
   text-align: left;
-  &__item{
+  &__item {
     margin: 0 auto;
-    padding-left: 47px; 
-    width: 233px;
-    &:nth-child(1){
+    margin-bottom: -12px;
+    padding-left: 49px;
+    padding-right: 20px;
+    line-height: 2.1rem;
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+      top: 28px;
+      left: -48px;
+      width: 39px;
+      height: 39px;
       background: url(../img/icon-house.png) no-repeat;
     }
-    &:nth-child(2){
-      background: url(../img/icon-souvenir.png) no-repeat;
+    &:nth-child(2) {
+      &:before {
+       background-image: url(../img/icon-souvenir.png);
+      }
     }
-    &:nth-child(3){
-      background: url(../img/icon-food.png) no-repeat;
+    &:nth-child(3) {
+      &:before{
+       background-image: url(../img/icon-food.png);
+      }
     }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+  }
+  &__text {
+    margin: 0;
   }
 }
