@@ -1,6 +1,12 @@
 .reasons-advantages {
   &__intro{
-    margin:  42px 0 32px;
+    position: relative;
+    margin:  31px 20px 42px;
     text-align: center;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0 10px;
   }
 }
