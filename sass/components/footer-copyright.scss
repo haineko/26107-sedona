@@ -1,0 +1,14 @@
+.footer-copyright {
+  &__title {
+    display: inline-block;
+    margin-right: 7px;
+  }
+  &__link {
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    @include invisible-text; 
+    vertical-align: middle;
+    background:  url(../img/icon-ha.png) no-repeat 50% 50%;
+  }
+}
