@@ -1,0 +1,28 @@
+.fotm-review {
+  &__btn-plus,
+  &__btn-minus {
+    display: block;
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+  }
+  &__btn-plus {
+    background: lighten($bg-reason, 2%) url(../img/icon-plus.png) no-repeat 50% 50%;
+    &:hover {
+      background: darken($bg-reason, 3%) url(../img/icon-plus-hover.png) no-repeat 50% 50%;
+    }
+    &:active {
+      background: darken($bg-reason, 9%) url(../img/icon-plus-active.png) no-repeat 50% 50%;
+    }
+  }
+  &__btn-minus {
+    background: lighten($bg-reason, 2%) url(../img/icon-minus.png) no-repeat 50% 50%;
+    &:hover {
+      background: darken($bg-reason, 3%) url(../img/icon-minus-hover.png) no-repeat 50% 50%;
+    }
+    &:active {
+      background: darken($bg-reason, 9%) url(../img/icon-minus-active.png) no-repeat 50% 50%;
+    }
+  }
+}
+  
