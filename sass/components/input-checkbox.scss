@@ -1,0 +1,23 @@
+
+input[type=checkbox] {
+  display: none;
+  &:checked {
+    &+ label {
+      &:before {
+        background: url(../img/icon-checkbox-checked.png) no-repeat;
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/icon-checkbox-checked-hover.png);
+        }
+      }
+    }
+    &:disabled {
+      &+ label {
+        &:before {
+          background-image: url(../img/icon-checkbox-checked-disabled.png);
+        }
+      }
+    }
+  }
+}  
