@@ -3,31 +3,34 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sedona-Пост</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" >
 </head>
 
 <body>
  
   <header class="main-header">
    
-    <div class="main-header__inner">
-      <a class="main-header-logo" href="index.html" title="Главная">Sedona</a>
-      <a class="main-menu-btn" href="#" title="Меню">Меню</a>
-    </div>
-      
     <nav class="main-menu">
-      <ul class="main-menu__list">
-        <li class="main-menu__item"><a href="#" title="Карта штата">Карта штата</a></li>
-        <li class="main-menu__item"><a href="#" title="Информация">Информация</a></li>
-        <li class="main-menu__item"><a href="#" title="Фото и видео">Фото и видео</a></li>
-        <li class="main-menu__item"><a href="#" title="Гостиницы">Гостиницы</a></li>
-      </ul>
-      <a class="main-menu__toggle" href="#" title="Закрыть меню"></a>
-    </nav>
+        <ul class="main-menu__list">
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Карта штата">Карта штата</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Информация">Информация</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Гостиницы">Гостиницы</a></li>
+        </ul>
+        <a class="main-menu__toggle" href="#" title="Закрыть меню">x</a>
+      </nav>
+     
+      <div class="main-header__inner">
+        <a class="main-header__logo" href="index.html" title="Главная">Sedona</a>
+        <a class="main-header__btn-menu" href="#" title="Меню">Меню</a>
+      </div>
       
-    <div class="intro">
-      <div class="intro__text-sedona">
-        <img src="http://placehold.it/280x48" alt="SEDONA">
+    <div class="intro-post">
+      <div class="intro-post__text-sedona">
+        <img src="../img/intro-sedona.png" alt="SEDONA">
       </div>
     </div>  
     
@@ -35,9 +38,9 @@
   
   <main>
    
-    <section class="blog-intro">
-        <header class="blog-intro__title"><h2>Блог шерифа</h2></header>
-        <p class="blog-intro_text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах</p>
+    <section class="blog__intro blog__intro--post">
+        <header><h2 class="blog__title">Блог шерифа</h2></header>
+        <p class="blog__text">Седона удивительный город! Горы здесь красного цвета, </br> а местный шериф ведет блог и общается на форумах</p>
     </section>
     
     <a class="post-item__time" href="#" title="Позавчера">
@@ -46,22 +49,22 @@
     <a class="post-item__tag" href="#" title="Происшествия">Происшествия</a>
     
     <article class="post">
-      <header class="post__title">
-        <h3>Внимание!Сбежала моя домашняя анаконда</h3>
+      <header>
+        <h3 class="post__intro-title">Внимание!Сбежала моя домашняя анаконда</h3>
       </header>
       <section class="post__intro">Жители Седоны и гости города, будьте бдительны - сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</section>
       <section class="post__content">
-        <header class="post__title"><h3>Предыстория</h3></header>
+        <header><h3 class="post__title">Предыстория</h3></header>
         <p class="post__text">В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе» </p>
-        <header class="post__title"><h3 >Пропажа</h3></header>
+        <header><h3 class="post__title">Пропажа</h3></header>
         <p class="post__text">Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
         <ul class="post__list">
           <li>Длина: 5 метров</li>
           <li>Масса: 85 кг</li>
           <li>Окраска: серовато-зелёная </li>
         </ul>
-        <p class="post-text">Если вы увидите эту змею, сразу <a class="post-link" href="#" title="911">звоните 911</a> и бегите со всех ног от нее! </p>
-        <header class="post__title"><h3>Предостережение</h3></header>
+        <p class="post__text">Если вы увидите эту змею, сразу <a class="post-link" href="#" title="911">звоните 911</a> и бегите со всех ног от нее! </p>
+        <header><h3 class="post__title">Предостережение</h3></header>
         <p class="post__text">Не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
         <blockquote class="post__blockquote">Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден. <cite>Адриано Челентано</cite></blockquote>
       </section>
@@ -69,9 +72,9 @@
     </article>
     
     <div class="post-pagination">
-      <a class="post-pagination__btn-page" href="#" title="Предыдущая страница">Пред.</a>
-      <a class="post-pagination__btn-page" href="#" title="Следующая страница">След.</a>
-      <a class="post-pagination__btn-page" href="#" title="Назад к блогу">Назад к списку</a>
+      <a class="post-pagination__btn-page btn btn--post" href="#" title="Предыдущая страница">Пред.</a>
+      <a class="post-pagination__btn-page btn btn--post" href="#" title="Следующая страница">След.</a>
+      <a class="post-pagination__btn-page btn btn--post" href="#" title="Назад к блогу">Назад к списку</a>
     </div>
       
   </main>
@@ -79,17 +82,17 @@
   <footer>
    
     <div class="footer-visitsedona">
-      <a href="#" title="Sedona">#visitsedona</a>
-    </div>
-    <div class="footer-social">
-      <a class="footer-social__btn-vk" href="#" title="Twitter">Twitter</a>
-      <a class="footer-social__btn-fb" href="#" title="Facebook">Facebook</a>
-      <a class="footer-social__btn-ytb" href="#" title="Youtube">Youtube</a>
-    </div>
-    <div class="footer-copyright">
-      <p class="footer-copyright__title">Разработано</p>
-      <a class="footer-copyright__icon" href="#" title="HTML Academy">HTML Academy</a>
-    </div>    
+        <a href="#" title="Sedona">#visitsedona</a>
+      </div>
+      <div class="footer-social">
+        <a class="footer-social__btn-tw btn" href="#" title="Twitter">Twitter</a>
+        <a class="footer-social__btn-fb btn" href="#" title="Facebook">Facebook</a>
+        <a class="footer-social__btn-ytb btn" href="#" title="Youtube">Youtube</a>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-copyright__title">Разработано</p>
+        <a class="footer-copyright__link" href="#" title="HTML Academy">HTML Academy</a>
+      </div>
      
   </footer>
   
