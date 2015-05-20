@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Sedona-Отзыв</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" >
 </head>
 
 <body>
@@ -11,24 +15,24 @@
    
     <header class="main-header">
      
-      <div class="main-header__inner">
-        <a class="main-header-logo" href="index.html" title="Главная">Sedona</a>
-        <a class="main-menu-btn" href="#" title="Меню">Меню</a>
-      </div>
-      
       <nav class="main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="#" title="Карта штата">Карта штата</a></li>
-          <li class="main-menu__item"><a href="#" title="Информация">Информация</a></li>
-          <li class="main-menu__item"><a href="#" title="Фото и видео">Фото и видео</a></li>
-          <li class="main-menu__item"><a href="#" title="Гостиницы">Гостиницы</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Карта штата">Карта штата</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Информация">Информация</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Гостиницы">Гостиницы</a></li>
         </ul>
-        <a class="main-menu__toggle" href="#" title="Закрыть меню"></a>
+        <a class="main-menu__toggle" href="#" title="Закрыть меню">x</a>
       </nav>
+     
+      <div class="main-header__inner">
+        <a class="main-header__logo" href="index.html" title="Главная">Sedona</a>
+        <a class="main-header__btn-menu" href="#" title="Меню">Меню</a>
+      </div>
       
-      <div class="intro">
-        <div class="intro__text-sedona">
-          <img src="http://placehold.it/280x48" alt="SEDONA">
+      <div class="intro-form">
+        <div class="intro-form__text-sedona">
+          <img src="../img/intro-sedona.png" alt="SEDONA">
         </div>
       </div>
       
@@ -38,74 +42,89 @@
      
       <div class="form-review">
        
-        <p class="form-rewiew__title">Оставьте свой отзыв</p>
-        <p class="form-rewiew__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form action="/echo" method="post">
-          
-           <fieldset class="form-rewiew__personal-data">
-            <legend class="form-rewiew__title">Представьтесь, пожалуйста:</legend>
-            <label for="lastname"></label>
+        <div class="form-review-intro">
+          <p class="form-review-intro__title">Оставьте свой отзыв</p>
+          <p class="form-review-intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+        
+        <form class="form-review__form" action="/echo" method="post">
+
+           <fieldset class="form-review__personal-data">
+            <legend class="form-review__title">Представьтесь, пожалуйста:</legend>
+            <label for="lastname">Фамилия:<span>*</span></label>
             <input id="lastname" name="lastname" type="text" placeholder="Иванов" required>
-            <label for="firstname">Имя</label>
+            <label for="firstname">Имя:<span>*</span></label>
             <input id="firstname" name="firstname" type="text" placeholder="Пётр" required>
             <label for="middlename">Отчество</label>
             <input id="middlename" name="middlename" type="text" placeholder="Александрович">
           </fieldset>
           
-          <fieldset class="form-rewiew__impression-data">
-            <legend class="form-rewiew__title">Ваше общие впечатление:</legend>
+          <fieldset class="form-review__impression-data">
+            <legend class="form-review__title">Ваше общие впечатление:</legend>
             <input id="positive" name="impression" type="radio" checked>
             <label for="positive">Скорее положительное</label>
             <input id="negative" name="impression" type="radio">
-            <label for="negative">Скорее отрицательное</label>
+            <label for="negative" >Скорее отрицательное</label>
+           
           </fieldset>
           
-          <fieldset class="form-rewiew__trip-data">
-            <legend class="form-rewiew__title">Даты вашей поездки:</legend>
-            <label for="arrival">Дата приезда:</label>
+          <fieldset class="form-review__trip-data">
+            <legend class="form-review__title">Даты вашей поездки:</legend>
+            <label for="arrival">Дата приезда:<span>*</span></label>
             <input id="arrival" name="arrival" type="text" placeholder="4 июля 2015" required>
-            <label for="trip-duration">Длительность пребывания</label>
-            <a class="form-rewiew__btn-plus" href="#" title="Увеличить количество">+</a>
-            <input id="trip-duration" name="trip-duration" type="text" placeholder="14 дн" required>
-            <a class="form-rewiew__btn-minus" href="#" title="Уменшить количество">-</a>
-            <label for="depart">Дата отъезда</label>
+            
+              <label for="trip-duration">Длительность пребывания:<span>*</span></label>            
+              <div class="form-review__counter-trip">
+              <a class="form-review__btn-minus btn--grey " href="#" title="Увеличить количество">+</a>
+              <input id="trip-duration" name="trip-duration" type="text" placeholder="14 дн" required>
+              <a class="form-review__btn-plus btn--grey" href="#" title="Уменшить количество">-</a>
+            </div>
+            <label for="depart">Дата отъезда:<span>*</span></label>
             <input id="depart" name="depart" type="text" placeholder="28 июля 2015" required>
           </fieldset>
           
-          <fieldset class="form-rewiew__data-travelers">
-            <legend class="form-rewiew__title">Кол-во путешественников:</legend>
-            <div class="form-rewiew__number-travelers">
-              <label for="number">Количество путешественников</label>
-              <a class="form-rewiew__btn-plus" href="#" title="Увеличить количество">+</a>
+          <fieldset class="form-review__data-travelers">
+            <legend class="form-review__title">Кол-во путешественников:</legend>
+            <div class="form-review__number-travelers">
+              <label for="number">Количество путешественников:<span>*</span></label>
+              <a class="form-review__btn-minus btn--grey " href="#" title="Увеличить количество">+</a>
               <input id="number" name="number" type="text" placeholder="2 чел" required>
-              <a class="form-rewiew__btn-minus" href="#" title="Уменшить количество">-</a>
+              <a class="form-review__btn-plus btn--grey" href="#" title="Уменшить количество">-</a>
             </div>
-            <div class="form-rewiew__name-travelers">
-              <div class="form-rewiew__first-traveler">
-                <label for="number-traveler">№</label>
-                <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
-                <label for="lastname-traveler">Фамилия:</label>
-                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
-                <label for="firstname-traveler">Имя:</label>
-                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
-                <label for="middlename-traveler">Отчество:</label>
-                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
-              </div>
-              <div class="form-rewiew__second-traveler">
-                <label for="number-traveler">№</label>
-                <input id="number-traveler" name="number-traveler" type="text" placeholder="2">
-                <label for="lastname-traveler">Фамилия:</label>
-                <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
-                <label for="firstname-traveler">Имя:</label>
-                <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
-                <label for="middlename-traveler">Отчество:</label>
-                <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
+            <div class="form-review__name-travelers">
+              <div class="form-review__first-traveler">
+                <div class="row-left">
+                  <label for="number-traveler">№</label>
+                  <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
+                </div>
+                <div class="row-right">
+                  <label for="lastname-traveler">Фамилия:<span>*</span></label>
+                  <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
+                  <label for="firstname-traveler">Имя:<span>*</span></label>
+                  <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
+                  <label for="middlename-traveler">Отчество:</label>
+                  <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
+                                </div>
+                </div>
+              <div class="form-review__second-traveler">
+                <div class="row-left">
+                  <label for="number-traveler">№</label>
+                  <input id="number-traveler" name="number-traveler" type="text" placeholder="2">
+                </div>
+                <div class="row-right">
+                  <label for="lastname-traveler">Фамилия:<span>*</span></label>
+                  <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
+                  <label for="firstname-traveler">Имя:<span>*</span></label>
+                  <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
+                  <label for="middlename-traveler">Отчество:</label>
+                  <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
+                </div>
               </div>
             </div>
           </fieldset>
           
-          <fieldset class="form-rewiew__sights">
-            <legend class="form-rewiew__title">Посещенные достопримечательности</legend>
+          <fieldset class="form-review__sights">
+            <legend class="form-review__title">Посещенные достопримечательности</legend>
             <input id="sight-bridge" name="sight1" type="checkbox" checked>
             <label for="sight-bridge">Мост Дьявола</label>
             <input id="sight-park" name="sight2" type="checkbox">
@@ -116,47 +135,47 @@
             <label for="sight-rock">Красные скалы</label>
           </fieldset>
           
-          <fieldset class="form-rewiew__download-photos">
-            <legend class="form-rewiew__title">Загрузите фотографии:</legend>
-            <input class="form-rewiew__btn-select" type="button" value="Выбрать фотографии">
-            <div class="form-rewiew__photos-gallery">
+          <fieldset class="form-review__download-photos">
+            <legend class="form-review__title">Загрузите фотографии:</legend>
+            <input class="form-review__btn-select btn--grey" type="button" value="Выбрать фотографии">
+            <div class="form-review__photos-gallery">
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
               <figure>
-                <img class="form-rewiew__photo" src="http://placehold.it/70x70" alt="photo">
+                <img class="form-review__photo" src="../img/photo.jpg" alt="photo">
                 <figcaption>photo</figcaption>
-                <a class="form-rewiew__photo-close" href="#" title="close">x</a>
+                <a class="form-review__photo-close" href="#" title="close">x</a>
               </figure>
             </div>
-            <input id="send" name="send" type="submit" value="Отправить фотографии">
+            <input id="send" class="form-review__btn-send btn" name="send" type="submit" value="Отправить отзыв">
           </fieldset>
           
         </form>
@@ -167,17 +186,19 @@
     
     <footer>
      
-      <div class="footer-row">
-        <a href="#" class="visitsedona" title="Sedona">#visitsedona</a>
+      <div class="footer-visitsedona">
+        <a href="#" title="Sedona">#visitsedona</a>
       </div>
-      <div class="footer-row">
-        <a class="btn btn-social btn-tw" href="#" title="Twitter">Twitter</a>
-        <a class="btn btn-social btn-fb" href="#" title="Facebook">Facebook</a>
-        <a class="btn btn-social btn-ytb" href="#" title="Youtube">Youtube</a>
+      
+      <div class="footer-social">
+        <a class="footer-social__btn-tw btn fa fa-twitter" href="#" title="Twitter">Twitter</a>
+        <a class="footer-social__btn-fb btn" href="#" title="Facebook">Facebook</a>
+        <a class="footer-social__btn-ytb btn" href="#" title="Youtube">Youtube</a>
       </div>
-      <div class="footer-row copyright">
-        <p>Разработано</p>
-        <a class="copyright-icon" href="#" title="HTML Academy">HTML Academy</a>
+      
+      <div class="footer-copyright">
+        <p class="footer-copyright__title">Разработано</p>
+        <a class="footer-copyright__link" href="#" title="HTML Academy">HTML Academy</a>
       </div>
       
     </footer>
@@ -189,14 +210,16 @@
         <h3 class="popup__title">Что-то пошло не так!</h3>
       </header>
       <p class="popup__text">Проверьте поля, вделенные красным, скорее всего вы забыли их заполнить</p>
-      <a class="popup-btn" href="#" title="Окей">Ok</a>
+      <a class="popup__btn btn" href="#" title="Окей">Ok</a>
     </div>
     <div class="popup popup--request">
       <header>
         <h3 class="popup__title">Ваша отзыв отправлен!</h3>
       </header>
       <p class="popup__text">Спасибо за ваше участие, ваша отзыва уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <a class="popup-btn" href="#" title="Закрыть окно">Закрыть окно</a>
+      <div class="popup__footer">
+        <a class="popup__btn btn" href="#" title="Закрыть окно">Закрыть окно</a>
+      </div>
     </div>
     
 </body>
