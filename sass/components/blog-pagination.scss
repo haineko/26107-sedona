@@ -1,0 +1,26 @@
+.blog-pagination {
+  display: block;
+  margin-top: 45px;
+  padding: 0 20px 29px;
+  font-size: 0;
+  border-bottom: 2px solid #d6d6d6;
+  &__btn-page {
+    /*color: $color-text-light;
+    background-color: $bg-main-menu;
+    &:hover {
+      background-color: desaturate(darken($bg-main-menu, 8%), 5%);
+    }*/
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;;
+    padding: 16px 23px;
+    font-size: $font-size;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    &--current {
+      color: $color-text-dark;
+      background-color: darken(#eeeeee, 3%);
+    }
+  }
+}
