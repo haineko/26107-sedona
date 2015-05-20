@@ -1,11 +1,10 @@
-//@import "../variables.scss";
-
-@mixin middle-font($fz: 1.8rem, $lh: 4rem, $tt: uppercase, $fw: 700) {
+@mixin middle-font($fz: 1.8rem, $lh: 2.6rem, $tt: uppercase, $fw: 700){
   font-size: $fz;
   line-height: $lh;
   text-transform: $tt;
   font-weight: $fw;
 }
+
 @mixin big-font($fz: 2.1rem, $lh: 2.6rem, $tt: uppercase, $fw: 700) {
   font-size: $fz;
   line-height: $lh;
@@ -13,7 +12,15 @@
   font-weight: $fw;
 }
 
-html, body {
+@mixin large-font($fz: 3.0rem, $lh: 2.6rem, $tt: uppercase, $fw: 700) {
+  font-size: $fz;
+  line-height: $lh;
+  text-transform: $tt;
+  font-weight: $fw;
+}
+/* base */
+html,
+body {
   font-family: $font-family;
   font-size: $html-size-base;
   line-height: $line-height-base;
@@ -21,28 +28,66 @@ html, body {
   text-transform: uppercase;
   font-weight: 400;
 }
-body{
+
+body {
   font-size: $font-size;
+  a {
+    text-decoration: none;
+  }
 }
+
 .main-header {
   &__logo {
     color: $color-text-dark;
-    text-decoration: none;
+   /* text-decoration: none;*/
   }
   &__btn-menu {
     color: $color-text-dark;
-    text-decoration: none;
+    /*text-decoration: none;*/
   }
 }
+
 .main-menu {
   &__link {
     @include middle-font;
+    color: $color-text-dark;
+    /*text-decoration: none;*/
+  }
+}
+
+.intro-content {
+  &__title {
+    @include middle-font;
+  }
+}
+
+footer {
+  color: $color-text-dark;
+}
+
+.footer-visitsedona {
+  a {
+    @include big-font;
+    color: $color-text-dark;
+    /*text-decoration: none;*/
+  }
+}
+
+.footer-social {
+  a {
     color: $color-text-dark;
     text-decoration: none;
   }
 }
 
-.intro-content {
+.footer-copyright {
+  &__link {
+    color: $color-text-dark;
+    /*text-decoration: none;*/
+  }
+}
+/* index */
+.reasons-advantages {
   &__title {
     @include middle-font;
   }
@@ -54,18 +99,18 @@ body{
   }
 }
 
-.advantage {
-  &__title{
-    @include middle-font;
-  }
-}
-
-.reason-time {
+.advantages {
   &__title {
     @include middle-font;
   }
 }
-  
+
+.reason-item {
+  &__title {
+    @include middle-font;
+  }
+}
+
 .hotel-search {
   &__title {
     @include big-font;
@@ -73,35 +118,118 @@ body{
   &__link {
     @include big-font;
     color: $color-text-dark;
+    /*text-decoration: none;*/
+  }
+}
+
+/* blog */
+.blog {
+  &__title {
+    &:first-child {
+      @include large-font;
+    }
+  }
+}
+.post-item {
+  a {
+    text-decoration: none;
+    
+  }
+  &__title {
+    @include big-font;
+    a {
+    color: $color-text-dark;
+    }
+  }
+  &__intro {
+    line-height: 2.1rem;
+  }
+  &__time,
+  &__tag {
+      color: #999; 
+      font-style: italic;
+  }
+}
+.blog-pagination {
+  a {
+    @include big-font;
     text-decoration: none;
   }
 }
 
-.footer {
-  
-  color: $color-text-dark;  
-}
+/* post */
 
-.footer-visitsedona {
+.post {
+  &__intro-title {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+  &__intro {
+    font-size: 1.8rem;
+    text-transform: none;
+  }
+  &__title {
+    @include large-font($lh: 2.8rem);
+  }
+  &__text {
+    line-height: 2.4rem;
+  }
   a {
-    @include middle-font;
-    color: $color-text-dark;
+    color: #766357;
     text-decoration: none;
+  }
+  &__list {
+    font-weight: 700;
+  }
+  cite {
+    color: #766357;
+    font-style: italic;
+    text-transform: none;
   }
 }
 
-.footer-social {
-  a {
+.post-pagination {
+  @include big-font;
+}
+
+/* form */
+.form-review-intro {
+  &__title {
     @include middle-font;
-    color: $color-text-dark;
-    text-decoration: none;
   }
 }
-.footer-copyright {
-  a {
-    display: inline-block;
+.form-review{
+  input[type=text] {
     @include middle-font;
-    color: $color-text-dark;
-    text-decoration: none;
+    text-transform: none;
+    &::-webkit-input-placeholder { font-family: $font-family; color: $color-text-dark;} 
+    &::-moz-placeholder { font-family: $font-family; color: $color-text-dark; }
+    &:-moz-placeholder { font-family: $font-family; color: $color-text-dark; }
+    &:-ms-input-placeholder { font-family: $font-family; color: $color-text-dark; }
+  }
+  &__impression-data,
+  &__sights {
+    label {
+      @include middle-font;
+      text-transform: none;
+    }
+  }
+  &__title {
+    @include middle-font;
+  }
+  &__btn-select{
+    @include middle-font;
+  }
+  &__btn-send {
+    @include big-font;
+  }
+  input[type=submit], input[type=buttom] {
+    font-family: $font-family;
+  }
+}
+.popup {
+  &__title,
+  &__btn{
+    @include middle-font;
   }
 }
