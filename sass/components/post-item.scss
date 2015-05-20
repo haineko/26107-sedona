@@ -1,0 +1,51 @@
+.post-item {
+  margin: 33px 0;
+  padding-bottom: 31px;
+  border-bottom: 2px solid #d6d6d6;
+  &:first-child {
+   /* border-top: 2px solid #d6d6d6;*/
+  }
+  &:last-child {
+    margin: 33px 0  0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  &__title,
+  &__intro {
+    text-align: center;
+  }
+  &__intro {
+    margin-bottom: 18px;
+    padding: 0 2px;
+  }
+  &__time,
+  &__tag {
+    margin-right: 21px;
+    padding-left: 20px;
+    text-align: left;
+  }
+  &__time {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      width: 11px;
+      height: 11px;
+      background: url(../img/icon-date.png) no-repeat 50% 50%;
+    }
+  }
+  &__tag {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      width: 11px;
+      height: 11px;
+      background: url(../img/icon-tag.png) no-repeat 50% 50%;
+    }
+  }
+}
