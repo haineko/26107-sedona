@@ -1,0 +1,20 @@
+.post-pagination {
+  margin-bottom: 24px;
+  padding: 45px 20px 25px;
+  font-size: 0;
+  border-bottom: 2px solid #d6d6d6;
+  border-top: 2px solid #d6d6d6;
+  a {
+    display: inline-block;
+    @include big-font;
+    margin-bottom: 20px;
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+  &__btn-page{
+    &:last-child{
+      padding: 14px 55px;
+    }
+  }
+}
