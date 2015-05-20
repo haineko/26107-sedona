@@ -1,0 +1,19 @@
+input[type=text] {
+  margin-bottom: 16px;
+  padding: 11px 17px;
+  width: 280px;
+  color: $color-text-dark;
+  background: lighten($bg-reason, 2%);
+  border: 4px solid lighten($bg-reason, 2%);
+  &:hover {
+    background: darken($bg-reason, 3%);
+    border: 4px solid darken($bg-reason, 3%);
+  }
+  &:focus {
+    background: $bg-color;
+    border: 4px solid darken($bg-reason, 3%);
+  }
+  &:last-child {
+    margin-bottom: 3px;
+  }
+}
