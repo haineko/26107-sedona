@@ -1,6 +1,8 @@
 .intro {
-  padding: 47px 20px;
-  background: url(../img/bg-intro.jpg) no-repeat 50% 50%;
+  position: relative;
+  padding: 48px 20px;
+  background: url(../img/bg-intro.jpg) no-repeat 50% 26%;
+  background-size: cover;
   &__text-welcome{
       text-align: center;
     & img {
@@ -8,7 +10,7 @@
     }
   }
   &__text-sedona{
-    margin: 70px 0;
+    margin: 52px 0 58px;
       text-align: center;
     & img {
       width: 280px;
@@ -20,4 +22,68 @@
       width: 197px;
     }
   }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 34px 210px;
+    border-color: transparent transparent $bg-color transparent;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 34px 0 0 210px;
+    border-color: transparent transparent transparent $bg-color;
+  }
+}
+.intro-form,
+.intro-blog,
+.intro-post {
+    position: relative;
+    margin-bottom: 67px;
+    padding: 48px 20px 80px;
+    background: url(../img/bg-intro.jpg) no-repeat 50% 26%;
+    background-size: cover;
+    &__text-sedona{
+      text-align: center;
+      & img {
+        width: 174px;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 34px 210px;
+      border-color: transparent transparent $bg-color transparent;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 34px 0 0 210px;
+      border-color: transparent transparent transparent $bg-color;
+    }
+  
+}
+.intro-blog,
+.intro-post {
+  margin-bottom: 40px;
 }
