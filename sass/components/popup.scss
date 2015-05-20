@@ -1,0 +1,33 @@
+.popup {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 280px;
+  text-align: center;
+  background-color: $bg-color;
+  &__footer {
+    padding: 20px;
+    background-color: lighten(#eeeeee, 2%);
+  }
+  &--failure {
+    padding: 34px 50px;
+    a {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0;
+      width: 180px;
+      height: 58px;
+    }
+  }
+  &--request {
+    /*padding: 34px 20px;*/
+    a {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0;
+      width: 280px;
+      height: 58px;
+    }
+  }
+}
