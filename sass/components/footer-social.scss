@@ -1,0 +1,21 @@
+.footer-social {
+  margin-bottom: 29px;
+  font-size: 0;
+  &__btn-tw,
+  &__btn-fb,
+  &__btn-ytb{
+    display: inline-block;
+    margin-right: 6px;
+    padding: 24px 23px;
+    @include invisible-text; 
+  }
+  &__btn-tw{
+    background: #81b3d2 url(../img/icon-tw.png) no-repeat 50% 50%;
+  }
+  &__btn-fb{
+    background: #81b3d2 url(../img/icon-fb.png) no-repeat 50% 50%;
+  }
+  &__btn-ytb{
+    background: #81b3d2 url(../img/icon-ytb.png) no-repeat 50% 50%;
+  }
+}
