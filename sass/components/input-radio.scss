@@ -1,0 +1,21 @@
+input[type=radio] {
+    display: none;
+    &:checked {
+      &+ label {
+        color: limegreen;
+        &:before {
+          background: url(../img/icon-radio-checked.png) no-repeat 50% 50%;
+        }
+        &:hover {
+          &:before {
+            background-image: url(../img/icon-radio-checked-hover.png);
+          }
+        }
+        &:disabled {
+          &:before {
+            background-image: url(../img/icon-radio-checked-active.png);
+          }
+        }
+      }
+    }
+  }
