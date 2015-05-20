@@ -3,30 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sedona-Блог</title>
+  <title>Sedona-Блог</title><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" >
 </head>
 
 <body>
   <header class="main-header">
    
-    <div class="main-header__inner">
-      <a class="main-header-logo" href="index.html" title="Главная">Sedona</a>
-      <a class="main-menu-btn" href="#" title="Меню">Меню</a>
-    </div>
-      
     <nav class="main-menu">
-      <ul class="main-menu__list">
-        <li class="main-menu__item"><a href="#" title="Карта штата">Карта штата</a></li>
-        <li class="main-menu__item"><a href="#" title="Информация">Информация</a></li>
-        <li class="main-menu__item"><a href="#" title="Фото и видео">Фото и видео</a></li>
-        <li class="main-menu__item"><a href="#" title="Гостиницы">Гостиницы</a></li>
-      </ul>
-      <a class="main-menu__toggle" href="#" title="Закрыть меню"></a>
-    </nav>
+        <ul class="main-menu__list">
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Карта штата">Карта штата</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Информация">Информация</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Гостиницы">Гостиницы</a></li>
+        </ul>
+        <a class="main-menu__toggle" href="#" title="Закрыть меню">x</a>
+      </nav>
+     
+      <div class="main-header__inner">
+        <a class="main-header__logo" href="index.html" title="Главная">Sedona</a>
+        <a class="main-header__btn-menu" href="#" title="Меню">Меню</a>
+      </div>
     
-    <div class="intro">
-      <div class="intro__text-sedona">
-        <img src="http://placehold.it/280x48" alt="SEDONA">
+    <div class="intro-blog">
+      <div class="intro-blog__text-sedona">
+          <img src="../img/intro-sedona.png" alt="SEDONA">
       </div>
     </div>
     
@@ -36,16 +38,16 @@
    
     <article class="blog">
      
-      <section class="blog-intro">
-        <header class="blog-intro__title"><h2>Блог шерифа</h2></header>
-        <p class="blog-intro__text">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах</p>
+      <section class="blog__intro">
+        <header><h2 class="blog__title">Блог шерифа</h2></header>
+        <p class="blog__text">Седона удивительный город! Горы здесь красного цвета, </br> а местный шериф ведет блог и общается на форумах</p>
       </section>
       
-      <section class="post">
+      <section class="blog__posts">
        
         <article class="post-item">
-          <header  class="post-item__title">
-            <h3>Внимание!Сбежала моя домашняя анаконда</h3>
+          <header  >
+           <h3 class="post-item__title"><a href="#" title="Внимание!">Внимание!Сбежала моя домашняя анаконда</a></h3>
           </header>
           <section class="post-item__intro">Жители Седоны и гости города, будьте бдительны - сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</section>
           <a class="post-item__time" href="#" title="Позавчера">
@@ -54,38 +56,38 @@
           <a class="post-item__tag" href="#" title="Происшествия">Происшествия</a>
         </article>
         <article class="post-item">
-          <header class="post-item__title">
-            <h3>Принят антитабачный закон штата</h3>
+          <header>
+            <h3 class="post-item__title">Принят антитабачный закон штата</h3>
           </header>
-          <section class="post-item__intro">Уважаемые туристы, пожалуйста не забывайте, что курение сигарет исигар в общественных местах города Седона категорически запрещено</section>
+          <section class="post-item__intro">Уважаемые туристы, пожалуйста не забывайте, что курение сигарет и сигар в общественных местах города Седона категорически запрещено</section>
           <a class="post-item__time" href="#" title="2 дня назад">
             <time datetime="2015-01-05">2 дня назад</time>
           </a>
           <a class="post-item__tag" href="#" title="Законы">законы</a>
         </article>
         <article class="post-item">
-          <header class="post-item__title">
-            <h3>Маньяк задержан, дает показания</h3>
+          <header>
+            <h3 class="post-item__title">Маньяк задержан, дает показания</h3>
           </header>
-          <section class="post-item__intro">Жители Седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державший в страхе весь город. Пострадавшим обращаться в 911.</section>
+          <section class="post-item__intro">Жители Седоны могут спать спокойно. Задержан </br> маньяк-эксгибиционист, державший в страхе весь город. Пострадавшим обращаться в 911.</section>
           <a class="post-item__time" href="#" title="3 дня назад">
             <time datetime="2015-30-04">3 дня назад</time>
           </a>
           <a class="post-item__tag" href="#" title="Происшествия">Происшествия</a>
         </article>
         <article class="post-item">
-          <header class="post-item__title">
-            <h3>Водопад закрыт на реконструкцию</h3>
+          <header>
+            <h3 class="post-item__title">Водопад закрыт на реконструкцию</h3>
           </header>
-          <section class="post-item__intro">Всем, кто планировал посещать водопад на выходных придется изменить планы, на нем ведутся ремонтные работы по улучшению подачи воды.</section>
+          <section class="post-item__intro">Всем, кто планировал посещать водопад на этих выходных придется изменить планы, на нем ведутся ремонтные работы по улучшению подачи воды.</section>
           <a class="post-item__time" href="#" title="Неделю назад">
             <time datetime="2015-27-04">Неделю назад</time>
           </a>
           <a class="post-item__tag" href="#" title="Интересное">Интересное</a>
         </article>
         <article class="post-item">
-          <header class="post-item__title">
-            <h3>Открылся новый стейкхаус "Горный бык"</h3>
+          <header>
+            <h3 class="post-item__title">Открылся новый стейкхаус "Горный бык"</h3>
           </header>
           <section class="post-item__intro">Лучшие стейки в Аризоне! Приемлемые цены и только самые лучшие продукты. Заходите попробовать! Действует акция: Съешь два и получи третий!</section>
           <a class="post-item__time" href="#" title="Месяц назад">
@@ -94,8 +96,8 @@
           <a class="post-item__tag" href="#" title="Еда">Еда</a>
         </article>
         <article class="post-item">
-          <header class="post-item__title">
-            <h3>Прогноз погоды на ближайшие выходные</h3>
+          <header>
+            <h3 class="post-item__title"> Прогноз погоды на ближайшие выходные</h3>
           </header>
           <section class="post-item__intro">Синоптики обещаеют, что будет ясно, безветрено и около 90 по фаренгейту. Как в пустыне! Проверим их слова уже через пару дней.</section>
           <a class="post-item__time" href="#" title="Год назад">
@@ -108,10 +110,10 @@
       
       <div class="blog-pagination">
         <a class="blog-pagination__btn-page blog-pagination__btn-page--current" href="#" title="Страница 1">1</a>
-        <a class="blog-pagination__btn-page" href="#" title="Страница 2">2</a>
-        <a class="blog-pagination__btn-page" href="#" title="Страница 3">3</a>
-        <a class="blog-pagination__btn-page" href="#" title="Страница 4">4</a>
-        <a class="blog-pagination__btn-page" href="#" title="Страница 5">5</a>
+        <a class="blog-pagination__btn-page btn" href="#" title="Страница 2">2</a>
+        <a class="blog-pagination__btn-page btn" href="#" title="Страница 3">3</a>
+        <a class="blog-pagination__btn-page btn" href="#" title="Страница 4">4</a>
+        <a class="blog-pagination__btn-page btn" href="#" title="Страница 5">5</a>
       </div>
       
     </article>
@@ -121,17 +123,17 @@
   <footer>
    
     <div class="footer-visitsedona">
-      <a href="#" title="Sedona">#visitsedona</a>
-    </div>
-    <div class="footer-social">
-      <a class="footer-social__btn-vk" href="#" title="Twitter">Twitter</a>
-      <a class="footer-social__btn-fb" href="#" title="Facebook">Facebook</a>
-      <a class="footer-social__btn-ytb" href="#" title="Youtube">Youtube</a>
-    </div>
-    <div class="footer-copyright">
-      <p class="footer-copyright__title">Разработано</p>
-      <a class="footer-copyright__icon" href="#" title="HTML Academy">HTML Academy</a>
-    </div>
+        <a href="#" title="Sedona">#visitsedona</a>
+      </div>
+      <div class="footer-social">
+        <a class="footer-social__btn-tw btn" href="#" title="Twitter">Twitter</a>
+        <a class="footer-social__btn-fb btn" href="#" title="Facebook">Facebook</a>
+        <a class="footer-social__btn-ytb btn" href="#" title="Youtube">Youtube</a>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-copyright__title">Разработано</p>
+        <a class="footer-copyright__link" href="#" title="HTML Academy">HTML Academy</a>
+      </div>
     
   </footer>
   
