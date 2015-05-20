@@ -7,9 +7,12 @@
   }
   &__link {
     display: inline-block;
-    margin:  10px 0;
-    padding: 18px 46px;
+    margin:  10px 0 20px;
+    padding: 17px 46px;
     color: $color-text-light;
     background-color: $bg-main-menu;
+  }
+  &__text {
+    margin-bottom: 20px;
   }
 }
