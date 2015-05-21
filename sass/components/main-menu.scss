@@ -9,8 +9,8 @@
     list-style: none;
   }
   &__item {
-    border-bottom: 1px solid lighten($bg-main-menu, 8%);
-    border-top: 1px solid desaturate(darken($bg-main-menu, 13%), 20%);
+    border-bottom: 1px solid desaturate(darken($bg-main-menu, 13%), 20%);
+    border-top: 1px solid lighten($bg-main-menu, 8%);
     &:first-child {
       border-top: none;
     }
@@ -21,7 +21,7 @@
   }
   &__link {
     display: block;
-    padding: 7px 0;
+    padding: 14px 0;
     color: $color-text-light;
     text-align: center;
   }
