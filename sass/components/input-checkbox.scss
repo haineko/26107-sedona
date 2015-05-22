@@ -1,4 +1,4 @@
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
   &+ label {
     position: relative;
@@ -29,13 +29,13 @@ input[type=checkbox] {
       display: none;
       width: 22px;
       height: 15px;
-      border-left: 5px solid darken(#eeeeee, 73%);
-      border-bottom: 5px solid darken(#eeeeee, 73%);
+      border-left: 5px solid darken($bg-reason, 73%);
+      border-bottom: 5px solid darken($bg-reasone, 73%);
       transform: rotate(-45deg);
     }
     &:hover {
       &:before {
-        background-color: darken(#eeeeee, 3%);
+        background-color: darken($bg-reasone, 3%);
       }
     }
   }
@@ -59,7 +59,7 @@ input[type=checkbox] {
     &:disabled {
       &+ label {
         &:before {
-          background-color: darken(#eeeeee, 9%);
+          background-color: darken($bg-reason, 9%);
         }
         &:after {
           display: block;
@@ -70,7 +70,7 @@ input[type=checkbox] {
   &:disabled {
     &+ label {
       &:before {
-        background-color: darken(#eeeeee, 9%);
+        background-color: darken($bg-reason, 9%);
       }
     }
   }

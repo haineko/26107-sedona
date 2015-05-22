@@ -60,7 +60,7 @@
         padding-left: 21px;
         text-align: left;
     }
-    input[type=text] {
+    input[type="text"] {
       margin-bottom: 21px;
     }
   }
@@ -95,7 +95,7 @@
   &__counter-trip {
     margin-bottom: 21px;
     font-size: 0;
-    input[type=text] {
+    input[type="text"] {
       display: inline-block;
       margin: 0 6px;
       width: 144px;
@@ -113,7 +113,7 @@
       font-size: 1.4rem;;
       text-align: left;
     }
-    input[type=text] {
+    input[type="text"] {
       display: inline-block;
       margin: 0 6px;
       width: 144px;
@@ -136,7 +136,7 @@
       label {
         margin-bottom: 8px;
       }
-      input[type=text] {
+      input[type="text"] {
         padding: 0;
         width: 61px;
         height: 56px;
@@ -150,7 +150,7 @@
         margin-bottom: 8px;
         padding-left: 20px;
       }
-      input[type=text] {
+      input[type="text"] {
         width: 213px;
         height: 56px;
       }
@@ -160,39 +160,6 @@
     }
   }
   
-  /*&__sights {
-    label {
-      position: relative;
-      display: block;
-      margin-bottom: 35px;
-      padding-top: 7px;
-      padding-left: 78px; 
-      padding-bottom: 12px;
-      &:last-child {
-        margin-bottom: 8px;
-      }
-      &:before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 0;
-        display: block;
-        width: 56px;
-        height: 56px;
-        background: url(../img/icon-checkbox.png) no-repeat 50% 50%;
-      }
-      &:hover {
-        &:before {
-          background-image: url(../img/icon-checkbox-hover.png);
-        }
-      }
-      &:disabled {
-        &:before {
-          background-image: url(../img/icon-checkbox-disabled.png);
-        }
-      }
-    }
-  }*/
   &__btn-select,
   &__btn-send {
     margin-top: -8px;

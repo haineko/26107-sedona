@@ -1,4 +1,4 @@
-input[type=radio] {
+input[type="radio"] {
   display: none;
   &+ label {
     position: relative;
@@ -24,27 +24,27 @@ input[type=radio] {
     }
     &:hover {
       &:before {
-        border: 17px solid darken(#eeeeee, 3%);
-        background-color: darken(#eeeeee, 3%);
+        border: 17px solid darken($bg-reason, 3%);
+        background-color: darken($bg-reason, 3%);
       }
     }
   }
   &:checked {
     &+ label {
       &:before {
-        background-color:darken(#eeeeee, 73%);
+        background-color:darken($bg-reason, 73%);
       }
       &:hover {
         &:before {
-          background-color:darken(#eeeeee, 73%);
+          background-color:darken($bg-reason, 73%);
         }
       }
     }
     &:disabled {
       &+ label {
         &:before {
-          border: 17px solid darken(#eeeeee, 9%);
-          background-color: darken(#eeeeee, 29%);
+          border: 17px solid darken($bg-reason, 9%);
+          background-color: darken($bg-reason, 29%);
         }
       }
     }
@@ -52,8 +52,8 @@ input[type=radio] {
   &:disabled {
     &+ label {
       &:before {
-        border: 17px solid darken(#eeeeee, 9%);
-        background-color: darken(#eeeeee, 9%);
+        border: 17px solid darken($bg-reason, 9%);
+        background-color: darken($bg-reason, 9%);
       }
     }
   }

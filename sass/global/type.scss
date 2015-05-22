@@ -199,7 +199,7 @@ footer {
   }
 }
 .form-review{
-  input[type=text] {
+  input[type="text"] {
     @include middle-font;
     text-transform: none;
     &::-webkit-input-placeholder { font-family: $font-family; color: $color-text-dark;} 
@@ -223,7 +223,7 @@ footer {
   &__btn-send {
     @include big-font;
   }
-  input[type=submit], input[type=buttom] {
+  input[type="submit"], input[type="buttom"] {
     font-family: $font-family;
   }
 }
