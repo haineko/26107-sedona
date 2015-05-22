@@ -229,16 +229,43 @@
     height: 70px;
   }
   &__photo-close {
-    @include invisible-text;
     position: absolute;
     top: -15px;
     left: 20px;
     width: 30px;
     height: 30px;
+    @include invisible-text;
     border-radius: 50%;
-    background: lighten(#eeeeee, 2%) url(../img/icon-photo-cross.png) no-repeat 50% 50%; 
+    background-color: lighten($bg-reason, 2%);
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 7px;
+      width: 16px;
+      height: 2px;
+      background-color: darken($bg-reason, 21%);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
     &:hover {
-      background-color: darken(#eeeeee, 3%);
+      background-color: darken($bg-reason, 3%);
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 38%);
+      }
+    }
+    &:active {
+      background-color: darken($bg-reason, 9%);
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 16%);
+      }
     }
   }
 }
