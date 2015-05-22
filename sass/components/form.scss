@@ -34,7 +34,7 @@
     
     span {
       margin-left: 4px;
-      color: red;
+      color: #ff3333;
     }
     a {
        @include invisible-text;
@@ -48,40 +48,6 @@
         margin-bottom: 8px;
         padding-left: 21px;
         text-align: left;
-    }
-  }
-  
-  &__impression-data {
-    label {
-      position: relative;
-      display: block;
-      margin-bottom: 19px;
-      padding-top: 12px;
-      padding-left: 78px; 
-      padding-bottom: 12px;
-      &:last-child {
-        margin-bottom: 6px;
-      }
-      &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 0;
-        display: block;
-        width: 56px;
-        height: 56px;
-        background: url(../img/icon-radio.png) no-repeat 50% 50%;
-      }
-      &:hover {
-        &:before {
-          background-image: url(../img/icon-radio-hover.png);
-        }
-      }
-      &:disabled {
-        &:before {
-          background-image: url(../img/icon-radio-disabled.png);
-        }
-      }
     }
   }
   

@@ -1,21 +1,60 @@
 input[type=radio] {
-    display: none;
-    &:checked {
-      &+ label {
-        color: limegreen;
+  display: none;
+  &+ label {
+    position: relative;
+    display: block;
+    margin-bottom: 19px;
+    padding-top: 12px;
+    padding-left: 78px; 
+    padding-bottom: 12px;
+    &:last-child {
+      margin-bottom: 6px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      display: block;
+      width: 56px;
+      height: 56px;
+      border: 17px solid lighten($bg-reason, 2%);
+      border-radius: 50%;
+      background-color: lighten($bg-reason, 2%);
+    }
+    &:hover {
+      &:before {
+        border: 17px solid darken(#eeeeee, 3%);
+        background-color: darken(#eeeeee, 3%);
+      }
+    }
+  }
+  &:checked {
+    &+ label {
+      &:before {
+        background-color:darken(#eeeeee, 73%);
+      }
+      &:hover {
         &:before {
-          background: url(../img/icon-radio-checked.png) no-repeat 50% 50%;
+          background-color:darken(#eeeeee, 73%);
         }
-        &:hover {
-          &:before {
-            background-image: url(../img/icon-radio-checked-hover.png);
-          }
-        }
-        &:disabled {
-          &:before {
-            background-image: url(../img/icon-radio-checked-active.png);
-          }
+      }
+    }
+    &:disabled {
+      &+ label {
+        &:before {
+          border: 17px solid darken(#eeeeee, 9%);
+          background-color: darken(#eeeeee, 29%);
         }
       }
     }
   }
+  &:disabled {
+    &+ label {
+      &:before {
+        border: 17px solid darken(#eeeeee, 9%);
+        background-color: darken(#eeeeee, 9%);
+      }
+    }
+  }
+}
