@@ -44,8 +44,19 @@
       top: 2px;
       left: 4px;
       width: 11px;
-      height: 11px;
-      background: url(../img/icon-tag.png) no-repeat 50% 50%;
+      height: 9px;
+      background-color: $bg-main-menu;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 4px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5.5px 2px 5.5px;
+      border-color: transparent transparent #fff transparent;
     }
   }
 }
