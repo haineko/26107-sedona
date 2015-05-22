@@ -13,25 +13,13 @@
   &--grey{
     color: darken(#eeeeee, 21%); 
     background-color: lighten($bg-reason, 2%);
-    
-    /*a{
-      opacity: 0.3;
-    }*/
     &:hover {
       color: darken(#eeeeee, 45%);
       background-color: darken($bg-reason, 3%);
-      
-     /* & a {
-        
-      }*/
     }
     &:active{
       color: darken(#eeeeee, 29%);
       background-color: darken($bg-reason, 9%);
-     
-      /*& a {
-        
-      }*/
     }
   }
   &--post {
