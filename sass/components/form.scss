@@ -74,21 +74,56 @@
     cursor: pointer;
   }
   &__btn-plus {
-    background: lighten($bg-reason, 2%) url(../img/icon-plus.png) no-repeat 50% 50%;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 22px;
+      width: 20px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: darken($bg-reason, 21%);
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
     &:hover {
-      background: darken($bg-reason, 3%) url(../img/icon-plus-hover.png) no-repeat 50% 50%;
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 38%);
+      }
     }
     &:active {
-      background: darken($bg-reason, 9%) url(../img/icon-plus-active.png) no-repeat 50% 50%;
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 16%);
+      }
     }
   }
+  
   &__btn-minus {
-    background: lighten($bg-reason, 2%) url(../img/icon-minus.png) no-repeat 50% 50%;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 22px;
+      width: 20px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: darken($bg-reason, 21%);
+    }
     &:hover {
-      background: darken($bg-reason, 3%) url(../img/icon-minus-hover.png) no-repeat 50% 50%;
+      &:before {
+        background-color: darken($bg-reason, 38%);
+      }
     }
     &:active {
-      background: darken($bg-reason, 9%) url(../img/icon-minus-active.png) no-repeat 50% 50%;
+      &:before {
+        background-color: darken($bg-reason, 16%);
+      }
     }
   }
   
