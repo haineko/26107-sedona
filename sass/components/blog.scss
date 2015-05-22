@@ -1,22 +1,23 @@
 .blog {
+  
   &__intro {
     margin-bottom: 30px;
     text-align: center;
-    /*&+ a {
-      text-align: center;    
-    }*/
     &--post {
       margin-bottom: 18px;
     }
   }
+
   &__title {
     margin: 0;
     margin-bottom: 30px;
   }
+  
   &__text {
     padding: 0 20px;
     line-height: 2.4rem;
   }
+  
   &__posts {
     padding: 0 20px 29px;
     border-top: 2px solid #d6d6d6;
