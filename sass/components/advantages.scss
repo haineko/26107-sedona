@@ -7,6 +7,7 @@
     margin-bottom: -12px;
     padding-left: 49px;
     padding-right: 20px;
+    width: 100%;
     line-height: 2.1rem;
     &:before {
       content: "";
@@ -20,12 +21,12 @@
     }
     &:nth-child(2) {
       &:before {
-       background-image: url(../img/icon-souvenir.png);
+       background-image: url(../img/icon-food.png);
       }
     }
     &:nth-child(3) {
       &:before{
-       background-image: url(../img/icon-food.png);
+       background-image: url(../img/icon-souvenir.png);
       }
     }
   }
@@ -35,5 +36,42 @@
   }
   &__text {
     margin: 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .advantages {
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    &__item {
+      padding: 150px 5% 0;
+      display: inline-block;
+      width: 33.3%;
+      font-size: 1.4rem;
+      vertical-align: top;
+      &:before {
+        top: -80px;
+        left: 43%;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .advantages {
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    &__item {
+      padding: 150px 5% 0;
+      display: inline-block;
+      width: 33.3%;
+      font-size: 1.4rem;
+      vertical-align: top;
+      &:before {
+        top: -80px;
+        left: 43%;
+      }
+    }
   }
 }
