@@ -1,40 +1,3 @@
-@mixin clearfix {
-  content:'';
-  display:table;
-  clear:both;
-}
-
-@mixin left {
-  float: left;
-}
-
-@mixin right {
-  float: right;
-}
-
-@mixin box-sizing( $bz: border-box) {
-  -ms-box-sizing: $bz;
-  -moz-box-sizing: $bz;
-  -webkit-box-sizing: $bz;
-  box-sizing: $bz;
-}
-
-* {
-  @include box-sizing;
-  &:before {
-    @include box-sizing;
-  }
-  &:after {
-    @include box-sizing;  
-  }
-}
-@mixin invisible-text {
-  font-size: 0;
-  line-height: 0;
-  text-shadow: none;
-  color: transparent;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -58,6 +21,4 @@ html, body {
     width: 1200px;
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2); 
   } 
-  // Или добавить wrapper и прописывать эти свойства ему? Как логичнее и правильнее?
 }
-

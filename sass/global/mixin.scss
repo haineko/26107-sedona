@@ -1,0 +1,37 @@
+@mixin clearfix {
+  content:'';
+  display:table;
+  clear:both;
+}
+
+@mixin left {
+  float: left;
+}
+
+@mixin right {
+  float: right;
+}
+
+@mixin box-sizing( $bz: border-box) {
+  -ms-box-sizing: $bz;
+  -moz-box-sizing: $bz;
+  -webkit-box-sizing: $bz;
+  box-sizing: $bz;
+}
+
+* {
+  @include box-sizing;
+  &:before {
+    @include box-sizing;
+  }
+  &:after {
+    @include box-sizing;  
+  }
+}
+
+@mixin invisible-text {
+  font-size: 0;
+  line-height: 0;
+  text-shadow: none;
+  color: transparent;
+}
