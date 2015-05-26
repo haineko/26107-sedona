@@ -233,3 +233,18 @@ footer {
     @include middle-font;
   }
 }
+
+@include tablet {
+  .main-menu {
+    &__link {
+      font-size: 1.4rem;
+    }
+  }
+}
+@include desktop {
+  .main-menu {
+    &__link {
+     font-size: 1.4rem;
+    }
+  }
+}
