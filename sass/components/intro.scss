@@ -87,3 +87,35 @@
 .intro-post {
   margin-bottom: 40px;
 }
+
+@include tablet {
+  .intro {
+    padding: 76px 20px;
+    &__text-welcome{
+      text-align: center;
+      & img {
+        width: 255px;
+      }
+    }
+    &__text-sedona{
+      margin: 44px 0 47px;
+        text-align: center;
+      & img {
+        width: 458px;
+      }
+    }
+    &__text-slogan{
+        text-align: center;
+      & img {
+        width: 295px;
+      }
+    }
+    &:before{
+      border-width: 40px 0 0 384px;
+    }
+    &:after {
+      border-width: 0 0 40px 384px;
+    }
+  }
+}
+@include desktop {}
