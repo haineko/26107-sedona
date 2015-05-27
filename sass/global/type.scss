@@ -240,7 +240,34 @@ footer {
       font-size: 1.4rem;
     }
   }
+  .reasons-advantages,
+  .reason-description,
+  .advantages,
+  .reason-item,
+  .form-review {
+    &__title {
+      @include big-font;
+    }
+  }
+  .hotel-search,
+  .form-review-intro {
+    &__title {
+      @include large-font;
+    }
+  }
+  
+//  .reason-description {
+//    &__title {
+//      @include big-font;
+//    }
+//  }
+//  .advantages {
+//  &__title {
+//    @include big-font;
+//  }
+//  }
 }
+
 @include desktop {
   .main-menu {
     &__link {
