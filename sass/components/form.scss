@@ -339,6 +339,26 @@
         margin: 42px 0 51px;
       }
     }
+    &__trip-data {
+      .form-wrapper{
+        margin: 29px 0 0;
+      }
+    }
+    &__counter-trip {
+      input[type="text"]{
+        width: 49%;
+        margin: 0;
+      }
+      a {
+        width: 61px;
+      }
+    }
+    &__number-travelers {
+      text-align: center;
+      label{
+        text-align: center;
+      }
+    }
     
   }
 }
