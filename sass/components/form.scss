@@ -312,6 +312,24 @@
         @include clearfix;
       }
     }
+    &__col-2 {
+      @include left;
+      width: 42%;
+      margin-right: 8%;
+      &:last-child {
+        margin-right: 0;
+        float: right;
+      }
+    }
+    &__col-3 {
+      @include left;
+      width: 28%;
+      margin-right: 8%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
   }
 }
 //@include desktop {
