@@ -9,10 +9,52 @@
     display: inline-block;
     margin:  10px 0 20px;
     padding: 17px 46px;
+    
     color: $color-text-light;
     background-color: $bg-main-menu;
   }
   &__text {
     margin-bottom: 20px;
+  }
+  &__map {
+    height: 350px;
+  }
+}
+  
+@media (min-width: 480px) and (max-width: 1200px) {
+  .hotel-search {
+    margin: 30px auto 0;
+    &__content{
+      margin-bottom: 56px;
+      padding: 0;
+      padding-top: 26px;
+      width: 458px;    
+    }
+    &__title {
+      margin: 0;
+    }
+    &__text {
+      margin: 30px 0 37px;
+      padding: 0 30px;
+    }
+    &__link {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .hotel-search {
+    &__content{
+      margin: 30px auto;
+      padding: 0;
+      width: 458px;    
+    }
+    &__text {
+      padding: 0 30px;
+    }
+    &__link {
+      width: 100%;
+    }
   }
 }
