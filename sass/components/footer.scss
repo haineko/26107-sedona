@@ -1,5 +1,16 @@
 footer {
   padding: 26px;
+  font-size: 0;
   text-align: center;
   background-color: $bg-footer;
+}
+@media (min-width: 480px) and (max-width: 1200px) {
+  footer {
+   padding: 36px 0;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+   padding: 36px 0;
+  }
 }
