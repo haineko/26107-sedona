@@ -18,3 +18,39 @@
   }
 }
 
+@include tablet {
+  .reason-item {
+    padding: 29px 5% 44px;
+    display: inline-block;
+    width: 33.3%;
+    font-size: 1.4rem;
+    vertical-align: top;
+    border: none;
+    &:before {
+      top: -80px;
+      left: 43%;
+    }
+    &__title {
+      padding: 0 5%;
+      margin-top: 17px;      
+    }
+    &__number {
+      margin: 0; 
+      margin-bottom: 19px;
+    }
+  }
+}
+@include desktop {
+  .reason-item {
+    padding: 30px 5%;
+    display: inline-block;
+    width: 33.3%;
+    font-size: 1.4rem;
+    vertical-align: top;
+    border: none;
+    &:before {
+      top: -80px;
+      left: 43%;
+    }
+  }
+}
