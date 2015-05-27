@@ -25,3 +25,32 @@
   }
   
 }
+@include tablet {
+  .blog {
+    &__intro {
+      padding: 23px 0 36px;
+      margin: 0;
+    }
+    &__posts {
+      border: none;
+      position: relative;
+      font-size: 0;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background-color: #d6d6d6;
+      }
+    }
+  }
+}
+@include desktop {
+  .blog {
+    &__posts {
+      border: none;
+    }
+  }
+}

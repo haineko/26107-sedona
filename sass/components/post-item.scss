@@ -67,3 +67,24 @@
     }
   }
 }
+
+@include tablet {
+  .post-item {
+    display: inline-block;
+    margin: 0 3%;
+    width: 44%;
+    font-size: 1.4rem;
+    vertical-align: top;
+    border-top: 2px solid #d6d6d6;
+    border-bottom: none;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+@include desktop {
+  .post-item {
+    display: inline-block;
+    
+  }
+}
