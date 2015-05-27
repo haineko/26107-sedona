@@ -269,3 +269,51 @@
     }
   }
 }
+
+@include tablet {
+  .form-review-intro {
+    margin: 0 20% 40px;
+    padding-top: 7px;
+    border-bottom: none;
+    &__title {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+  }
+  .form-review {
+    fieldset {      
+      position: relative;
+      margin: 0 7%;
+      padding: 0;
+      border-bottom: none;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        
+        width: 19%;
+        height: 1px;
+        background-color: darken($bg-reason, 3%);;
+      }
+      &:before{
+        left: 0;
+      }
+      &:after{
+        right: 0;
+      }
+      legend {
+        margin: 0;
+        padding: 0 45px;
+      }
+    }
+    .form-wrapper {
+      &:after {
+        @include clearfix;
+      }
+    }
+  }
+}
+//@include desktop {
+//  
+//}
