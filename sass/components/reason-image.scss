@@ -1,13 +1,24 @@
-.reason-image{  
-  width: 320px;
-  &__title {
-    margin: 0;
+.reason-image {  
+  height: 256px;
+  &--town {
+    background: url(../img/reason-image1.jpg) no-repeat 50% 20%;
+    background-size: cover;
   }
-  img {
-    display: block;
-    max-width: 100%;
-   /* width: 320px;*/
-    height: 256px;
+  &--bridge {
+    background: url(../img/reason-image2.jpg) no-repeat 50% 20%;
+    background-size: cover;
   }
 }
 
+@include tablet {
+  .reason-image {
+    @include right;
+    width: 67%;
+  }
+}
+@include desktop {
+  .reason-image {
+    @include right;
+    width: 67%;
+  }
+}

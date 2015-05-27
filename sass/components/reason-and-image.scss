@@ -1,27 +1,15 @@
 .reason-and-image {
-  position: relative;
-  &:first-child{
-    &:after {
-      content: "";
-      position: absolute;
-      top: -16px;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 0 16px 160px;
-      border-color: transparent transparent $bg-main-menu transparent;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      top: -16px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 16px 0 0 160px;
-      border-color: transparent transparent transparent $bg-main-menu;
-    }
+  
+  background-color: $bg-main-menu;
+  &:after {
+    @include clearfix;
   }
+}
+
+
+@include tablet {
+  height: 256px;
+}
+@include desktop {
+  height: 256px;
 }

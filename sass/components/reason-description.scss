@@ -16,3 +16,37 @@
     line-height: 2.1rem;
   }
 }
+
+@include tablet {
+  .reason-description {
+    width: 33%;
+    height: 256px;
+    padding: 6% 5%;
+    &__number {
+      margin-bottom: 19px;
+    }
+    &--town{
+      @include left;
+    }
+    &--bridge {
+      @include right;
+    }
+  }
+}
+@include desktop {
+  .reason-description {
+    @include left;
+    width: 33%;
+    height: 256px;
+    padding: 6% 5%;
+    &__number {
+      margin-bottom: 19px;
+    }
+    &--town{
+      @include left;
+    }
+    &--bridge {
+      @include right;
+    }
+  }
+}
