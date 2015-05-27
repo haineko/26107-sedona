@@ -359,7 +359,37 @@
         text-align: center;
       }
     }
-    
+    &__travelers-data {
+      font-size: 0;
+      .row-left,
+      .row-right {
+        font-size: 1.4rem;
+        display: inline-block;
+      }
+      .row-left {
+        width: 61px;
+        margin-right: 7px;
+        vertical-align: top;
+      }
+      .row-right {
+        width: 90%;
+        .form-review__col-3 {
+          width: 32.5%;
+          margin-right: 7px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }    
+    }
+    &__sights {
+      .form-review__col-2 {
+        &:first-child {
+          @include right;
+          margin-right: 0;
+        }            
+      }
+    }
   }
 }
 //@include desktop {
