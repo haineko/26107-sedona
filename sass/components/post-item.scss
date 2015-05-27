@@ -80,6 +80,20 @@
     &:last-child {
       margin: 0;
     }
+    &__tags {
+      position: relative;
+      margin: 0 auto;
+      background-color: white;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+      } 
+    }
   }
 }
 @include desktop {
