@@ -19,7 +19,7 @@
     background: #81b3d2 url(../img/icon-ytb.png) no-repeat 50% 50%;
   }
 }
-@media (min-width: 480px) and (max-width: 1200px) {
+@include tablet {
   .footer-social {
     display: inline-block;
     margin: 0;
@@ -27,7 +27,7 @@
     width: 33.3%;
   }
 }
-@media (min-width: 1200px) {
+@include desktop {
   .footer-social {
     display: inline-block;
     margin: 0;

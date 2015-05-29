@@ -144,6 +144,7 @@
       order: 3;
     }
     &__link {
+      width: 100%;
         color: $color-text-dark;
         &:hover {
           color: $bg-main-menu;
@@ -162,6 +163,50 @@
 
 @include desktop {
   .main-menu { 
-    
+    .main-menu { 
+    &__list {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    &__item.btn,
+    &__item--logo {
+      display: flex;
+      flex-basis: 20%;
+      background-color: $bg-color;
+      border: none;
+      box-shadow: none;
+      &:hover,
+      &:active {
+        background-color: $bg-color;
+      }
+    }
+    &__item {
+      &:first-child {
+        order: 4;
+      }
+      &:last-child {
+        order: 5;
+      }
+    }
+    &__item--logo {
+      order: 3;
+    }
+    &__link {
+      width: 100%;
+      color: $color-text-dark;
+      &:hover {
+        color: $bg-main-menu;
+        background-color: $bg-color;
+      }
+      &:active {
+        color: darken($bg-reason, 23%);
+        background-color: $bg-color;
+      }
+    }
+    &__btn-menu {
+      display: none;
+    }
+  }
   }
 }
