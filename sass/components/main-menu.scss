@@ -155,6 +155,9 @@
           background-color: $bg-color;
         }
       }
+    &__logo {
+      background-size: contain;
+    }
     &__btn-menu {
       display: none;
     }
