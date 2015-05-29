@@ -23,14 +23,16 @@
     }
   }
   &--post {
-    padding: 14px 35px;
-    color: #000;
+    padding: 14px 1%;
+    color: $color-text-dark;
     background-color: #fff;
     border: 2px solid $bg-main-menu;
     &:hover{
+      color: $color-text-light;
       border: 2px solid desaturate(darken($bg-main-menu, 8%), 5%);
     }
     &:active {
+      color: desaturate(lighten($bg-main-menu, 2%), 5%);
       border: 2px Ssolid desaturate(darken($bg-main-menu, 12%), 3%);
     }
   }
