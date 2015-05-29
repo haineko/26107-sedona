@@ -27,7 +27,6 @@
 
 @include tablet {
   .post-pagination {
-    margin: 10px;
     padding: 25px 46px 0;
     border: none;
     &__btn-page {
@@ -54,6 +53,5 @@
         margin-right: 3.5%;
       }
     }
-    
   }
 }
