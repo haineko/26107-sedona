@@ -4,6 +4,10 @@
   padding: 0 20px 29px;
   font-size: 0;
   border-bottom: 2px solid #d6d6d6;
+  &__title {
+    @include big-font;
+    display: none;
+  }
   &__btn-page {
     /*color: $color-text-light;
     background-color: $bg-main-menu;
@@ -15,12 +19,42 @@
     margin-bottom: 16px;;
     padding: 16px 23px;
     font-size: $font-size;
-    &:nth-child(4n) {
+    vertical-align: middle;
+    &:nth-of-type(4n) {
       margin-right: 0;
     }
     &--current {
       color: $color-text-dark;
       background-color: darken(#eeeeee, 3%);
+    }
+  }
+}
+
+@include tablet {
+  .blog-pagination {
+    padding: 0 46px 29px;
+    border: none;
+    &:after {
+      @include clearfix;
+    }
+    &__title {
+      display: block;
+      margin: 0;
+      padding-top: 16px;
+      padding-right: 70px;
+      @include left;
+    }
+    &__btn-page {
+      @include left;
+      &:first-child {
+      background-color: red;
+      }
+      &:nth-of-type(4n) {
+        margin-right: 16px;
+      }
+      &:nth-of-type(5n) {
+        margin-right: 0;
+      } 
     }
   }
 }

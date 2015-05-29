@@ -29,7 +29,9 @@
   .blog {
     &__intro {
       padding: 23px 0 36px;
-      margin: 0;
+      &--post {
+        padding: 23px 46px 36px;
+      }
     }
     &__posts {
       border: none;

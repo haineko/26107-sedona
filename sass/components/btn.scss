@@ -5,6 +5,7 @@
     background-color: desaturate(darken($bg-main-menu, 8%), 5%);
   }
   &:active{
+    color: desaturate(lighten($bg-main-menu, 2%), 5%);
     background-color: desaturate(darken($bg-main-menu, 12%), 3%);
     & a {
       opacity: 0.3;
