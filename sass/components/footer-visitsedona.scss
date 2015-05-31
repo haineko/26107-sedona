@@ -1,8 +1,8 @@
 .footer-visitsedona {
   margin-bottom: 34px;
-}
-@include tablet {
-  .footer-visitsedona {
+  
+  
+  @include tablet {
     display: inline-block;
     margin: 0;
     padding: 0 5%;
@@ -12,9 +12,9 @@
       vertical-align: middle;
     }
   }
-}
-@include desktop {
-  .footer-visitsedona {
+  
+  
+  @include desktop {
     display: inline-block;
     margin: 0;
     padding: 0 4%;

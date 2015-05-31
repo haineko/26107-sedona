@@ -3,14 +3,14 @@ footer {
   font-size: 0;
   text-align: center;
   background-color: $bg-footer;
-}
-@include tablet {
-  footer {
+  
+  
+  @include tablet {
    padding: 36px 0;
   }
-}
-@include desktop {
-  footer {
-   padding: 36px 0;
+  
+  
+  @include desktop {
+     padding: 36px 0;
   }
 }

@@ -1,7 +1,10 @@
 .footer-copyright {
+  font-size: 0;
   &__title {
     display: inline-block;
     margin-right: 7px;
+    font-size: 1.4rem;
+    vertical-align: middle;
   }
   &__link {
     display: inline-block;
@@ -11,9 +14,9 @@
     vertical-align: middle;
     background:  url(../img/icon-ha.png) no-repeat 50% 50%;
   }
-}
-@include tablet {
-  .footer-copyright {
+  
+  
+  @include tablet {
     display: inline-block;
     margin: 0;
     padding: 0 5%;
@@ -22,16 +25,11 @@
     &__title {
       margin: 0;
       margin-right: 11px;
-      font-size: 1.4rem;
-      vertical-align: middle;
-    }
-    &__link {
-      vertical-align: middle;
     }
   }
-}
-@include desktop {
-  .footer-copyright {
+  
+  
+  @include desktop {
     display: inline-block;
     margin: 0;
     padding: 0 4%;
@@ -40,11 +38,6 @@
     &__title {
       margin: 0;
       margin-right: 11px;
-      font-size: 1.4rem;
-      vertical-align: middle;
-    }
-    &__link {
-      vertical-align: middle;
     }
   }
 }
