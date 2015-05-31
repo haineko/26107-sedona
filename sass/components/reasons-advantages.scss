@@ -1,75 +1,58 @@
 .reasons-advantages {
   position: relative;
   &__intro{
-    margin:  31px 20px 42px;
+    position: relative;
+    margin:  31px 0 42px;
+    padding: 0 20px;
     text-align: center;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -42px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 0 0 300px;
+      border-color: transparent transparent transparent $bg-main-menu;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -42px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 16px 300px;
+      border-color: transparent transparent $bg-main-menu transparent;
+    }
   }
   &__title {
     margin: 0;
     margin-bottom: 27px;
     padding: 0 10px;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 183px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 16px 0 0 240px;
-    border-color: transparent transparent transparent $bg-main-menu;
+  
+  
+  @include tablet{
+    margin-top: 56px;
+    &__intro{
+      margin: 0 50px 51px;
+      &:before,
+    &:after {
+      display: none;
+    }
+    }
+    
   }
-  &:after {
-    content: "";
-    position: absolute;
-    top: 183px;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 16px 240px;
-    border-color: transparent transparent $bg-main-menu transparent;
+  
+  
+  @include desktop {
+    margin-top: 56px;
+    &__intro{
+      margin: 0 50px 51px;
+    }
   }
 }
 
-@include tablet{
-  .reasons-advantages {
-    margin-top: 56px;
-    &__intro{
-      margin: 0 50px 51px;
-    }
-    &:before {
-      left: 152px;
-      top: -92px;
-      border-width: 36px 0 0 220px;
-      border-color: transparent transparent transparent $bg-color;
-    }
-    &:after {
-      right: 152px;
-      top: -92px;
-      border-width: 0 0 36px 220px;
-      border-color: transparent transparent $bg-color transparent;
-    }
-  }
-}
-@include desktop {
- .reasons-advantages {
-    margin-top: 56px;
-    &__intro{
-      margin: 0 50px 51px;
-    }
-    &:before {
-      left: 152px;
-      top: -92px;
-      border-width: 36px 0 0 220px;
-      border-color: transparent transparent transparent $bg-color;
-    }
-    &:after {
-      right: 152px;
-      top: -92px;
-      border-width: 0 0 36px 220px;
-      border-color: transparent transparent $bg-color transparent;
-    }
-  }
-}
