@@ -27,13 +27,17 @@
 }
 @include tablet {
   .blog {
+    margin: 0 36px;
     &__intro {
-      padding: 23px 0 36px;
+      margin-bottom: 0;
+      padding: 32px 0 36px;
       &--post {
-        padding: 23px 46px 36px;
+        padding: 33px 46px 24px;
       }
     }
     &__posts {
+      padding: 0;
+      marging-bottom: 29px;
       border: none;
       position: relative;
       font-size: 0;
@@ -45,13 +49,22 @@
         width: 2px;
         height: 100%;
         background-color: #d6d6d6;
+        transform: translateX(-100%);
       }
     }
   }
 }
 @include desktop {
   .blog {
+    &__intro {
+      margin-bottom: 0;
+      padding: 70px 0 76px;
+      &--post {
+        padding: 70px 46px 34px;
+      }
+    }
     &__posts {
+      padding: 0;
       border: none;
     }
   }
