@@ -40,19 +40,34 @@
     &__intro{
       margin: 0 50px 51px;
       &:before,
-    &:after {
-      display: none;
+      &:after {
+        display: none;
+      }
     }
+    &__title {
+      padding: 0 11%;
     }
-    
+    &__text {
+      padding: 0 10%;
+    }
   }
   
   
   @include desktop {
-    margin-top: 56px;
+    margin-top: 61px;
     &__intro{
       margin: 0 50px 51px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    &__title {
+      margin-bottom: 28px;
+      padding: 0 21%;
+    }
+    &__text {
+      padding: 0 20%;
     }
   }
 }
-
