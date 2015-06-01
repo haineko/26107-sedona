@@ -27,7 +27,7 @@
 
 @include tablet {
   .post-pagination {
-    padding: 25px 46px 0;
+    padding: 37px 46px 0;
     border: none;
     &__btn-page {
       &--prev,
@@ -51,6 +51,37 @@
       &--back {
         width: 31%;
         margin-right: 3.5%;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .post-pagination {
+    margin-bottom: 36px;
+    padding: 37px 200px 0;
+    border: none;
+    &__btn-page {
+      &--prev,
+      &--next,
+      &--back {
+      width: 26.5%;
+      margin-right: 10.25%;
+        margin-bottom: 0;
+      }
+      span {
+        display: inline-block;
+      }
+      &--prev {
+        float: left;
+       // margin-right: 3.5%;
+      }
+      &--next {
+        float: right;
+        margin-right: 0;
+      }
+      &--back {
+        //margin-right: 3.5%;
       }
     }
   }
