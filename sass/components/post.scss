@@ -50,3 +50,81 @@
     display: block;
   }
 }
+
+@include tablet {
+  .post {
+    margin-top: 38px;
+    padding: 0 6%;
+    &__intro-title {
+      margin: 0;
+    }
+    &__intro-title {
+      margin: 0;
+      padding: 0 50px;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    &__content {
+      margin-top: 42px;
+      header {
+        margin: 42px 0 30px;
+      }
+    }
+    &__list {
+      li {
+        padding-left: 36px;
+      }
+    }
+    blockquote {
+      margin: 25px 0;
+      padding-left: 20px;
+      padding-right: 10px;
+      width: 480px;
+      line-height: 2rem;
+      border-left: 2px solid $bg-main-menu;
+    }
+    cite {
+      display: block;
+    }
+  }
+}
+
+@include desktop {
+  .post {
+    margin-top: 38px;
+    padding: 0 200px;
+    &__intro-title {
+      margin: 0;
+      padding: 0 50px;
+    }
+    &__intro {
+      padding: 0 65px;
+    }
+    header {
+      margin-bottom: 25px;
+    }
+    &__content {
+      margin-top: 41px;
+      header {
+        margin: 42px 0 30px;
+      }
+    }
+    &__list {
+      li {
+        padding-left: 36px;
+      }
+    }
+    blockquote {
+      margin: 25px 0;
+      padding-left: 20px;
+      padding-right: 10px;
+      width: 480px;
+      line-height: 2rem;
+      border-left: 2px solid $bg-main-menu;
+    }
+    cite {
+      display: block;
+    }
+  }
+}
