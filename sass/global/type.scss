@@ -151,6 +151,7 @@ footer {
   }
 }
 .blog-pagination {
+  @include big-font;
   a {
     @include big-font;
     text-decoration: none;
@@ -266,12 +267,52 @@ footer {
 //    @include big-font;
 //  }
 //  }
+  .post {
+    &__intro-title {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+    &__intro {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+  
+  .popup {
+    &__title {
+      @include large-font($lh:4rem);
+    }
+  }
 }
 
 @include desktop {
   .main-menu {
     &__link {
      font-size: 1.4rem;
+    }
+  }
+  .reasons-advantages,
+  .reason-description,
+  .advantages,
+  .reason-item {
+    &__title {
+       @include big-font;
+    }
+  }
+  .hotel-search,
+  .form-review-intro {
+    &__title {
+      @include large-font;
+    }
+  }
+  .post {
+    &__intro-title {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+    &__intro {
+      font-size: 2.4rem;
+      line-height: 3rem;
     }
   }
 }
