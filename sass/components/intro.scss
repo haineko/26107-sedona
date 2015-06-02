@@ -12,6 +12,12 @@
   &__text-welcome{
       text-align: center;
     & img {
+      width: 146px;
+    }
+  }
+  &__text-gorgeous{
+      text-align: center;
+    & img {
       width: 196px;
     }
   }
@@ -59,8 +65,14 @@
     &__text-welcome{
       text-align: center;
       & img {
-        width: 255px;
+        width: 189px;
       }
+    }
+    &__text-gorgeous{
+      text-align: center;
+    & img {
+      width: 247px;
+    }
     }
     &__text-sedona{
       margin: 44px 0 47px;
@@ -97,7 +109,13 @@
     &__text-welcome{
       text-align: center;
       & img {
-        width: 255px;
+        width: 189px;
+      }
+    }
+    &__text-gorgeous{
+      text-align: center;
+      & img {
+        width: 256px;
       }
     }
     &__text-sedona{
