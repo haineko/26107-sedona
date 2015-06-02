@@ -30,40 +30,26 @@
     
   }
   
-  &__time {
+  &__time,
+  &__tag {
     position: relative;
     &:before {
       content: "";
       position: absolute;
-      top: 3px;
+      top: 50%;
       left: 4px;
       width: 11px;
       height: 11px;
-      background: url(../img/icon-date.png) no-repeat 50% 50%;
+      background: url(../img/blog-calendar.svg) no-repeat 50% 50%;
+      transform: translateY(-50%);
     }
   }
   
   &__tag {
     position: relative;
     &:before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 4px;
-      width: 11px;
       height: 9px;
-      background-color: $bg-main-menu;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 9px;
-      left: 4px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 5.5px 2px 5.5px;
-      border-color: transparent transparent #fff transparent;
+      background: url(../img/blog-flag.svg) no-repeat 50% 50%;
     }
   }
 }
