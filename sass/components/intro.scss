@@ -1,8 +1,14 @@
-.intro {
+.intro, 
+.intro-form,
+.intro-blog,
+.intro-post {
   position: relative;
   padding: 48px 20px;
-  background: url(../img/bg-intro.jpg) no-repeat 50% 26%;
+  background: url(../img/photo-background@1x.jpg) no-repeat 50% 26%;
   background-size: cover;
+}
+
+.intro {
   &__text-welcome{
       text-align: center;
     & img {
@@ -23,41 +29,18 @@
     }
   }
 }
-.intro,
-.intro-form,
-.intro-blog,
-.intro-post {
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 34px 210px;
-    border-color: transparent transparent $bg-color transparent;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 34px 0 0 210px;
-    border-color: transparent transparent transparent $bg-color;
-  }
+
+#triangle {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
 }
 .intro-form,
 .intro-blog,
 .intro-post {
-    position: relative;
     margin-bottom: 67px;
     padding: 48px 20px 80px;
-    background: url(../img/bg-intro.jpg) no-repeat 50% 26%;
-    background-size: cover;
     &__text-sedona{
       text-align: center;
       & img {
@@ -92,12 +75,6 @@
         width: 295px;
       }
     }
-    &:before{
-      border-width: 36px 0 0 384px;
-    }
-    &:after {
-      border-width: 0 0 36px 384px;
-    }
   }
   .intro-form,
   .intro-blog,
@@ -112,10 +89,11 @@
     }
   }
 }
+
+
 @include desktop {
   .intro {
     padding: 76px 20px 70px;
-    border-bottom: 1px solid lighten($bg-reason, 2%);
     &__text-welcome{
       text-align: center;
       & img {
@@ -147,5 +125,15 @@
   .intro-form {
     margin-bottom: 40px;
     padding: 104px 20px 160px;
+  } 
+}
+
+@include retina {
+  .intro,
+  .intro-form,
+  .intro-blog,
+  .intro-post {
+    background: url(../img/photo-background@2x.jpg) no-repeat 50% 26%;
+    background-size: cover;
   }
 }
