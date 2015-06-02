@@ -13,6 +13,12 @@
     @include invisible-text; 
     vertical-align: middle;
     background:  url(../img/htmlacademy.svg) no-repeat 50% 50%;
+    &:hover {
+      background-image: url(../img/htmlacademy-hover.svg);
+    }
+    &:active {
+      background-image: url(../img/htmlacademy-active.svg);
+    }
   }
   
   
