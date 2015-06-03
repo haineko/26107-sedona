@@ -13,9 +13,6 @@
 }
 
 @mixin box-sizing( $bz: border-box) {
-  -ms-box-sizing: $bz;
-  -moz-box-sizing: $bz;
-  -webkit-box-sizing: $bz;
   box-sizing: $bz;
 }
 
