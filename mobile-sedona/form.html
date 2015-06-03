@@ -62,7 +62,7 @@
                 <div class="form-wrapper">
                   <div class="form-review__col-3">
                     <label for="lastname">Фамилия:<span>*</span></label>
-                    <input id="lastname" name="lastname" type="text" placeholder="Иванов" required>
+                    <input id="lastname" name="lastname" type="text" placeholder="Иванов" required autofocus>
                   </div>
                   
                   <div class="form-review__col-3">
@@ -86,12 +86,12 @@
              <div class="form-wrapper">
               
                <div class="form-review__col-2">
-                <input id="positive" name="impression" type="radio" checked>
+                <input id="positive" name="impression" type="radio" value="positive" checked>
                 <label for="positive">Скорее положительное</label>
               </div>
               
                <div class="form-review__col-2">
-                <input id="negative" name="impression" type="radio">
+                <input id="negative" name="impression" type="radio" value="negative">
                 <label for="negative" >Скорее отрицательное</label>
               </div>
               
@@ -115,7 +115,7 @@
                   <div class="form-review__counter-trip">
                     <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
                     
-                      <input id="trip-duration" name="trip-duration" type="text" placeholder="14" required>
+                      <input id="trip-duration" name="trip-duration" type="number" min="1" max="10" step="1" value="14" required>
                   
                     <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
                   </div>
@@ -137,7 +137,7 @@
                <div class="form-review__number-travelers">
                 <label for="number">Кол-во путешественников:<span>*</span></label>
                 <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
-                <input id="number" name="number" type="text" placeholder="2 чел" required>
+                <input id="number" name="number" type="number"  min="1" max="10" step="1" placeholder="2 чел" required>
                 <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
               </div>
               

@@ -1,4 +1,5 @@
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   margin-bottom: 16px;
   padding: 11px 17px;
   width: 100%;
@@ -12,5 +13,6 @@ input[type="text"] {
   &:focus {
     background: $bg-color;
     border: 4px solid darken($bg-reason, 3%);
+    outline: none;
   }
 }
