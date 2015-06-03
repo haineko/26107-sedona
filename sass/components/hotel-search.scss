@@ -17,7 +17,12 @@
     margin-bottom: 20px;
   }
   &__map {
+    display: block;
+    width: 100%;
     height: 350px;
+    img{
+    //  display: none;
+    }
   }
   
   
