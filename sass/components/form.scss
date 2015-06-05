@@ -172,6 +172,7 @@
   
   &__traveler {
     //display: table;
+    font-size: 0;
     margin-bottom: 30px;
     &:after {
       @include clearfix;
@@ -196,13 +197,13 @@
     }
     .row-right {
       @include right;
-      width: 213px;
+      //width: 92%;
       label {
         margin-bottom: 8px;
         padding-left: 20px;
       }
       input[type="text"] {
-        width: 213px;
+        width: 100%;
         height: 56px;
       }
     }
@@ -221,6 +222,13 @@
     width: 280px;
     height: 58px;
     border: none;
+  }
+  &__select {
+    opacity: 0;
+  }
+  &__btn-select {
+    text-align: center;
+  padding: 17px 0;
   }
   &__btn-send {
     margin-bottom: 20px;
@@ -334,23 +342,10 @@
       margin: 0 7%;
       padding: 0;
       border-bottom: none;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 12px;
-        width: 100%;
-        height: 1px;
-        background-color: darken($bg-reason, 3%);;
-      }
-      &:before{
-        left: 0;
-      }
-      &:after{
-        right: 0;
-      }
+      border-top: 1px solid darken($bg-reason, 3%);
+
       legend {
-        position: relative;
-        z-index: 200;
+
         margin: 0;
         padding: 0 45px;         
         background-color: white;
@@ -457,9 +452,6 @@
     }
     
     &__sights {
-      legend {
-        transform: translateY(-25%);
-      }
       .form-wrapper{
         font-size: 0;
         margin: 36px 0 38px;
@@ -547,23 +539,9 @@
       margin: 0 117px;
       padding: 0;
       border-bottom: none;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 12px;
-        width: 100%;
-        height: 1px;
-        background-color: darken($bg-reason, 3%);;
-      }
-      &:before{
-        left: 0;
-      }
-      &:after{
-        right: 0;
-      }
+       border-top: 1px solid darken($bg-reason, 3%);
       legend {
-        position: relative;
-        z-index: 200;
+        
         margin: 0;
         padding: 0 45px;         
         background-color: white;
@@ -656,9 +634,7 @@
       }
     }
     &__sights {
-      legend {
-        transform: translateY(-25%);
-      }
+      
       .form-wrapper{
         font-size: 0;
         margin: 36px 0 38px;
