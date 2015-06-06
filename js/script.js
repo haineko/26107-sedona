@@ -31,8 +31,7 @@ function initForm() {
   }
   var data = new FormData(form);
   var xhr = new XMLHttpRequest();
-  //xhr.open("post", "http://simonenko.su/academy/echo?");
-  xhr.open("get", "http://localhost:8001/out.txt");
+  xhr.open("post", "http://simonenko.su/academy/echo?");
   xhr.addEventListener("readystatechange", function() {
     if (xhr.readyState == 4) {
       console.log(xhr.responseText);
@@ -86,22 +85,27 @@ btn_minus.addEventListener('click', function(e){
 
 btn_plus.addEventListener('click', function(e){
   e.preventDefault();
+  console.log('asd');
   changeNumbers(1, trip_duration);
 });
 
 function changeNumbers(number, el){
-  if ((el.value + number) >= 1 && (el.value + number) <= 20) {
+  if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 20) {
     if (!el.value) { el.value = 1; }
     el.value = parseInt(el.value) + number;
-    console.log(parseInt(el.value));
-    console.log(number);
+    console.info(el.value);
+    console.info(number);
+  } else {
+    console.warn('Слишком много!');
   }
 }
 
 depart.addEventListener('change', function(){
   var date_arrival = new Date(arrival.value).getTime();
   var date_depart = new Date(depart.value).getTime();
-  trip_duration.value(Math.floor((date_depart - date_arrival)/1000/60/60/24))
+  var date_diff = Math.floor((date_depart - date_arrival)/1000/60/60/24)
+  //TODO: реализовать проверку
+  trip_duration.value = date_diff
 });
 
 

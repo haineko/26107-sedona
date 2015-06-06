@@ -12,9 +12,9 @@
 
 <body>
   <div class="content-wrapper">
-   
+
     <header class="main-header">
-     
+
       <nav class="main-menu">
         <ul class="main-menu__list">
           <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Карта штата">Карта штата</a></li>
@@ -23,12 +23,12 @@
             <a class="main-menu__logo" href="index.html" title="Главная">Sedona</a>
             <a class="main-menu__btn-menu" href="#" title="Меню">Меню<span></span></a>
           </li>
-          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>  
+          <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Фото и видео">Фото и видео</a></li>
           <li class="main-menu__item btn"><a class="main-menu__link" href="#" title="Гостиницы">Гостиницы</a></li>
         </ul>
         <a class="main-menu__cross" href="#" title="Закрыть меню">x</a>
       </nav>
-      
+
       <div class="intro-form">
         <div class="intro-form__text-sedona">
           <img src="../img/text-sedona.svg" alt="SEDONA">
@@ -41,107 +41,107 @@
           </g>
         </svg>
       </div>
-      
+
     </header>
-    
+
     <main>
-     
+
       <div class="form-review">
-       
+
         <div class="form-review-intro">
           <p class="form-review-intro__title">Оставьте свой отзыв</p>
           <p class="form-review-intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
-        
+
         <form class="form-review__form" action="/echo" method="post">
 
            <fieldset class="form-review__personal-data">
-           
-            <legend class="form-review__title">Представьтесь, пожалуйста:</legend>
-                
+
+            <legend class="form-review__title" align="center">Представьтесь, пожалуйста:</legend>
+
                 <div class="form-wrapper">
                   <div class="form-review__col-3">
                     <label for="lastname">Фамилия:<span>*</span></label>
                     <input id="lastname" name="lastname" type="text" placeholder="Иванов" required autofocus>
                   </div>
-                  
+
                   <div class="form-review__col-3">
                     <label for="firstname">Имя:<span>*</span></label>
                     <input id="firstname" name="firstname" type="text" placeholder="Пётр" required>
                   </div>
-                               
+
                   <div class="form-review__col-3">
                     <label for="middlename">Отчество</label>
                     <input id="middlename" name="middlename" type="text" placeholder="Александрович">
                   </div>
-                  
+
                 </div>
-                
+
           </fieldset>
-          
+
           <fieldset class="form-review__impression-data">
-            
-            <legend class="form-review__title">Ваше общие впечатление:</legend>
-            
+
+            <legend class="form-review__title" align="center">Ваше общие впечатление:</legend>
+
              <div class="form-wrapper">
-              
+
                <div class="form-review__col-2">
                 <input id="positive" name="impression" type="radio" value="positive" checked>
                 <label for="positive">Скорее положительное</label>
               </div>
-              
+
                <div class="form-review__col-2">
                 <input id="negative" name="impression" type="radio" value="negative">
                 <label for="negative" >Скорее отрицательное</label>
               </div>
-              
+
             </div>
-           
+
           </fieldset>
-          
+
           <fieldset class="form-review__trip-data">
-            
-            <legend class="form-review__title">Даты вашей поездки:</legend>
-            
+
+            <legend class="form-review__title" align="center">Даты вашей поездки:</legend>
+
             <div class="form-wrapper">
-             
+
               <div class="form-review__col-3">
                 <label for="arrival">Дата приезда:<span>*</span></label>
-                <input id="arrival" name="arrival" type="text" placeholder="4 июля 2015" required>
+                <input id="arrival" name="arrival" type="date" placeholder="4 июля 2015" required>
               </div>
-              
+
                 <div class="form-review__col-3">
-                  <label for="trip-duration">Длительность дней:<span>*</span></label>            
-                  <div class="form-review__counter-trip">
+                  <label for="trip-duration">Длительность дней:<span>*</span></label>
+                  <div class="form-review__counter-trip form-review__number">
                     <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
-                    
-                      <input id="trip-duration" name="trip-duration" type="number" min="1" max="10" step="1" value="14" required>
-                  
+
+                      <input id="trip-duration" name="trip-duration" type="number" min="1" max="16" step="1" value="14" required>
+
                     <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
                   </div>
                 </div>
-                
+
               <div class="form-review__col-3">
                 <label for="depart">Дата отъезда:<span>*</span></label>
-                <input id="depart" name="depart" type="text" placeholder="28 июля 2015" required>
+                <input id="depart" name="depart" type="date" placeholder="28 июля 2015" required>
               </div>
-              
+
             </div>
-            
+
           </fieldset>
-          
+
           <fieldset class="form-review__travelers-data">
-            <legend class="form-review__title">Кол-во путешественников:</legend>
+            <legend class="form-review__title" align="center">Кол-во путешественников:</legend>
             <div class="form-wrapper">
-              
-               <div class="form-review__number-travelers">
+
+               <div class="form-review__number-travelers form-review__counter">
                 <label for="number">Кол-во путешественников:<span>*</span></label>
                 <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
                 <input id="number" name="number" type="number"  min="1" max="10" step="1" placeholder="2 чел" required>
                 <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
               </div>
-              
-              
+
+
                 <div class="form-review__traveler">
                   <div class="row-left">
                     <label for="number-traveler">№</label>
@@ -182,12 +182,12 @@
                     </div>
                   </div>
                 </div>
-        
+
             </div>
           </fieldset>
-          
+
           <fieldset class="form-review__sights">
-            <legend class="form-review__title">Посещенные</br> достопримечательности</legend>
+            <legend class="form-review__title" align="center">Посещенные</br> достопримечательности</legend>
            <div class="form-wrapper">
              <div class="form-review__col-2">
                  <input id="sight-bridge" name="sight1" type="checkbox" checked>
@@ -203,10 +203,13 @@
               </div>
            </div>
           </fieldset>
-          
+
           <fieldset class="form-review__download-photos">
-            <legend class="form-review__title">Загрузите фотографии:</legend>
-            <input class="form-review__btn-select btn--grey" type="button" value="Выбрать фотографии">
+            <legend class="form-review__title" align="center">Загрузите фотографии:</legend>
+            <label for="upload_photo" class="form-review__btn-select btn--grey">
+              Выбрать фотографии
+              <input id="upload_photo" class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple accept="image/jpeg,image/png,image/gif">
+            </label>
             <div class="form-review__photos-gallery">
               <figure>
                 <img class="form-review__photo" src="../img/photo1.jpg" alt="photo">
@@ -235,7 +238,7 @@
               </figure>
               <figure>
                 <img class="form-review__photo" src="../img/photo6.jpg" alt="photo">
-                
+
                 <a class="form-review__photo-close" href="#" title="close">x</a>
                 <figcaption class="form-review__photo-name">photo</figcaption>
               </figure>
@@ -247,34 +250,34 @@
             </div>
             <input id="send" class="form-review__btn-send btn" name="send" type="submit" value="Отправить отзыв">
           </fieldset>
-          
+
         </form>
-        
+
       </div>
-      
+
     </main>
-    
+
     <footer>
-     
+
       <div class="footer-visitsedona">
         <a href="#" title="Sedona">#visitsedona</a>
       </div>
-      
+
       <div class="footer-social">
         <a class="footer-social__btn-tw btn fa fa-twitter" href="#" title="Twitter">Twitter</a>
         <a class="footer-social__btn-fb btn" href="#" title="Facebook">Facebook</a>
         <a class="footer-social__btn-ytb btn" href="#" title="Youtube">Youtube</a>
       </div>
-      
+
       <div class="footer-copyright">
         <p class="footer-copyright__title">Разработано</p>
         <a class="footer-copyright__link" href="#" title="HTML Academy">HTML Academy</a>
       </div>
-      
+
     </footer>
-    
+
   </div>
-   
+
     <div class="popup popup--failure">
       <header>
         <h3 class="popup__title">Что-то пошло не так!</h3>
@@ -293,9 +296,9 @@
         <a class="popup__btn btn" href="#" title="Закрыть окно">Закрыть окно</a>
       </div>
     </div>
-    
+
     <script type="text/javascript" src="../js/script.js"></script>
-    
+
 </body>
 
 </html>

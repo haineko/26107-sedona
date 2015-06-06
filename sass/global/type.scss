@@ -200,7 +200,9 @@ footer {
   }
 }
 .form-review{
-  input[type="text"] {
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
     @include middle-font;
     text-transform: none;
     &::-webkit-input-placeholder { font-family: $font-family; color: $color-text-dark;} 
