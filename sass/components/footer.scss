@@ -1,0 +1,16 @@
+footer {
+  padding: 26px;
+  font-size: 0;
+  text-align: center;
+  background-color: $bg-footer;
+  
+  
+  @include tablet {
+   padding: 36px 0;
+  }
+  
+  
+  @include desktop {
+     padding: 36px 0;
+  }
+}

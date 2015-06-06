@@ -1,0 +1,83 @@
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 300;
+  width: 320px;
+  min-height: 280px;
+  text-align: center;
+  background-color: $bg-color;
+  box-shadow: 0 3px 15px 0 rgba(0, 1, 1, 0.3);
+  transform: translateX(-50%);
+  &__footer {
+    padding: 20px;
+    background-color: lighten($bg-reason, 2%);
+  }
+  &--failure {
+    display: none;
+    padding: 40px 50px 35px;
+    a {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0;
+      width: 180px;
+      height: 58px;
+    }
+  }
+  &--request {
+    display: none;
+    a {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0;
+      width: 280px;
+      height: 58px;
+    }
+  }
+  &__content {
+    padding: 40px 40px 0;
+  }
+  
+  &__title {
+    margin: 0;
+  }
+  &__text {
+    margin: 25px 0 35px;
+
+  }
+  
+  @include tablet {
+    &--failure {
+      padding: 54px 60px 48px;      
+      width: 400px;
+      display: none;
+//      a {
+//        width: 100%;
+//      }
+    }
+    &--request{
+      width: 640px;
+      
+    }
+    a {
+        width: 100%;
+      }
+    &__content {
+      padding: 54px 90px 0;
+    }
+    &__footer {
+      padding: 40px 90px;
+      width: 100%;
+    }
+    &__title {
+      margin: 0;
+      padding: 0 25px;
+    }
+    &__text {
+      margin: 23px 0 30px;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}

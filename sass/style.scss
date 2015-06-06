@@ -1,30 +1,33 @@
-$color: #fff;
-$bg-color: #000;
-$wrap-width: 300px;
+@import "vendor/normalize"; 
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+@import "global/variables.scss";
+@import "global/mixin.scss";
+@import "global/base.scss";
+@import "global/type.scss";
 
-body {
-  background-color: $bg-color;
-  color: $color;
-}
-
-.page-header {
-  &__logo-wrap {
-    width: $wrap-width;
-    height: $wrap-width/2;
-    margin: $wrap-width/4 auto 0;
-    text-align: center;
-  }
-
-  &__logo-link {
-    color: $color;
-    font-size: 28px;
-    font-weight: bold;
-  }
-}
+@import "components/main-menu.scss";
+@import "components/intro.scss";
+@import "components/reasons-advantages.scss";
+@import "components/reason-and-image.scss";
+@import "components/reason-description.scss";
+@import "components/reason-image.scss";
+@import "components/reasons.scss";
+@import "components/reason-item.scss";
+@import "components/advantages.scss";
+@import "components/hotel-search.scss";
+@import "components/btn.scss";
+@import "components/number-counter.scss";
+@import "components/footer.scss";
+@import "components/footer-visitsedona.scss";
+@import "components/footer-social.scss";
+@import "components/footer-copyright.scss";
+@import "components/form.scss";
+@import "components/input-radio.scss";
+@import "components/input-checkbox.scss";
+@import "components/input-text.scss";
+@import "components/popup.scss";
+@import "components/blog.scss";
+@import "components/post-item.scss";
+@import "components/blog-pagination.scss";
+@import "components/post.scss";
+@import "components/post-pagination.scss";

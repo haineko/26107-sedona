@@ -1,0 +1,157 @@
+.intro, 
+.intro-form,
+.intro-blog,
+.intro-post {
+  position: relative;
+  padding: 48px 20px;
+  background: url(../img/photo-background@1x.jpg) no-repeat 50% 26%;
+  background-size: cover;
+}
+
+.intro {
+  &__text-welcome{
+      text-align: center;
+    & img {
+      width: 146px;
+    }
+  }
+  &__text-gorgeous{
+      text-align: center;
+    & img {
+      width: 196px;
+    }
+  }
+  &__text-sedona{
+    margin: 52px 0 58px;
+      text-align: center;
+    & img {
+      width: 280px;
+    }
+  }
+  &__text-slogan{
+      text-align: center;
+    & img {
+      width: 197px;
+    }
+  }
+}
+
+#triangle {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+}
+.intro-form,
+.intro-blog,
+.intro-post {
+    margin-bottom: 67px;
+    padding: 48px 20px 80px;
+    &__text-sedona{
+      text-align: center;
+      & img {
+        width: 174px;
+      }
+    }
+}
+.intro-blog,
+.intro-post {
+  margin-bottom: 40px;
+}
+
+@include tablet {
+  .intro {
+    padding: 76px 20px;
+    &__text-welcome{
+      text-align: center;
+      & img {
+        width: 189px;
+      }
+    }
+    &__text-gorgeous{
+      text-align: center;
+    & img {
+      width: 247px;
+    }
+    }
+    &__text-sedona{
+      margin: 44px 0 47px;
+        text-align: center;
+      & img {
+        width: 458px;
+      }
+    }
+    &__text-slogan{
+        text-align: center;
+      & img {
+        width: 295px;
+      }
+    }
+  }
+  .intro-form,
+  .intro-blog,
+  .intro-post {
+    padding: 0;
+    &__text-sedona{
+      text-align: center;
+      & img {
+        padding: 103px 0;
+        width: 458px;
+      }
+    }
+  }
+}
+
+
+@include desktop {
+  .intro {
+    padding: 76px 20px 70px;
+    &__text-welcome{
+      text-align: center;
+      & img {
+        width: 189px;
+      }
+    }
+    &__text-gorgeous{
+      text-align: center;
+      & img {
+        width: 256px;
+      }
+    }
+    &__text-sedona{
+      margin: 44px 0 47px;
+        text-align: center;
+      & img {
+        width: 458px;
+      }
+    }
+    &__text-slogan{
+        text-align: center;
+      & img {
+        width: 295px;
+      }
+    }
+    &:before{
+      border-width: 56px 0 0 600px;
+    }
+    &:after {
+      border-width: 0 0 56px 600px;
+    }
+  }
+  .intro-blog,
+  .intro-post,
+  .intro-form {
+    margin-bottom: 40px;
+    padding: 104px 20px 160px;
+  } 
+}
+
+@include retina {
+  .intro,
+  .intro-form,
+  .intro-blog,
+  .intro-post {
+    background: url(../img/photo-background@2x.jpg) no-repeat 50% 26%;
+    background-size: cover;
+  }
+}

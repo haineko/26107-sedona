@@ -1,0 +1,15 @@
+.reason-and-image {
+  
+  background-color: $bg-main-menu;
+  &:after {
+    @include clearfix;
+  }
+}
+
+
+@include tablet {
+  height: 256px;
+}
+@include desktop {
+  height: 256px;
+}

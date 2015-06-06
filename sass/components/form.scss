@@ -1,0 +1,701 @@
+.form-review-intro {
+  
+  padding-bottom: 20px;
+  border-bottom: 1px solid darken($bg-reason, 3%);
+  
+  &__title{
+    margin-bottom: 27px;
+    text-align: center;
+  }
+  
+  &__text {
+    width: 280px;
+  margin: 0 auto;
+    line-height: 2.3rem;
+    text-align: center;
+  }
+}
+  
+.form-review {
+  margin-bottom: 50px;
+ 
+  fieldset {
+    margin: 0; 
+    margin-top: 18px;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid darken($bg-reason, 3%);
+    &:last-child {
+      border-bottom: none;
+    }
+    legend{
+      margin-left: 5px;
+      margin-bottom: 5px;
+      padding: 0;
+      text-align: center;
+    }
+    .form-wrapper {
+  }
+    span {
+      margin-left: 4px;
+      color: #ff3333;
+    }
+    a {
+       @include invisible-text;
+    }
+  }
+  
+  &__personal-data {
+    label{
+        position: relative;
+        display: block;
+        margin-bottom: 8px;
+        padding-left: 21px;
+        text-align: left;
+    }
+  }
+  
+  &__trip-data {
+    label{
+        position: relative;
+        display: block;
+        margin-top: -5px;
+        margin-bottom: 8px;
+        padding-left: 21px;
+        text-align: left;
+    }
+    input[type="text"] {
+      margin-bottom: 21px;
+    }
+  }
+  
+  &__btn-plus,
+  &__btn-minus {
+    display: inline-block;
+    width: 62px;
+    height: 56px;
+    vertical-align: top;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+      //border: 4px solid darken($bg-reason, 3%);
+      box-shadow: inset 0 0 0 4px darken($bg-reason, 3%);
+    }
+    &:hover,
+    &:active {
+      box-shadow: none;
+    }
+  }
+  &__btn-plus {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 22px;
+      width: 20px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: darken($bg-reason, 21%);
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
+    &:hover {
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 38%);
+      }
+    }
+    &:active {
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 16%);
+      }
+    }
+  }
+  
+  &__btn-minus {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 22px;
+      width: 20px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: darken($bg-reason, 21%);
+    }
+    &:hover {
+      &:before {
+        background-color: darken($bg-reason, 38%);
+      }
+    }
+    &:active {
+      &:before {
+        background-color: darken($bg-reason, 16%);
+      }
+    }
+  }
+  
+  &__counter-trip {
+    margin-bottom: 21px;
+    font-size: 0;
+    input[type="text"],
+    input[type="number"]{
+      display: inline-block;
+      margin: 0 6px;
+      width: 144px;
+    }
+  }
+  
+  &__number-travelers {
+    margin-bottom: 38px;
+    font-size: 0;
+    label {
+      position: relative;
+      display: block;
+      margin-bottom: 8px;
+      padding-left: 21px;
+      font-size: 1.4rem;;
+      text-align: left;
+    }
+    input[type="text"],
+    input[type="number"]{
+      display: inline-block;
+      margin: 0 6px;
+      width: 144px;
+    }
+  }
+  
+  &__traveler {
+    //display: table;
+    font-size: 0;
+    margin-bottom: 30px;
+    &:after {
+      @include clearfix;
+    }
+    label {
+      display: block;
+    }
+    .row-left {
+      @include left;
+      margin-right: 6px;
+      width: 61px;
+      text-align: center;
+      label {
+        margin-bottom: 8px;
+      }
+      input[type="text"] {
+        padding: 0;
+        width: 61px;
+        height: 56px;
+        text-align: center;
+      }
+    }
+    .row-right {
+      @include right;
+      //width: 92%;
+      label {
+        margin-bottom: 8px;
+        padding-left: 20px;
+      }
+      input[type="text"] {
+        width: 100%;
+        height: 56px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__btn-select,
+  &__btn-send {
+    display: block;
+    margin: 0 auto;
+    //margin-top: -8px;
+    margin-bottom: 55px;
+    padding: 0;
+    width: 280px;
+    height: 58px;
+    border: none;
+  }
+  &__select {
+    opacity: 0;
+  }
+  &__btn-select {
+    text-align: center;
+  padding: 17px 0;
+  }
+  &__btn-send {
+    margin-bottom: 20px;
+  }
+  &__photos-gallery {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+    font-size: 0;
+    line-height: 0;
+    figure {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      margin-right: 35px;
+      margin-bottom: 35px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__photo {
+    display: block;
+    max-width: 100%; 
+    width: 70px;
+    height: 70px;
+  }
+  &__photo-close {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    @include invisible-text;
+    border-radius: 50%;
+    background-color: lighten($bg-reason, 2%);
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 7px;
+      width: 16px;
+      height: 2px;
+      background-color: darken($bg-reason, 21%);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:hover {
+      background-color: darken($bg-reason, 3%);
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 38%);
+      }
+    }
+    &:active {
+      background-color: darken($bg-reason, 9%);
+      &:before,
+      &:after {
+        background-color: darken($bg-reason, 16%);
+      }
+    }
+  }
+  &__col-3 {
+    &:last-child {
+    input[type="text"] {
+      margin-bottom: 3px;
+      }
+    }
+  }
+  &__col-2 {
+    &:last-child {
+      input[type="radio"] {
+        &+ label{
+          margin-bottom: 6px;
+        }
+      }
+      input[type="checkbox"] {
+        &:last-child {
+          &+ label{
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include tablet {
+  .form-review-intro {
+    margin: 0 20% 40px;
+    padding-top: 7px;
+    border-bottom: none;
+    &__title {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+  .form-review {
+    margin-bottom: 102px;
+    fieldset {      
+      position: relative;
+      margin: 0 7%;
+      padding: 0;
+      border-bottom: none;
+      border-top: 1px solid darken($bg-reason, 3%);
+
+      legend {
+
+        margin: 0;
+        padding: 0 45px;         
+        background-color: white;
+      }
+      .form-wrapper {
+        &:after {
+          @include clearfix;
+        }
+      }
+    }
+    
+    &__col-2 {
+      width: 50%;
+      display: inline-block;
+    }
+    
+    &__col-3 {
+      @include left;
+      width: 28%;
+      margin-right: 8%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    &__personal-data {
+      .form-wrapper{
+        margin: 25px 0 49px;
+      }
+    }
+    
+    &__impression-data {
+      .form-wrapper{
+        margin: 42px 0 38px;
+        font-size: 0;
+        .form-review__col-2 {
+        &:nth-child(2n+1) {
+          padding-left: 7%;
+          padding-right: 1%;
+          
+        }   
+        &:nth-child(2n) {
+          padding-left: 1%;
+          padding-right: 7%;
+        } 
+      }
+      }
+    }
+    
+    &__trip-data {
+      .form-wrapper{
+        margin: 29px 0 0;
+      }
+    }
+    
+    &__counter-trip {
+      input[type="text"]{
+        width: 49%;
+        margin: 0;
+      }
+      a {
+        width: 61px;
+      }
+    }
+    
+    &__number-travelers {
+      text-align: center;
+      label{
+        text-align: center;
+      }
+    }
+    
+    &__traveler {
+      display: table;
+      font-size: 0;
+      .row-left,
+      .row-right {
+        font-size: 1.4rem;
+        display: inline-block;
+      }
+      .row-left {
+        display: table-cell;
+        width: 61px;
+        padding-right: 7px;
+        vertical-align: top;
+        input[type="text"] {
+          text-align: center;
+        }
+      }
+      .row-right {
+        display: table-cell;
+        width: 90%;
+        .form-review__col-3 {
+          width: 32.3%;
+          margin-right: 7px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .form-wrapper{
+        margin: 25px 0 38px;
+      }
+    }
+    
+    &__sights {
+      .form-wrapper{
+        font-size: 0;
+        margin: 36px 0 38px;
+        .form-review__col-2 {
+          vertical-align: top;
+          &:nth-child(2n+1) {
+            padding-left: 10%;
+          }   
+          &:nth-child(2n) {
+            padding-right: 10%;
+          } 
+        }
+      }
+    }
+    
+    &__btn-select {
+      display: block;
+      margin: 57px auto 88px;
+      width: 458px;
+    }
+    
+    &__photos-gallery {
+      margin-bottom: 36px;
+      width: 100%;
+      text-align: center;
+      figure {
+        margin: 0 5% 68px;
+        margin-bottom: 68px;
+        &:nth-child(3n) {
+          margin: 0 5% 68px;
+        }
+      }
+    }
+    
+    &__photo {
+      display: block;
+      max-width: 100%; 
+      width: 140px;
+      height: 140px;
+    }
+    
+    &__photo-close {
+      top: -30px;
+      left: 80%;
+      width: 60px;
+      height: 60px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 30px;
+        height: 2px;
+        background-color: darken($bg-reason, 21%);
+      }
+    }
+    
+    &__btn-send {
+      display: block;
+      margin: 0 auto;
+      width: 458px;
+    }
+  }
+}
+
+
+@include desktop{
+  .form-review-intro {
+    margin: 0 20% 40px;
+    padding-top: 7px;
+    border-bottom: none;
+    &__title {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+  .form-review {
+    margin-bottom: 102px;
+    fieldset {      
+      position: relative;
+      margin: 0 117px;
+      padding: 0;
+      border-bottom: none;
+       border-top: 1px solid darken($bg-reason, 3%);
+      legend {
+        
+        margin: 0;
+        padding: 0 45px;         
+        background-color: white;
+      }
+      .form-wrapper {
+        &:after {
+          @include clearfix;
+        }
+      }
+    }
+    &__col-2 {
+      display: inline-block;
+    }
+    &__col-3 {
+      @include left;
+      width: 28%;
+      margin-right: 8%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__personal-data {
+      .form-wrapper{
+        margin: 25px 0 49px;
+      }
+    }
+    &__impression-data {
+      .form-wrapper{
+        margin: 42px 0 38px;
+        padding: 0 168px;
+        font-size: 0;
+        .form-review__col-2 {
+          width: 265px;
+          &:nth-child(2n+1) {
+            margin-right: 100px;
+          }    
+        }
+      }
+    }
+    &__trip-data {
+      .form-wrapper{
+        margin: 29px 0 0;
+      }
+    }
+    &__counter-trip {
+      input[type="number"]{
+        width: 49%;
+        margin: 0;
+      }
+      a {
+        width: 61px;
+      }
+    }
+    &__number-travelers {
+      text-align: center;
+      label{
+        text-align: center;
+      }
+    }
+    &__traveler {
+      display: table;
+      font-size: 0;
+      .row-left,
+      .row-right {
+        font-size: 1.4rem;
+        display: inline-block;
+      }
+      .row-left {
+        display: table-cell;
+        width: 61px;
+        padding-right: 7px;
+        vertical-align: top;
+        input[type="text"] {
+          text-align: center;
+        }
+      }
+      .row-right {
+        display: table-cell;
+        width: 92%;
+        .form-review__col-3 {
+          width: 32.8%;
+          margin-right: 7px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .form-wrapper{
+        margin: 25px 0 38px;
+      }
+    }
+    &__sights {
+      
+      .form-wrapper{
+        font-size: 0;
+        margin: 36px 0 38px;
+        .form-review__col-2 {
+          margin-right: 69px;
+          label {
+            display: inline-block;
+            margin-right: 69px;
+            &:last-child {
+              margin-right: 0;
+            } 
+          }
+          &:nth-child(2n) {
+            margin-right: 0;  
+          }
+        }
+      } 
+    }
+    &__btn-select {
+      display: block;
+      margin: 57px auto 88px;
+      width: 458px;
+    }
+    &__photos-gallery {
+      margin-bottom: 36px;
+      width: 100%;
+      text-align: left;
+      figure {
+        margin: 0 5% 68px;
+        margin-bottom: 68px;
+        &:nth-child(3n) {
+          margin: 0 5% 68px;
+        }
+      }
+    }
+    &__photo {
+      display: block;
+      max-width: 100%; 
+      width: 140px;
+      height: 140px;
+    }
+    &__photo-close {
+      top: -30px;
+      left: 80%;
+      width: 60px;
+      height: 60px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 30px;
+        height: 2px;
+        background-color: darken($bg-reason, 21%);
+      }
+    }
+    &__btn-send {
+      display: block;
+      margin: 0 auto;
+      width: 458px;
+    }
+  }
+}

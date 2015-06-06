@@ -1,0 +1,29 @@
+.reason-image {  
+  height: 256px;
+  &--town {
+    background: url(../img/photo-city@1x.jpg) no-repeat 50% 20%/cover;
+  }
+  &--bridge {
+    background: url(../img/photo-bridge@1x.jpg) no-repeat 50% 20%/cover;
+  }
+  
+  
+  @include tablet {   
+    @include right;
+    width: 67%;
+  }
+  @include desktop {
+    @include right;
+    width: 67%;
+  }
+  
+  
+  @include retina {
+    &--town {
+      background: url(../img/photo-city@2x.jpg) no-repeat 50% 20%/cover;
+    }
+    &--bridge {
+      background: url(../img/photo-bridge@2x.jpg) no-repeat 50% 20%/cover;
+    }
+  } 
+}

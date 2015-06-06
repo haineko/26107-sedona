@@ -1,0 +1,49 @@
+.footer-copyright {
+  font-size: 0;
+  &__title {
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 1.4rem;
+    vertical-align: middle;
+  }
+  &__link {
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    @include invisible-text; 
+    vertical-align: middle;
+    background:  url(../img/htmlacademy.svg) no-repeat 50% 50%;
+    &:hover {
+      background-image: url(../img/htmlacademy-hover.svg);
+    }
+    &:active {
+      background-image: url(../img/htmlacademy-active.svg);
+    }
+  }
+  
+  
+  @include tablet {
+    display: inline-block;
+    margin: 0;
+    padding: 0 5%;
+    width: 33.3%;
+    text-align: right;
+    &__title {
+      margin: 0;
+      margin-right: 11px;
+    }
+  }
+  
+  
+  @include desktop {
+    display: inline-block;
+    margin: 0;
+    padding: 0 4%;
+    width: 33.3%;
+    text-align: right;
+    &__title {
+      margin: 0;
+      margin-right: 11px;
+    }
+  }
+}

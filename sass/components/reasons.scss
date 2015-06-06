@@ -1,0 +1,19 @@
+.reasons {
+  padding: 0 20px;
+  text-align: center;
+  background-color: $bg-reason;
+  
+  
+  @include tablet{
+    padding: 29px 0 44px;
+    font-size: 0;
+    text-align: center;
+  }
+  
+  
+  @include desktop{
+    padding: 43px 0 64px;
+      font-size: 0;
+      text-align: center;
+  }
+}

@@ -1,0 +1,40 @@
+.btn {
+  color: $color-text-light;
+  background-color: $bg-main-menu;
+  &:hover {
+    background-color: desaturate(darken($bg-main-menu, 8%), 5%);
+  }
+  &:active{
+    color: desaturate(lighten($bg-main-menu, 2%), 5%);
+    background-color: desaturate(darken($bg-main-menu, 12%), 3%);
+    & a {
+      opacity: 0.3;
+    }
+  }
+  &--grey{
+    color: darken(#eeeeee, 21%); 
+    background-color: lighten($bg-reason, 2%);
+    &:hover {
+      color: darken(#eeeeee, 45%);
+      background-color: darken($bg-reason, 3%);
+    }
+    &:active{
+      color: darken(#eeeeee, 29%);
+      background-color: darken($bg-reason, 9%);
+    }
+  }
+  &--post {
+    padding: 14px 1%;
+    color: $color-text-dark;
+    background-color: #fff;
+    border: 2px solid $bg-main-menu;
+    &:hover{
+      color: $color-text-light;
+      border: 2px solid desaturate(darken($bg-main-menu, 8%), 5%);
+    }
+    &:active {
+      color: desaturate(lighten($bg-main-menu, 2%), 5%);
+      border: 2px Ssolid desaturate(darken($bg-main-menu, 12%), 3%);
+    }
+  }
+}
