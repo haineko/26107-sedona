@@ -7,7 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 gulp.task('sass', function() {
   return gulp.src("sass/style.scss")
     .pipe(sass())
-	.pipe(autoprefixer())
+  	.pipe(autoprefixer())
     .pipe(gulp.dest("css"))
     .pipe(reload({stream: true}));
 });
