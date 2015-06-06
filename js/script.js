@@ -51,9 +51,11 @@ function initForm() {
 function request(data, fn) {
 
   var xhr = new XMLHttpRequest();
+
   xhr.open("post", "http://simonenko.su/academy/echo?" + time);
 
   xhr.addEventListener("readystatechange", function () {
+
     if (xhr.readyState == 4) {
       fn(xhr.responseText);
       // TODO: тут делаем очистку localstorage
@@ -112,7 +114,9 @@ btn_plus.addEventListener('click', function (e) {
   e.preventDefault();
   console.log('asd');
   changeNumbers(1, trip_duration);
+  plusDate(trip_duration);
 });
+
 
 function changeNumbers(number, el) {
   if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 20) {
@@ -122,6 +126,7 @@ function changeNumbers(number, el) {
     el.value = parseInt(el.value) + number;
     console.info(el.value);
     //console.info(number);
+
   } else {
     console.warn('Слишком много!');
   }
@@ -130,15 +135,21 @@ function changeNumbers(number, el) {
 depart.addEventListener('change', function () {
   var date_arrival = new Date(arrival.value).getTime();
   var date_depart = new Date(depart.value).getTime();
+
   var date_diff = Math.floor((date_depart - date_arrival) / 1000 / 60 / 60 / 24)
     //TODO: реализовать проверку
   if (date_diff <= 0) {
     trip_duration.value = 1;
   } else {
     trip_duration.value = date_diff;
+    console.log(trip_duration.value);
   }
 });
 
+function plusDate(num) {
+  var date_arrival = new Date(arrival.value).getTime();
+  
+}
 
 
 /* -- УДАЛЕНИЕ И ДОБАВЛЕНИЕ ЛЮДЕЙ -- */
@@ -233,70 +244,70 @@ function addTraveler() {
 
 
 /* -- ЗАГРУЗКА ФОТОГРАФИЙ -- */
-function LoadPhoto() {
-  if ('FileReader' in window) {
-    var btn_upload = document.getElementById('upload_photo'); // кнопка для добавления фотографий
-    var gallery = document.querySelector('.form-review__photos-gallery'); // див в котором лежат наши фотографии
-    var templ_image = document.getElementById('image_template').innerHTML; // шаблон для добавления фотографий
-    var images = []; // массив, в который передаем загруженные фотографии
-
-    btn_upload.addEventListener('change', function () {
-      var files = this.files;
-      for (var i = 0; i < files.length: i++) {
-        preview(files[i]);
-      }
-      this.value = '';
-    });
-
-    function preview(file) {
-      if (file.type.match(/image.*/)) {
-        var reader = new FileReader();
-
-        reader.addEventListener('load', function (event) {
-          var html = Mustache.render(template, {
-              "image": event.target.result,
-              "name": file.name
-            });
-          
-          console.log('Ура, картинка загрузилась');
-          
-          var figure = document.createElement('figure');
-          figure.classList.add('upload-photo');
-          figure.innerHTML = html;
-          
-          gallery.innerHTML = gallery.innerHTML + html;
-          
-          gallery.appendChild(img);
-          
-          figure.querySelector(".form-review__photo-close").addEventListener("click", function(event) {
-              event.preventDefault();
-              removePreview(figure);
-            });
-          
-          images.push({
-            'file': file,
-            'figure': figure
-          })
-          
-        });
-
-        reader.readAsDataURL(file);
-      }
-    }
-    
-    function removePreview(figure) {
-      images = images.filter(function(element) {
-        return element.figure != figure;
-      });
-      figure.parentNode.removeChild(figure);
-    }
-  }
-}
+//function LoadPhoto() {
+//  if ('FileReader' in window) {
+//    var btn_upload = document.getElementById('upload_photo'); // кнопка для добавления фотографий
+//    var gallery = document.querySelector('.form-review__photos-gallery'); // див в котором лежат наши фотографии
+//    var templ_image = document.getElementById('image_template').innerHTML; // шаблон для добавления фотографий
+//    var images = []; // массив, в который передаем загруженные фотографии
+//
+//    btn_upload.addEventListener('change', function () {
+//      var files = this.files;
+//      for (var i = 0; i < files.length; i++) {
+//        preview(files[i]);
+//      }
+//      this.value = '';
+//    });
+//
+//    function preview(file) {
+//      if (file.type.match(/image.*/)) {
+//        var reader = new FileReader();
+//
+//        reader.addEventListener('load', function (event) {
+//          var html = Mustache.render(template, {
+//              "image": event.target.result,
+//              "name": file.name
+//            });
+//          
+//          console.log('Ура, картинка загрузилась');
+//          
+//          var figure = document.createElement('figure');
+//          figure.classList.add('upload-photo');
+//          figure.innerHTML = html;
+//          
+//          gallery.innerHTML = gallery.innerHTML + html;
+//          
+//          gallery.appendChild(img);
+//          
+//          figure.querySelector(".form-review__photo-close").addEventListener("click", function(event) {
+//              event.preventDefault();
+//              removePreview(figure);
+//            });
+//          
+//          images.push({
+//            'file': file,
+//            'figure': figure
+//          })
+//          
+//        });
+//
+//        reader.readAsDataURL(file);
+//      }
+//    }
+//    
+//    function removePreview(figure) {
+//      images = images.filter(function(element) {
+//        return element.figure != figure;
+//      });
+//      figure.parentNode.removeChild(figure);
+//    }
+//  }
+//}
 
 
 
 /* -- АВТОМАТИЧЕСКОЕ ЗАПОЛНЕНИЕ 1го ПОЛЯ в ПУТЕШЕСТВЕННИКАХ -- */
-var lastname = document.querySelector('.form-review__personal-data  [name=lastname]');
-var lastname = document.querySelector('.form-review__personal-data  [name=firstname]');
-var lastname = document.querySelector('.form-review__personal-data  [name=middlename]');
+//var lastname = document.querySelector('.form-review__personal-data  [name=lastname]');
+//var lastname = document.querySelector('.form-review__personal-data  [name=firstname]');
+//var lastname = document.querySelector('.form-review__personal-data  [name=middlename]');
 
