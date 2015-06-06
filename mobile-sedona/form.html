@@ -137,7 +137,7 @@
                <div class="form-review__number-travelers form-review__counter">
                 <label for="number">Кол-во путешественников:<span>*</span></label>
                 <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
-                <input id="number" name="number" type="number"  min="1" max="10" step="1" placeholder="2 чел" required>
+                <input id="number_traveler" name="number" type="number"  min="1" max="10" step="1" placeholder="2 чел" required>
                 <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
               </div>
               
@@ -211,7 +211,7 @@
               <input id="upload_photo"class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
             </label>
             <div class="form-review__photos-gallery">
-              <figure>
+              <!--<figure>
                 <img class="form-review__photo" src="../img/photo1.jpg" alt="photo">
                 <a class="form-review__photo-close" href="#" title="close">x</a>
                 <figcaption class="form-review__photo-name">photo</figcaption>
@@ -246,9 +246,9 @@
                 <img class="form-review__photo" src="../img/photo2.jpg" alt="photo">
                 <a class="form-review__photo-close" href="#" title="close">x</a>
                 <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
+              </figure>-->
             </div>
-            <input id="send" class="form-review__btn-send btn" name="send" type="submit" value="Отправить отзыв">
+            <input id="send" class="form-review__btn-send btn" name="send" type="submit" value="Отправить отзыв" placeholder="Отправить отзыв">
           </fieldset>
           
         </form>
@@ -298,6 +298,14 @@
     </div>
     
     <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/mustache.js"></script>
+    <script id="image_template" type="text/html">
+      <figure class="upload-photo">
+        <img class="form-review__photo" src="{{image}}" alt="{{name}}">
+        <a class="form-review__photo-close" href="#" title="close">x</a>
+        <figcaption class="form-review__photo-name">{{name}}</figcaption>
+      </figure>
+    </script>
     
 </body>
 

@@ -583,26 +583,39 @@
     }
     &__trip-data {
       .form-wrapper{
-        margin: 29px 0 0;
+        margin: 29px 0 40px;
       }
     }
     &__counter-trip {
       input[type="number"]{
-        width: 49%;
-        margin: 0;
+        width: 50.4%;
+        //margin: 0;
       }
       a {
         width: 61px;
       }
     }
     &__number-travelers {
-      text-align: center;
+      margin-top: 25px;
+      width: 28%;
       label{
         text-align: center;
       }
+       input[type="number"]{
+        width: 50%;
+       // margin: 0;
+      }
+      a {
+        width: 61px;
+      }
+    }
+    &__traveler-data {
+      .form-wrapper{
+       // margin: 25px 0 49px;
+      }
     }
     &__traveler {
-      display: table;
+      //display: table;
       font-size: 0;
       .row-left,
       .row-right {
@@ -610,7 +623,7 @@
         display: inline-block;
       }
       .row-left {
-        display: table-cell;
+        //display: table-cell;
         width: 61px;
         padding-right: 7px;
         vertical-align: top;
@@ -619,11 +632,11 @@
         }
       }
       .row-right {
-        display: table-cell;
+        //display: table-cell;
         width: 92%;
         .form-review__col-3 {
-          width: 32.8%;
-          margin-right: 7px;
+          width: 31%;
+          margin-right: 30px;
           &:last-child {
             margin-right: 0;
           }
