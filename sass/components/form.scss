@@ -18,7 +18,11 @@
   
 .form-review {
   margin-bottom: 50px;
- 
+  
+  .popup-show {
+    display: block;
+  }
+  
   fieldset {
     margin: 0; 
     margin-top: 18px;
@@ -676,18 +680,30 @@
       width: 100%;
       text-align: left;
       figure {
-        margin: 0 5% 68px;
-        margin-bottom: 68px;
+        margin-left: 0;
+        margin-right: 7.5%;
+        margin-bottom: 38px;
+        width: 140px;
+        vertical-align: top;
         &:nth-child(3n) {
-          margin: 0 5% 68px;
+          margin-right: 7.5%;
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
         }
       }
     }
     &__photo {
+      margin-bottom: 20px;
       display: block;
       max-width: 100%; 
       width: 140px;
       height: 140px;
+    }
+    &__photo-name {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
     }
     &__photo-close {
       top: -30px;
