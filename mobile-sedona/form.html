@@ -6,7 +6,7 @@
   <title>Sedona-Отзыв</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/font-awesome.css" rel="stylesheet">
+  <!--<link href="../css/font-awesome.css" rel="stylesheet">-->
   <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" >
 </head>
 
@@ -53,7 +53,7 @@
           <p class="form-review-intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         
-        <form class="form-review__form" action="/echo" method="post">
+        <form class="form-review__form" action="http://simonenko.su/academy/echo" method="post">
 
            <fieldset class="form-review__personal-data">
            
@@ -206,9 +206,9 @@
           
           <fieldset class="form-review__download-photos">
             <legend class="form-review__title" align="center">Загрузите фотографии:</legend>
-            <label for="upload_photo" class="form-review__btn-select btn--grey">
+            <label for="upload__photo" class="form-review__btn-select btn--grey">
               Выбрать фотографии
-              <input id="upload_photo"class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
+              <input id="upload__photo" class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
             </label>
             <div class="form-review__photos-gallery">
               <!--<figure>
@@ -297,16 +297,15 @@
       </div>
     </div>
     
-    <script type="text/javascript" src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/mustache.js"></script>
+<!--
     <script id="image_template" type="text/html">
-      <figure class="upload-photo">
         <img class="form-review__photo" src="{{image}}" alt="{{name}}">
         <a class="form-review__photo-close" href="#" title="close">x</a>
         <figcaption class="form-review__photo-name">{{name}}</figcaption>
-      </figure>
     </script>
-    
+    <script type="text/javascript" src="../js/mustache.min.js"></script>
+-->
+    <script type="text/javascript" src="../js/script.js"></script>
 </body>
 
 </html>
