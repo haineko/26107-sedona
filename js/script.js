@@ -7,21 +7,19 @@ var fail = document.querySelector(".popup--failure");
 
 
 /* -- МЕНЮ -- */
-menu.addEventListener("click", function () {
+var handler = function () {
   event.preventDefault();
   for (var i = 0; i < nav.length; i++) {
     nav[i].classList.toggle("main-menu__item--show");
   }
   cross.classList.toggle("main-menu__cross--show");
-});
+};
 
-cross.addEventListener("click", function () {
-  event.preventDefault();
-  for (var i = 0; i < nav.length; i++) {
-    nav[i].classList.remove("main-menu__item--show");
-  }
-  cross.classList.remove("main-menu__cross--show");
-});
+menu.addEventListener("click", handler);
+menu.addEventListener("tap", handler);
+
+cross.addEventListener("click", handler);
+cross.addEventListener("tap", handler);
 
 initForm();
 initLocalStorage()
@@ -29,26 +27,26 @@ initLocalStorage()
 /* -- ОТПРАВКА ФОРМЫ С ПОМОЩЬЮ AJAX -- */
 function initForm() {
   if (!("FormData" in window)) {
-    
+
+    console.warn('У вас нет пожжержки FormData в браузере');
     return;
-    
+
   } else {
-    
-    
+
     form.addEventListener("submit", function(event) {
-      
+
       event.preventDefault();
       var data = new FormData(form);
       var queue =[];
-      
+
       queue.forEach(function(element) {
         data.append("form-review__photos-gallery", element.file);
       });
-      
+
       request(data, function(response) {
         console.log(response);
       });
-      
+
     });
   }
 }
@@ -68,7 +66,7 @@ function request(data, fn) {
     } else {
       fail.classList.add("popup-show");
     }
-    
+
   });
 
   xhr.send(data);
@@ -76,42 +74,42 @@ function request(data, fn) {
 
 /* -- LOCALSTORAGE -- */
 function initLocalStorage() {
-  
+
   if (window.localStorage) {
-    
+
     var form = document.querySelector(".form-review__form");
     var savElements = form.querySelectorAll("[name]")-1;
-    
+
     for (var i = 0; i < savElements.length; i++) {
-      
+
       getState(savElements[i]);
       setState(savElements[i]);
-      
+
     }
   }
 }
 
 function getState(savElement) {
-  
+
   var name = savElement.getAttribute('name');
   savElement.value = localStorage.getItem(name) || '';
-  
+
 }
 
 function setState(savElement) {
-  
+
   var name = savElement.getAttribute('name');
-  
+
   savElement.addEventListener('keyup', function () {
-    
+
     var value = this.value;
-    
+
     if (!value) {
       value = '';
     }
-    
+
     localStorage.setItem(name, value);
-    
+
   });
 }
 
@@ -121,19 +119,19 @@ var btn_minus = document.querySelector('.form-review__counter-trip > .form-revie
 var btn_plus = document.querySelector('.form-review__counter-trip > .form-review__btn-plus');
 
 btn_minus.addEventListener('click', function (e) {
-  
+
   e.preventDefault();
   changeNumbers(-1, trip_duration);
-  console.info('Минус день'+trip_duration.value);
-  
+  console.info('Минус день' + trip_duration.value);
+  plusDate(trip_duration.value);
 });
 
 btn_plus.addEventListener('click', function (e) {
-  
+
   e.preventDefault();
   changeNumbers(1, trip_duration);
-  console.info('Плюс день'+trip_duration.value);
-  
+  console.info('Плюс день' + trip_duration.value);
+  plusDate(trip_duration.value);
 });
 
 arrival.addEventListener('change', function () {
@@ -145,7 +143,7 @@ arrival.addEventListener('change', function () {
       //TODO: реализовать проверку
     if (date_diff < 0) {
       trip_duration.value = 0;
-    } else   {
+    } else {
       trip_duration.value = date_diff;
       console.log(trip_duration.value);
     }
@@ -155,34 +153,51 @@ arrival.addEventListener('change', function () {
 
 
 function plusDate(num) {
-  
+
+  if (!arrival.value) {
+    date = new Date();
+    arrival.value = date.getFullYear() + '-01-01'; /* TODO: refactor */
+  }
+
   var date_arrival = new Date(arrival.value).getTime();
-  var date_depart = new Date(depart.value).getTime();
+  console.log('Дата в первом инпуте: ' + new Date(date_arrival));
+
   var d = Math.floor(num*1000*60*60*24 + date_arrival);
   var a = new Date(d);
-  console.log(a); //высчитывает правильно, но не могу вывести в инпут
-  //depart.value = new Date(d); 
+  console.warn('Дата в втором инпуте: ' + a);
+
+  var month = (a.getMonth() + 1).toString();
+  var month = month[1] ? month : '0' + month[0]
+
+  var day = a.getDate().toString();
+  console.info('Day1: ' + day);
+  var day = day[1] ? day : '0' + day[0]
+
+  console.info('Month: ' + month);
+  console.info('Day2: ' + day);
+
+  depart.value = a.getFullYear() + '-' + month + '-' + day;
 }
 
 /* -- СЧЕТЧИК --*/
 function changeNumbers(number, el) {
-  
+
   if ((parseInt(el.value) + number) < 1) {
-    
+
     console.warn('Слишком мало!');
-    
+
   } else if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 30) {
-    
+
     if (!el.value) {
-      el.value = 1; 
+      el.value = 1;
     }
-    
+
     el.value = parseInt(el.value) + number;
-    
+
   } else {
     console.warn('Слишком много!');
   }
-  
+
 }
 
 
@@ -192,25 +207,25 @@ var add_traveler = document.querySelector('.form-review__number-travelers > .for
 var number_traveler = document.getElementById('number_traveler');
 
 del_traveler.addEventListener('click', function (e) {
-  
+
   e.preventDefault();
   changeNumbers(-1, number_traveler);
   console.info('Больше путешественников, больше!'+number_traveler.value);
   removeTraveler();
-  
+
 });
 
 add_traveler.addEventListener('click', function (e) {
-  
+
   e.preventDefault();
   changeNumbers(1, number_traveler);
   console.info('Меньше путешественников,меньше!'+number_traveler.value);
   addTraveler()
-  
+
 });
 
 function removeTraveler() {
-  
+
   var data_traveler = form.querySelector('.form-review__travelers-data .form-wrapper');
   var del_traveler = document.getElementById("traveler" + (parseInt(number_traveler.value) + 1));
 
@@ -219,14 +234,14 @@ function removeTraveler() {
 }
 
 function addTraveler() {
-  
-  var data_traveler = document.querySelector('.form-review__travelers-data'); 
+
+  var data_traveler = document.querySelector('.form-review__travelers-data');
   var contener = document.querySelector('.form-review__travelers-data .form-wrapper');
   var traveler_template = document.querySelector("#traveler_template").innerHTML;
   var traveler_html = Mustache.render(traveler_template, {
           "number": number_traveler.value
         });
-  
+
   var new_traveler = document.createElement('div');
   new_traveler.classList.add('form-review__traveler');
   new_traveler.id = "traveler"+number_traveler.value;
@@ -240,34 +255,34 @@ var btn_upload = document.querySelector("#upload_photo");
 
 btn_upload.addEventListener("change", function() {
   var files = this.files;
-  
+
   for (var i = 0; i < files.length; i++) {
     preview(files[i]);
   }
   this.value = "";
-  
+
 });
 
 function preview(file) {
 
   if("FileReader" in window) {
-    
+
     if(file.type.match(/image.*/)) {
-      
+
       var reader = new FileReader();
-      
+
       reader.addEventListener("load", function(event) {
-          
+
         var form = document.querySelector(".form-review__form");
-        var gallery = document.querySelector(".form-review__photos-gallery"); 
+        var gallery = document.querySelector(".form-review__photos-gallery");
         var imtemplate = document.querySelector("#image_template").innerHTML;
         var queue =[];
-        
+
         var html = Mustache.render(imtemplate, {
           "image": event.target.result,
           "name": file.name
         });
-          
+
         var figure = document.createElement("figure");
         figure.innerHTML = html;
         gallery.appendChild(figure);
@@ -275,34 +290,34 @@ function preview(file) {
 
         var close = figure.querySelector(".form-review__photo-close");
         close.addEventListener("click", function(event) {
-          
+
           event.preventDefault();
           removePreview(figure);
         });
-        
+
         queue.push({
-          
+
           "file": file,
           "figure": figure
-          
+
         });
-        
+
       });
-      
+
       reader.readAsDataURL(file);
     }
   }
 }
 
 function removePreview(figure) {
-  
+
   var queue =[];
   queue = queue.filter(function(element) {
-    
+
     return element.figure != figure;
-    
+
   });
-  
+
   figure.parentNode.removeChild(figure);
   console.info("Фотография удалена!");
 }

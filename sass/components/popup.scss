@@ -24,6 +24,9 @@
       height: 58px;
     }
   }
+  &.popup-show { /* TODO: refactor */
+    display: block;
+  }
   &--request {
     display: none;
     a {
@@ -37,7 +40,7 @@
   &__content {
     padding: 40px 40px 0;
   }
-  
+
   &__title {
     margin: 0;
   }
@@ -45,10 +48,10 @@
     margin: 25px 0 35px;
 
   }
-  
+
   @include tablet {
     &--failure {
-      padding: 54px 60px 48px;      
+      padding: 54px 60px 48px;
       width: 400px;
       display: none;
 //      a {
@@ -57,7 +60,7 @@
     }
     &--request{
       width: 640px;
-      
+
     }
     a {
         width: 100%;
