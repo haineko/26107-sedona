@@ -115,6 +115,7 @@
   
   
   @include tablet {
+    background-color: red;
     &__list {
       flex-direction: row;
       flex-wrap: nowrap;
@@ -142,6 +143,11 @@
     }
     &__item--logo {
       order: 3;
+    }
+    &__logo {
+      position: inherit;
+      background: url(../img/logo-sedona@1x.png) no-repeat 50% 0,
+                url(../img/logo-triangle.svg) no-repeat 0 0/contain;
     }
     &__link {
       width: 100%;
