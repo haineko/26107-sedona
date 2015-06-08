@@ -115,7 +115,7 @@
                   <div class="form-review__counter-trip form-review__number">
                     <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
                     
-                      <input id="trip-duration" name="trip-duration" type="number" min="1" max="16" step="1" value="14" required>
+                      <input id="trip-duration" name="trip-duration" type="number" min="1" max="30" step="1" value="1" required>
                   
                     <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
                   </div>
@@ -137,53 +137,33 @@
                <div class="form-review__number-travelers form-review__counter">
                 <label for="number">Кол-во путешественников:<span>*</span></label>
                 <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
-                <input id="number_traveler" name="number" type="number"  min="1" max="10" step="1" placeholder="2 чел" required>
+                <input id="number_traveler" name="number" type="number"  min="1" max="10" step="1" value="1" required>
                 <a class="form-review__btn-plus btn--grey" href="#" title="Увеличить количество">+</a>
               </div>
               
               
-                <div class="form-review__traveler">
+                <div id="treveler"class="form-review__traveler">
                   <div class="row-left">
                     <label for="number-traveler">№</label>
                     <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
                   </div>
                   <div class="row-right">
                     <div class="form-review__col-3">
-                      <label for="lastname-traveler">Фамилия:<span>*</span></label>
-                      <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
+                      <label for="lastname-traveler1">Фамилия:<span>*</span></label>
+                      <input id="lastname-traveler1" name="lastname-traveler1" type="text" placeholder="Иванов" required>
                     </div>
                     <div class="form-review__col-3">
-                      <label for="firstname-traveler">Имя:<span>*</span></label>
-                      <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
+                      <label for="firstname-traveler1">Имя:<span>*</span></label>
+                      <input id="firstname-traveler1" name="firstname-traveler1" type="text" placeholder="Пётр" required>
                     </div>
                     <div class="form-review__col-3">
-                      <label for="middlename-traveler">Отчество:</label>
-                      <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
+                      <label for="middlename-traveler1">Отчество:</label>
+                      <input id="middlename-traveler1" name="middlename-traveler1" type="text" placeholder="Александрович">
                     </div>
                                   </div>
                   </div>
-                <div class="form-review__traveler">
-                  <div class="row-left">
-                    <label for="number-traveler">№</label>
-                    <input id="number-traveler" name="number-traveler" type="text" placeholder="2">
-                  </div>
-                  <div class="row-right">
-                    <div class="form-review__col-3">
-                      <label for="lastname-traveler">Фамилия:<span>*</span></label>
-                      <input id="lastname-traveler" name="lastname-traveler" type="text" placeholder="Иванов" required>
-                    </div>
-                    <div class="form-review__col-3">
-                      <label for="firstname-traveler">Имя:<span>*</span></label>
-                      <input id="firstname-traveler" name="firstname-traveler" type="text" placeholder="Пётр" required>
-                    </div>
-                    <div class="form-review__col-3">
-                      <label for="middlename-traveler">Отчество:</label>
-                      <input id="middlename-traveler" name="middlename-traveler" type="text" placeholder="Александрович">
-                    </div>
-                  </div>
-                </div>
-        
-            </div>
+                
+            </div>  
           </fieldset>
           
           <fieldset class="form-review__sights">
@@ -211,50 +191,12 @@
               <input id="upload_photo"class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
             </label>
             <div class="form-review__photos-gallery">
-              <!--<figure>
-                <img class="form-review__photo" src="../img/photo1.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo2.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo3.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo4.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo5.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo6.jpg" alt="photo">
-                
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>
-              <figure>
-                <img class="form-review__photo" src="../img/photo2.jpg" alt="photo">
-                <a class="form-review__photo-close" href="#" title="close">x</a>
-                <figcaption class="form-review__photo-name">photo</figcaption>
-              </figure>-->
             </div>
             <input id="send" class="form-review__btn-send btn" name="send" type="submit" value="Отправить отзыв" placeholder="Отправить отзыв">
           </fieldset>
           
         </form>
-        
-      </div>
-      
+
     </main>
     
     <footer>
@@ -298,15 +240,6 @@
     </div>
     
     <script type="text/javascript" src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/mustache.js"></script>
-    <script id="image_template" type="text/html">
-      <figure class="upload-photo">
-        <img class="form-review__photo" src="{{image}}" alt="{{name}}">
-        <a class="form-review__photo-close" href="#" title="close">x</a>
-        <figcaption class="form-review__photo-name">{{name}}</figcaption>
-      </figure>
-    </script>
-    
 </body>
 
 </html>
