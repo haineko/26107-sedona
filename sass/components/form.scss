@@ -147,6 +147,7 @@
       display: inline-block;
       margin: 0 6px;
       width: calc(100% - 136px);
+      text-align: center;
     }
   }
   
@@ -165,6 +166,7 @@
       display: inline-block;
       margin: 0 6px;
       width: calc(100% - 136px);
+      text-align: center;
     }
   }
   
@@ -393,12 +395,12 @@
     
     &__trip-data {
       .form-wrapper{
-        margin: 29px 0 0;
+        margin: 29px 0 60px;
       }
     }
     
     &__counter-trip {
-      input[type="text"]{
+      input[type="number"]{
         width: 49%;
         margin: 0;
       }
@@ -408,14 +410,22 @@
     }
     
     &__number-travelers {
+      margin: 0 auto;
+      max-width: 278px;
       text-align: center;
       label{
         text-align: center;
       }
+      input[type="number"] {
+        margin: 0;
+      }
     }
-    
+    &__travelers-data {
+      .form-wrapper{
+        margin: 36px 0 60px;
+      }
+    }
     &__traveler {
-      display: table;
       font-size: 0;
       .row-left,
       .row-right {
@@ -423,7 +433,6 @@
         display: inline-block;
       }
       .row-left {
-        display: table-cell;
         width: 61px;
         padding-right: 7px;
         vertical-align: top;
@@ -432,11 +441,9 @@
         }
       }
       .row-right {
-        display: table-cell;
-        width: 90%;
         .form-review__col-3 {
-          width: 32.3%;
-          margin-right: 7px;
+          width: calc(33.3% - 4px);
+          margin-right: 6px;
           &:last-child {
             margin-right: 0;
           }
@@ -450,15 +457,16 @@
     &__sights {
       .form-wrapper{
         font-size: 0;
-        margin: 36px 0 38px;
+        margin: 36px auto 38px;
+        width: 460px;
+        &:after {@include clearfix;}
+        label {
+          display: block;
+          margin-right: 7%;
+          float: left;
+        }
         .form-review__col-2 {
           vertical-align: top;
-          &:nth-child(2n+1) {
-            padding-left: 10%;
-          }   
-          &:nth-child(2n) {
-            padding-right: 10%;
-          } 
         }
       }
     }
@@ -588,7 +596,6 @@
     &__counter-trip {
       input[type="number"]{
         width: 50.4%;
-        //margin: 0;
       }
       a {
         width: 61px;
@@ -602,19 +609,20 @@
       }
        input[type="number"]{
         width: 50%;
-       // margin: 0;
       }
       a {
         width: 61px;
       }
     }
-    &__traveler-data {
+    
+    &__travelers-data {
       .form-wrapper{
-       // margin: 25px 0 49px;
+        margin: 36px 0 60px;
       }
     }
-    &__traveler {
-      //display: table;
+    
+    &__travelers {
+
       font-size: 0;
       .row-left,
       .row-right {
@@ -622,7 +630,6 @@
         display: inline-block;
       }
       .row-left {
-        //display: table-cell;
         width: 61px;
         padding-right: 7px;
         vertical-align: top;
@@ -631,7 +638,6 @@
         }
       }
       .row-right {
-        //display: table-cell;
         width: 92%;
         .form-review__col-3 {
           width: 31%;
