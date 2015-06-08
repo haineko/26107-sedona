@@ -156,6 +156,33 @@ function changeNumbers(number, el) {
   }
   
 }
+arrival.addEventListener('change', function () {
+  depart.addEventListener('change', function () {
+    var date_arrival = new Date(arrival.value).getTime();
+    var date_depart = new Date(depart.value).getTime();
+
+    var date_diff = Math.floor((date_depart - date_arrival) / 1000 / 60 / 60 / 24);
+      //TODO: реализовать проверку
+    if (date_diff < 0) {
+      trip_duration.value = 0;
+    } else   {
+      trip_duration.value = date_diff;
+      console.log(trip_duration.value);
+    }
+
+  });
+});
+
+
+function plusDate(num) {
+  
+  var date_arrival = new Date(arrival.value).getTime();
+  var date_depart = new Date(depart.value).getTime();
+  var d = Math.floor(num*1000*60*60*24 + date_arrival);
+  var a = new Date(d);
+  console.log(a); //высчитывает правильно, но не могу вывести в инпут
+  //depart.value = new Date(d); 
+}
 
 var del_traveler = document.querySelector('.form-review__number-travelers > .form-review__btn-minus');
 var add_traveler = document.querySelector('.form-review__number-travelers > .form-review__btn-plus');
