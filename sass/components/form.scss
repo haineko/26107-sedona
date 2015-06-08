@@ -221,16 +221,26 @@
     width: 280px;
     height: 58px;
     border: none;
+    outline: none;
   }
   &__select {
     opacity: 0;
+//    &:focus {
+//      &+ label {
+//        color: red;
+//      }
+//    }
   }
   &__btn-select {
     text-align: center;
-  padding: 17px 0;
+    padding: 17px 0;
+   
   }
   &__btn-send {
     margin-bottom: 20px;
+    &:focus {
+      border: 3px solid desaturate(darken($bg-main-menu, 8%), 5%);
+    }
   }
   &__photos-gallery {
     margin: 0 auto;

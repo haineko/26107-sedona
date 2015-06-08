@@ -111,7 +111,7 @@
               
                 <div class="form-review__col-3">
                   <label for="trip-duration">Длительность дней:<span>*</span></label>            
-                  <div class="form-review__counter-trip form-review__number">
+                  <div class="form-review__counter-trip">
                     <a class="form-review__btn-minus btn--grey " href="#" title="Уменшить количество">-</a>
                     
                       <input id="trip-duration" name="trip-duration" type="number" min="1" max="30" step="1" value="1" required>
@@ -144,7 +144,7 @@
                 <div id="treveler"class="form-review__traveler">
                   <div class="row-left">
                     <label for="number-traveler">№</label>
-                    <input id="number-traveler" name="number-traveler" type="text" placeholder="1">
+                    <input id="number-traveler" name="number-traveler" type="text" placeholder="1" disabled>
                   </div>
                   <div class="row-right">
                     <div class="form-review__col-3">
@@ -187,7 +187,7 @@
             <legend class="form-review__title" align="center">Загрузите фотографии:</legend>
             <label for="upload_photo" class="form-review__btn-select btn--grey">
               Выбрать фотографии
-              <input id="upload_photo"class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
+              <input id="upload_photo" class="form-review__select btn--grey" type="file" value="Выбрать фотографии" multiple>
             </label>
             <div class="form-review__photos-gallery">
             </div>
@@ -244,7 +244,7 @@
       
         <div class="row-left">
           <label for="number-traveler{{number}}">№</label>
-          <input id="number-traveler{{number}}" name="number-traveler" type="text" placeholder="{{number}}">
+          <input id="number-traveler{{number}}" name="number-traveler" type="text" placeholder="{{number}}" disabled>
         </div>
         <div class="row-right">
           <div class="form-review__col-3">
