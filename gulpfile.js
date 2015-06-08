@@ -11,49 +11,51 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 
-gulp.task('check', function() {
+gulp.task('check', function() { /* TODO: проверить работоспособность */
   gulp.src("mobile-sedona/*.html")
-  .pipe(htmlhint({
-    "tag-pair": true,
-    "style-disabled": true,
-    "img-alt-require": true,
-    "tagname-lowercase": true,
-    "src-not-empty": true,
-    "id-unique": true,
-    "spec-char-escape": true
-  }));
+    .pipe(htmlhint({
+      "tag-pair": true,
+      "style-disabled": true,
+      "img-alt-require": true,
+      "tagname-lowercase": true,
+      "src-not-empty": true,
+      "id-unique": true,
+      "spec-char-escape": true
+    }));
 });
 
 gulp.task('sass', function() {
   return gulp.src("sass/style.scss")
     .pipe(sass())
+    .pipe(gulp.dest("./dest/css"))
   	.pipe(autoprefixer())
-    .pipe(cmq({
-      log: true
-    }))
+    //.pipe(cmq({
+    //  log: true
+    //}))
     .pipe(minifyCss())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("./dest/css"))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('script', function() {
-  gulp.src('js/script.js', 'js/map.js')
-    .pipe(concat('all.js'))
+  gulp.src(['js/script.js', 'js/map.js'])
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('./dest/js'))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('.js'));
+    .pipe(gulp.dest('./dest/js'));
 });
 
 gulp.task('image', function() {
-  gulp.src()
-  .pipe(imagemin())
-  .pipe(gulp.dest('./dest/img'));
-}
+  gulp.src('./img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dest/img'));
+});
 
 gulp.task('serve', ['sass'], function() {
 
@@ -65,4 +67,5 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch("mobile-sedona/*.html").on('change', reload);
 });
 
+gulp.task('build', ['check', 'sass', 'script', 'image']);
 gulp.task('default', ['serve']);
