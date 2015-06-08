@@ -238,7 +238,29 @@
         <a class="popup__btn btn" href="#" title="Закрыть окно">Закрыть окно</a>
       </div>
     </div>
-    
+    <script id="traveler_template" type="text/html">
+      
+        <div class="row-left">
+          <label for="number-traveler{{number}}">№</label>
+          <input id="number-traveler{{number}}" name="number-traveler" type="text" placeholder="{{number}}">
+        </div>
+        <div class="row-right">
+          <div class="form-review__col-3">
+            <label for="lastname-traveler{{number}}">Фамилия:<span>*</span></label>
+            <input id="lastname-traveler{{number}}" name="lastname-traveler{{number}}" type="text" placeholder="Иванов" required>
+          </div>
+          <div class="form-review__col-3">
+            <label for="firstname-traveler{{number}}">Имя:<span>*</span></label>
+            <input id="firstname-traveler{{number}}" name="firstname-traveler{{number}}" type="text" placeholder="Пётр" required>
+          </div>
+          <div class="form-review__col-3">
+            <label for="middlename-traveler{{number}}">Отчество:</label>
+            <input id="middlename-traveler{{number}}" name="middlename-traveler{{number}}" type="text" placeholder="Александрович">
+        </div>
+        </div>
+         
+    </script>
+    <script type="text/javascript" src="../js/mustache.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
 </body>
 
