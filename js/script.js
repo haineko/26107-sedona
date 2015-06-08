@@ -115,7 +115,7 @@ function setState(savElement) {
   });
 }
 
-
+/* -- ДАТЫ -- */
 var trip_duration = document.getElementById('trip-duration');
 var btn_minus = document.querySelector('.form-review__counter-trip > .form-review__btn-minus');
 var btn_plus = document.querySelector('.form-review__counter-trip > .form-review__btn-plus');
@@ -136,26 +136,6 @@ btn_plus.addEventListener('click', function (e) {
   
 });
 
-
-function changeNumbers(number, el) {
-  
-  if ((parseInt(el.value) + number) < 1) {
-    
-    console.warn('Слишком мало!');
-    
-  } else if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 30) {
-    
-    if (!el.value) {
-      el.value = 1; 
-    }
-    
-    el.value = parseInt(el.value) + number;
-    
-  } else {
-    console.warn('Слишком много!');
-  }
-  
-}
 arrival.addEventListener('change', function () {
   depart.addEventListener('change', function () {
     var date_arrival = new Date(arrival.value).getTime();
@@ -184,6 +164,29 @@ function plusDate(num) {
   //depart.value = new Date(d); 
 }
 
+/* -- СЧЕТЧИК --*/
+function changeNumbers(number, el) {
+  
+  if ((parseInt(el.value) + number) < 1) {
+    
+    console.warn('Слишком мало!');
+    
+  } else if ((parseInt(el.value) + number) >= 1 && (parseInt(el.value) + number) <= 30) {
+    
+    if (!el.value) {
+      el.value = 1; 
+    }
+    
+    el.value = parseInt(el.value) + number;
+    
+  } else {
+    console.warn('Слишком много!');
+  }
+  
+}
+
+
+/* -- УДАЛЕНИЕ И ДОБАВЛЕНИЕ ЛЮДЕЙ -- */
 var del_traveler = document.querySelector('.form-review__number-travelers > .form-review__btn-minus');
 var add_traveler = document.querySelector('.form-review__number-travelers > .form-review__btn-plus');
 var number_traveler = document.getElementById('number_traveler');
@@ -230,4 +233,76 @@ function addTraveler() {
   new_traveler.innerHTML = traveler_html;
   contener.appendChild(new_traveler);
   console.log('Добавлен путешественник!');
+}
+
+/* -- ДОБАВЛЕНИЕ ФОТОГРАФИЙ -- */
+var btn_upload = document.querySelector("#upload_photo");
+
+btn_upload.addEventListener("change", function() {
+  var files = this.files;
+  
+  for (var i = 0; i < files.length; i++) {
+    preview(files[i]);
+  }
+  this.value = "";
+  
+});
+
+function preview(file) {
+
+  if("FileReader" in window) {
+    
+    if(file.type.match(/image.*/)) {
+      
+      var reader = new FileReader();
+      
+      reader.addEventListener("load", function(event) {
+          
+        var form = document.querySelector(".form-review__form");
+        var gallery = document.querySelector(".form-review__photos-gallery"); 
+        var imtemplate = document.querySelector("#image_template").innerHTML;
+        var queue =[];
+        
+        var html = Mustache.render(imtemplate, {
+          "image": event.target.result,
+          "name": file.name
+        });
+          
+        var figure = document.createElement("figure");
+        figure.innerHTML = html;
+        gallery.appendChild(figure);
+        console.info("Фотография добавлена!");
+
+        var close = figure.querySelector(".form-review__photo-close");
+        close.addEventListener("click", function(event) {
+          
+          event.preventDefault();
+          removePreview(figure);
+        });
+        
+        queue.push({
+          
+          "file": file,
+          "figure": figure
+          
+        });
+        
+      });
+      
+      reader.readAsDataURL(file);
+    }
+  }
+}
+
+function removePreview(figure) {
+  
+  var queue =[];
+  queue = queue.filter(function(element) {
+    
+    return element.figure != figure;
+    
+  });
+  
+  figure.parentNode.removeChild(figure);
+  console.info("Фотография удалена!");
 }

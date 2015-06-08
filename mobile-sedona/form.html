@@ -227,6 +227,7 @@
       <p class="popup__text">Проверьте поля, вделенные красным, скорее всего вы забыли их заполнить</p>
       <a class="popup__btn btn" href="#" title="Окей">Ok</a>
     </div>
+    
     <div class="popup popup--request">
       <div class="popup__content">
         <header>
@@ -238,6 +239,8 @@
         <a class="popup__btn btn" href="#" title="Закрыть окно">Закрыть окно</a>
       </div>
     </div>
+    
+    
     <script id="traveler_template" type="text/html">
       
         <div class="row-left">
@@ -260,8 +263,18 @@
         </div>
          
     </script>
+    
+    <script id="image_template" type="text/html">
+      
+        <img class="form-review__photo" src="{{image}}" alt="{{name}}">
+        <a class="form-review__photo-close" href="#" title="close">x</a>
+        <figcaption class="form-review__photo-name">{{name}}</figcaption>
+      
+    </script>
+    
     <script type="text/javascript" src="../js/mustache.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
+    
 </body>
 
 </html>
