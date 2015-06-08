@@ -209,6 +209,12 @@ footer {
     &::-moz-placeholder { font-family: $font-family; color: $color-text-dark; }
     &:-moz-placeholder { font-family: $font-family; color: $color-text-dark; }
     &:-ms-input-placeholder { font-family: $font-family; color: $color-text-dark; }
+    &:focus {
+      &::-webkit-input-placeholder { color: darken($bg-reason, 2%); ;} 
+      &::-moz-placeholder { color: darken($bg-reason, 2%); ; }
+      &:-moz-placeholder { color: darken($bg-reason, 2%); ; }
+      &:-ms-input-placeholder { color: darken($bg-reason, 2%); ; }
+    }
   }
   &__impression-data,
   &__sights {

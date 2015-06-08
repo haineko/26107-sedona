@@ -39,6 +39,12 @@
   }
 }
 
+@mixin tablet--form {
+  @media (min-width: #{$tablet-width--form}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;

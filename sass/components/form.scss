@@ -39,6 +39,7 @@
     span {
       margin-left: 4px;
       color: #ff3333;
+      font-weight: 700;
     }
     a {
        @include invisible-text;
@@ -320,7 +321,7 @@
 }
 
 
-@include tablet {
+@include tablet--form {
   .form-review-intro {
     margin: 0 20% 40px;
     padding-top: 7px;
@@ -401,7 +402,7 @@
     
     &__counter-trip {
       input[type="number"]{
-        width: 49%;
+        width: calc(100% - 122px);
         margin: 0;
       }
       a {
@@ -411,7 +412,8 @@
     
     &__number-travelers {
       margin: 0 auto;
-      max-width: 278px;
+      margin-bottom: 29px;
+      width: 30%;
       text-align: center;
       label{
         text-align: center;
