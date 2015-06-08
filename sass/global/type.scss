@@ -279,7 +279,12 @@ footer {
       line-height: 3rem;
     }
   }
-  
+  .form-review {
+    &__photo-name{
+      font-size: $font-size;
+      line-height: $line-height-base;
+    }
+  }
   .popup {
     &__title {
       @include large-font($lh:4rem);
@@ -315,6 +320,12 @@ footer {
     &__intro {
       font-size: 2.4rem;
       line-height: 3rem;
+    }
+  }
+  .form-review {
+    &__photo-name{
+      font-size: $font-size;
+      line-height: $line-height-base;
     }
   }
 }

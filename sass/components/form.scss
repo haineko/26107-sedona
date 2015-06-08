@@ -171,7 +171,7 @@
   }
   
   &__traveler {
-    //display: table;
+    display: table;
     font-size: 0;
     margin-bottom: 30px;
     &:after {
@@ -476,10 +476,11 @@
     &__photos-gallery {
       margin-bottom: 36px;
       width: 100%;
-      text-align: center;
+      
       figure {
         margin: 0 5% 68px;
         margin-bottom: 68px;
+        vertical-align: top;
         &:nth-child(3n) {
           margin: 0 5% 68px;
         }
@@ -509,7 +510,9 @@
         background-color: darken($bg-reason, 21%);
       }
     }
-    
+    &__photo-name {
+      max-width: 140px;
+    }
     &__btn-send {
       display: block;
       margin: 0 auto;
@@ -676,14 +679,19 @@
       width: 100%;
       text-align: left;
       figure {
-        margin: 0 5% 68px;
-        margin-bottom: 68px;
+        margin-right: 6.85% ;
+        margin-bottom: 37px;
+        vertical-align: top;
         &:nth-child(3n) {
-          margin: 0 5% 68px;
+          margin-right: 6.85%;
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
         }
       }
     }
     &__photo {
+      margin-bottom: 15px;
       display: block;
       max-width: 100%; 
       width: 140px;
@@ -704,6 +712,9 @@
         height: 2px;
         background-color: darken($bg-reason, 21%);
       }
+    }
+    &__photo-name {
+      max-width: 140px;
     }
     &__btn-send {
       display: block;
