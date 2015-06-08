@@ -143,11 +143,10 @@
   &__counter-trip {
     margin-bottom: 21px;
     font-size: 0;
-    input[type="text"],
     input[type="number"]{
       display: inline-block;
       margin: 0 6px;
-      width: 144px;
+      width: calc(100% - 136px);
     }
   }
   
@@ -162,17 +161,14 @@
       font-size: 1.4rem;;
       text-align: left;
     }
-    input[type="text"],
     input[type="number"]{
       display: inline-block;
       margin: 0 6px;
-      width: 144px;
+      width: calc(100% - 136px);
     }
   }
   
   &__traveler {
-    display: table;
-    font-size: 0;
     margin-bottom: 30px;
     &:after {
       @include clearfix;
@@ -197,7 +193,7 @@
     }
     .row-right {
       @include right;
-      //width: 92%;
+      width: calc(100% - 67px);
       label {
         margin-bottom: 8px;
         padding-left: 20px;
