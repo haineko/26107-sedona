@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
 var htmlhint = require("gulp-htmlhint");
+var minifyHTML = require('gulp-minify-html');
 var cmq = require('gulp-combine-media-queries');
 var minifyCss = require('gulp-minify-css');
 var rename = require("gulp-rename");
@@ -12,7 +13,7 @@ var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('check', function() { /* TODO: проверить работоспособность */
-  gulp.src("mobile-sedona/*.html")
+  gulp.src("./src/*.html")
     .pipe(htmlhint({
       "tag-pair": true,
       "style-disabled": true,
@@ -24,24 +25,33 @@ gulp.task('check', function() { /* TODO: проверить работоспос
     }));
 });
 
+gulp.task('minify-html', function() {
+  return gulp.src('./src/*.html')
+    .pipe(minifyHTML())
+    .pipe(rename({
+        suffix: '.min'
+      }))
+    .pipe(gulp.dest('./dest/'));
+});
+
 gulp.task('sass', function() {
-  return gulp.src("sass/style.scss")
+  return gulp.src("./src/sass/style.scss")
     .pipe(sass())
     .pipe(gulp.dest("./dest/css"))
   	.pipe(autoprefixer())
     //.pipe(cmq({
     //  log: true
     //}))
-    .pipe(minifyCss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+//    .pipe(minifyCss())
+//    .pipe(rename({
+//      suffix: '.min'
+//    }))
     .pipe(gulp.dest("./dest/css"))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('script', function() {
-  gulp.src(['js/script.js', 'js/map.js'])
+  gulp.src(['./src/js/script.js', 'js/map.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('./dest/js'))
     .pipe(uglify())
@@ -52,7 +62,7 @@ gulp.task('script', function() {
 });
 
 gulp.task('image', function() {
-  gulp.src('./img/*')
+  gulp.src('./src/img/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./dest/img'));
 });
@@ -60,11 +70,11 @@ gulp.task('image', function() {
 gulp.task('serve', ['sass'], function() {
 
   browserSync.init({
-    server: '.'
+    server: './src/'
   });
 
-  gulp.watch("sass/**/*.scss", ['sass']);
-  gulp.watch("mobile-sedona/*.html").on('change', reload);
+  gulp.watch(".src/sass/**/*.scss", ['sass']);
+  gulp.watch(".src/*.html").on('change', reload);
 });
 
 gulp.task('build', ['check', 'sass', 'script', 'image']);
