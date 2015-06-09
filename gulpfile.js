@@ -12,6 +12,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var ghPages = require('gulp-gh-pages');
+var notify = require("gulp-notify");
 
 gulp.task('check', function() { /* TODO: проверить работоспособность */
   gulp.src("./src/*.html")
@@ -38,6 +39,10 @@ gulp.task('minify-html', function() {
 gulp.task('sass', function() {
   return gulp.src("./src/sass/style.scss")
     .pipe(sass())
+//    .pipe(notify({
+//      title: "Sass",
+//      message: "Все прошло успешно"
+//    });
     .pipe(gulp.dest("./dest/css"))
   	.pipe(autoprefixer())
     //.pipe(cmq({
@@ -78,7 +83,7 @@ gulp.task('serve', ['sass'], function() {
   browserSync.init({
     server: './src/'
   });
-
+  
   gulp.watch(".src/sass/**/*.scss", ['sass']);
   gulp.watch(".src/*.html").on('change', reload);
 });
