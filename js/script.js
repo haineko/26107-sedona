@@ -351,8 +351,8 @@ function removePreview(figure) {
 }
 function initialize() {
   var myLatlng = new google.maps.LatLng(34.8697395, -111.7609896);
-  var image = "http://i11.pixs.ru/storage/8/1/4/markerpng_8770777_17539814.png";
-  var myOptions = {
+  var image = "./img/marker.png";
+    var myOptions = {
     zoom: 7,
     center: myLatlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
