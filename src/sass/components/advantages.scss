@@ -60,24 +60,15 @@
         left: 50%;
         width: 76px;
         height: 76px;
-        background: url(../img/icon-house.svg) no-repeat;
         background-size: contain;
         transform: translateX(-50%);
         order: 1;
       }
       &:nth-child(2) {
         order: 3;
-        &:before {
-         background-image: url(../img/icon-gift.svg);
-          
-        }
       }
       &:nth-child(3) {
         order: 2;
-        &:before{
-         background-image: url(../img/icon-burger.svg);
-          order: 2;
-        }
       }
     }
     &__title {
@@ -104,24 +95,15 @@
         left: 50%;
         width: 76px;
         height: 76px;
-        background: url(../img/icon-house.svg) no-repeat;
         background-size: contain;
         transform: translateX(-50%);
         order: 1;
       }
       &:nth-child(2) {
         order: 3;
-        &:before {
-         background-image: url(../img/icon-gift.png);
-          
-        }
       }
       &:nth-child(3) {
         order: 2;
-        &:before{
-         background-image: url(../img/icon-burger.svg);
-          order: 2;
-        }
       }
     }
     &__title {
