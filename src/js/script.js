@@ -4,7 +4,8 @@ var cross = document.querySelector(".main-menu__cross");
 var form = document.querySelector(".form-review__form");
 var done = document.querySelector(".popup--request");
 var fail = document.querySelector(".popup--failure");
-var btn_popup = document.querySelectorAll(".popup__btn");
+var btn_done = document.querySelectorAll(".popup--request__btn");
+var btn_fail = document.querySelectorAll(".popup--failure__btn");
 
 /* -- МЕНЮ -- */
 var handler = function () {
@@ -63,14 +64,18 @@ function request(data, fn) {
       fn(xhr.responseText);
       // TODO: тут делаем очистку localstorage
       done.classList.add("popup-show");
-      btn_popup.addEventListener("click", function() {
+      btn_done.addEventListener("click", function() {
         event.preventDefault();
         console.info("close popup");
         done.classList.remove("popup-show");
-        
       });
     } else {
       fail.classList.add("popup-show");
+      btn_fail.addEventListener("click", function() {
+        event.preventDefault();
+        console.info("close popup");
+        fail.classList.remove("popup-show");
+      });
     }
 
   });
@@ -147,7 +152,6 @@ function diffDate() {
     var date_depart = new Date(depart.value).getTime();
 
     var date_diff = Math.floor((date_depart - date_arrival) / 1000 / 60 / 60 / 24);
-      //TODO: реализовать проверку
     if (date_diff < 0) {
       trip_duration.value = 0;
     } else {
@@ -167,7 +171,7 @@ function plusDate(num) {
     console.info('Day1: ' + day);
     var day = day[1] ? day : '0' + day[0]
     arrival.value = date.getFullYear() + '-' + month + '-' + day; /* TODO: refactor */
-    
+
     arrival.addEventListener('change', function () {
       plusDate(trip_duration.value);
       depart.addEventListener('change', function () {
