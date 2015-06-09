@@ -1,6 +1,6 @@
 .main-menu {
   position: relative;
-  background-color: $bg-main-menu;
+  background-color: $bg-color;
   &__list {
     display: flex;
     flex-direction: column;
@@ -145,6 +145,7 @@
     }
   }
   &__item {
+    height: 58px;
     &:first-child {
       order: 4;
     }
@@ -187,7 +188,8 @@
         background-color: $bg-color;
       }
     }
-  &__btn-menu {
+  &__btn-menu,
+  &__cross {
     display: none;
   }
 }
@@ -212,6 +214,7 @@
     }
   }
   &__item {
+    height: 58px;
     &:first-child {
       order: 4;
     }
@@ -249,7 +252,8 @@
       background-color: $bg-color;
     }
   }
-  &__btn-menu {
+  &__btn-menu,
+  &__cross {
     display: none;
   }
 }
