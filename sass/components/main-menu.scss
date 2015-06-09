@@ -114,60 +114,8 @@
   }
   
   
-  @include tablet {
-    background-color: red;
-    &__list {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-    }
-    &__item.btn,
-    &__item--logo {
-      display: flex;
-      flex-basis: 20%;
-      background-color: $bg-color;
-      border: none;
-      box-shadow: none;
-      &:hover,
-      &:active {
-        background-color: $bg-color;
-      }
-    }
-    &__item {
-      &:first-child {
-        order: 4;
-      }
-      &:last-child {
-        order: 5;
-      }
-    }
-    &__item--logo {
-      order: 3;
-    }
-    &__logo {
-      position: inherit;
-      background: url(../img/logo-sedona@1x.png) no-repeat 50% 0,
-                url(../img/logo-triangle.svg) no-repeat 0 0/contain;
-    }
-    &__link {
-      width: 100%;
-        color: $color-text-dark;
-        &:hover {
-          color: $bg-main-menu;
-          background-color: $bg-color;
-        }
-        &:active {
-          color: darken($bg-reason, 23%);
-          background-color: $bg-color;
-        }
-      }
-    &__btn-menu {
-      display: none;
-    }
-  }
-  
-  
-  @include desktop {
+@include tablet {
+  background-color: red;
   &__list {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -191,6 +139,88 @@
     }
     &:last-child {
       order: 5;
+    }
+    &--active.btn {
+      a {
+        color: #766357;
+      }
+      &:hover {
+        a {
+          color: #603e43;
+        }
+      }
+      &:active {
+        a {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  &__item--logo {
+    order: 3;
+  }
+  &__logo {
+    position: inherit;
+    background: url(../img/logo-sedona@1x.png) no-repeat 50% 0,
+              url(../img/logo-triangle.svg) no-repeat 0 0/contain;
+  }
+  &__link {
+    width: 100%;
+      color: $color-text-dark;
+      &:hover {
+        color: $bg-main-menu;
+        background-color: $bg-color;
+      }
+      &:active {
+        color: darken($bg-reason, 23%);
+        background-color: $bg-color;
+      }
+    }
+  &__btn-menu {
+    display: none;
+  }
+}
+  
+  
+@include desktop {
+  &__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  &__item.btn,
+  &__item--logo {
+    display: flex;
+    flex-basis: 20%;
+    background-color: $bg-color;
+    border: none;
+    box-shadow: none;
+    &:hover,
+    &:active {
+      background-color: $bg-color;
+    }
+  }
+  &__item {
+    &:first-child {
+      order: 4;
+    }
+    &:last-child {
+      order: 5;
+    }
+    &--active.btn {
+      a {
+        color: #766357;
+      }
+      &:hover {
+        a {
+          color: #603e43;
+        }
+      }
+      &:active {
+        a {
+          opacity: 0.3;
+        }
+      }
     }
   }
   &__item--logo {
