@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('script', function() {
-  gulp.src(['./src/js/script.js', 'js/map.js'])
+  gulp.src(['./src/js/script.js', './src/js/map.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('./dest/js'))
     .pipe(uglify())
