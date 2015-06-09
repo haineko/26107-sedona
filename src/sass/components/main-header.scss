@@ -1,0 +1,12 @@
+.main-header {
+  background-color: $bg-color;
+ 
+  &__inner {
+    position: relative;
+    margin:  0 auto;
+    max-height: 56px;
+    &:after{
+      @include clearfix;
+    }
+  }  
+}
