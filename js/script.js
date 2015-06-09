@@ -4,7 +4,7 @@ var cross = document.querySelector(".main-menu__cross");
 var form = document.querySelector(".form-review__form");
 var done = document.querySelector(".popup--request");
 var fail = document.querySelector(".popup--failure");
-
+var btn_popup = document.querySelectorAll(".popup__btn");
 
 /* -- МЕНЮ -- */
 var handler = function () {
@@ -63,6 +63,12 @@ function request(data, fn) {
       fn(xhr.responseText);
       // TODO: тут делаем очистку localstorage
       done.classList.add("popup-show");
+      btn_popup.addEventListener("click", function() {
+        event.preventDefault();
+        console.info("close popup");
+        done.classList.remove("popup-show");
+        
+      });
     } else {
       fail.classList.add("popup-show");
     }
@@ -134,9 +140,10 @@ btn_plus.addEventListener('click', function (e) {
   plusDate(trip_duration.value);
 });
 
-arrival.addEventListener('change', function () {
-  depart.addEventListener('change', function () {
-    var date_arrival = new Date(arrival.value).getTime();
+
+
+function diffDate() {
+  var date_arrival = new Date(arrival.value).getTime();
     var date_depart = new Date(depart.value).getTime();
 
     var date_diff = Math.floor((date_depart - date_arrival) / 1000 / 60 / 60 / 24);
@@ -147,16 +154,26 @@ arrival.addEventListener('change', function () {
       trip_duration.value = date_diff;
       console.log(trip_duration.value);
     }
-
-  });
-});
-
+}
 
 function plusDate(num) {
 
   if (!arrival.value) {
     date = new Date();
-    arrival.value = date.getFullYear() + '-01-01'; /* TODO: refactor */
+    var month = (date.getMonth() + 1).toString();
+    var month = month[1] ? month : '0' + month[0]
+
+    var day = date.getDate().toString();
+    console.info('Day1: ' + day);
+    var day = day[1] ? day : '0' + day[0]
+    arrival.value = date.getFullYear() + '-' + month + '-' + day; /* TODO: refactor */
+    
+    arrival.addEventListener('change', function () {
+      plusDate(trip_duration.value);
+      depart.addEventListener('change', function () {
+        diffDate();
+      });
+    });
   }
 
   var date_arrival = new Date(arrival.value).getTime();
