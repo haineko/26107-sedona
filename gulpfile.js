@@ -41,10 +41,14 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(notify({
       title: "Sass",
-      message: "Все прошло успешно"
+      message: "Получите ваш css файл"
+    }))
+  	.pipe(autoprefixer())
+    .pipe(notify({
+      title: "Autoprefixer",
+      message: "Товарищ, ваши префиксы расставлены, а Вы все еще не готовы"
     }))
     .pipe(gulp.dest("./dest/css"))
-  	.pipe(autoprefixer())
     .pipe(cmq({
       log: true
     }))

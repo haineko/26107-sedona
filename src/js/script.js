@@ -130,6 +130,7 @@ function setState(savElement) {
 }
 
 /* -- ДАТЫ -- */
+if (document.querySelector(".form-review__form")) {
 var trip_duration = document.getElementById('trip-duration');
 var btn_minus = document.querySelector('.form-review__counter-trip > .form-review__btn-minus');
 var btn_plus = document.querySelector('.form-review__counter-trip > .form-review__btn-plus');
@@ -346,4 +347,5 @@ function removePreview(figure) {
 
   figure.parentNode.removeChild(figure);
   console.info("Фотография удалена!");
+}
 }
