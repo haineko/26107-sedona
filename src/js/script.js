@@ -22,8 +22,13 @@ menu.addEventListener("tap", handler);
 cross.addEventListener("click", handler);
 cross.addEventListener("tap", handler);
 
-initForm();
-initLocalStorage()
+if (document.querySelector(".form-review__form")) {
+  console.info('Форма обнаружена!');
+  initForm();
+  initLocalStorage();
+} else {
+  console.info('Форма не обнаружена!');
+}
 
 /* -- ОТПРАВКА ФОРМЫ С ПОМОЩЬЮ AJAX -- */
 function initForm() {
