@@ -39,10 +39,10 @@ gulp.task('minify-html', function() {
 gulp.task('sass', function() {
   return gulp.src("./src/sass/style.scss")
     .pipe(sass())
-//    .pipe(notify({
-//      title: "Sass",
-//      message: "Все прошло успешно"
-//    });
+    .pipe(notify({
+      title: "Sass",
+      message: "Все прошло успешно"
+    }))
     .pipe(gulp.dest("./dest/css"))
   	.pipe(autoprefixer())
     //.pipe(cmq({
@@ -83,10 +83,10 @@ gulp.task('serve', ['sass'], function() {
   browserSync.init({
     server: './src/'
   });
-  
+
   gulp.watch(".src/sass/**/*.scss", ['sass']);
   gulp.watch(".src/*.html").on('change', reload);
 });
 
-gulp.task('build', ['check', 'sass', 'script', 'image', 'deploy']);
+gulp.task('build', ['minify-html', 'sass', 'script', 'image']);
 gulp.task('default', ['serve']);

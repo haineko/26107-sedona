@@ -67,10 +67,14 @@ function request(data, fn) {
         event.preventDefault();
         console.info("close popup");
         done.classList.remove("popup-show");
-        
       });
     } else {
       fail.classList.add("popup-show");
+      btn_popup.addEventListener("click", function() {
+        event.preventDefault();
+        console.info("close popup");
+        fail.classList.remove("popup-show");
+      });
     }
 
   });
@@ -167,7 +171,7 @@ function plusDate(num) {
     console.info('Day1: ' + day);
     var day = day[1] ? day : '0' + day[0]
     arrival.value = date.getFullYear() + '-' + month + '-' + day; /* TODO: refactor */
-    
+
     arrival.addEventListener('change', function () {
       plusDate(trip_duration.value);
       depart.addEventListener('change', function () {
