@@ -4,12 +4,13 @@
   &:after {
     @include clearfix;
   }
+    
+  @include tablet {
+    height: 256px;
+  }
+  @include desktop {
+    height: 256px;
+  }
 }
 
 
-@include tablet {
-  height: 256px;
-}
-@include desktop {
-  height: 256px;
-}
