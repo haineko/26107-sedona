@@ -11,6 +11,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('check', function() { /* TODO: проверить работоспособность */
   gulp.src("./src/*.html")
@@ -42,10 +43,10 @@ gulp.task('sass', function() {
     //.pipe(cmq({
     //  log: true
     //}))
-//    .pipe(minifyCss())
-//    .pipe(rename({
-//      suffix: '.min'
-//    }))
+    .pipe(minifyCss())
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest("./dest/css"))
     .pipe(reload({stream: true}));
 });
@@ -67,6 +68,11 @@ gulp.task('image', function() {
     .pipe(gulp.dest('./dest/img'));
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./dest/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('serve', ['sass'], function() {
 
   browserSync.init({
@@ -77,5 +83,5 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch(".src/*.html").on('change', reload);
 });
 
-gulp.task('build', ['check', 'sass', 'script', 'image']);
+gulp.task('build', ['check', 'sass', 'script', 'image', 'deploy']);
 gulp.task('default', ['serve']);
