@@ -5,6 +5,9 @@ body {
   position: relative;
   background-color: $bg-color;
   min-width: 320px;
+  .content-wrapper { 
+    overflow: hidden;
+  }
 }
 
 @include desktop {
