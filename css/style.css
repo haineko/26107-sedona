@@ -1097,7 +1097,16 @@ footer {
   .intro-post,
   .intro-form {
     margin-bottom: 40px;
-    padding: 104px 20px 160px; } }
+    padding: 104px 20px 160px; }
+    .intro-blog__text-sedona,
+    .intro-post__text-sedona,
+    .intro-form__text-sedona {
+      text-align: center; }
+      .intro-blog__text-sedona img,
+      .intro-post__text-sedona img,
+      .intro-form__text-sedona img {
+        padding: 103px 0;
+        width: 458px; } }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
   .intro,
