@@ -373,6 +373,9 @@ body {
   position: relative;
   background-color: #fff;
   min-width: 320px; }
+  html .content-wrapper,
+  body .content-wrapper {
+    overflow: hidden; }
 
 @media (min-width: 1200px) {
   html,
@@ -979,7 +982,8 @@ footer {
       display: none; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
     .main-menu__logo {
-      background: url(../img/logo-sedona@2x.png) no-repeat 50% 0, url(../img/logo-triangle.svg) no-repeat; } }
+      background: url(../img/logo-sedona@2x.png) no-repeat 50% 0, url(../img/logo-triangle.svg) no-repeat;
+      background-size: 50% 100%; } }
 
 .intro,
 .intro-form,
