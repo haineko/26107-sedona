@@ -759,7 +759,7 @@ footer {
     display: block;
     margin: 0 auto;
     width: 138px;
-    height: 70px;
+    height: 71px;
     font-size: 0;
     line-height: 0;
     text-shadow: none;
@@ -1109,7 +1109,6 @@ footer {
       .intro-blog__text-sedona img,
       .intro-post__text-sedona img,
       .intro-form__text-sedona img {
-        padding: 103px 0;
         width: 458px; } }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
