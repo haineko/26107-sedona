@@ -747,7 +747,11 @@ footer {
       .main-menu__item--show:first-child {
         border-top: none; }
   .main-menu__logo {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 2;
     display: block;
     margin: 0 auto;
